@@ -3,15 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Nome - Portfólio</title>
+    <title>Levi Lucena - Portfólio</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    
+
+    <!-- Google Fonts - Orbitron -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+   
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  
     <!-- Seu CSS personalizado -->
     <style>
         body {
             padding-top: 56px; /* Altura da barra de navegação */
+            font-family: 'Orbitron', sans-serif; /* Adicionando a fonte Orbitron */
         }
 
         /* Adaptação para telas menores */
@@ -20,6 +28,24 @@
                 padding-top: 0;
             }
         }
+
+        /* Estilo do cabeçalho */
+        header {
+            background: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        /* Estilo das seções */
+        section {
+            padding: 60px 0;
+        }
+
+        /* Aumentar o tamanho do ícone no cabeçalho */
+        header i {
+            font-size: 2em;
+        }
     </style>
 </head>
 <body>
@@ -27,7 +53,16 @@
     <!-- Barra de Navegação -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">Seu Nome</a>
+            <a class="navbar-brand" href="#">Levi Lucena</a>
+
+            <!-- Ícones do LinkedIn e GitHub -->
+            <a class="navbar-brand" href="https://www.linkedin.com/in/levilucena">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a class="navbar-brand" href="https://github.com/LeviLucena">
+                <i class="fab fa-github"></i>
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -50,16 +85,663 @@
         </div>
     </nav>
 
+    <!-- Cabeçalho -->
+    <header>
+        <h1><i class="fas fa-code"></i> Levi Lucena</h1>
+        <p>Desenvolvedor, Autor, Profissional Multidisciplinar</p>
+    </header>
+
     <!-- Conteúdo Principal -->
-    <div class="container mt-5">
+    <div class="container">
         <section id="projetos">
             <h2>Projetos</h2>
             <!-- Seu conteúdo de projetos aqui -->
+
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/R/R.png" width="100%" alt="Análise de Clima Tempo"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/R/2.png" width="100%" alt="Análise de Clima Tempo"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/R/3.png" width="100%" alt="Análise de Clima Tempo"><p style="margin-bottom: 5px;"></p>
+                </div>
+    
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Análise de Clima Tempo</strong></p>
+                    <p>jan de 2024 - jan de 2024</p>
+    
+                    <p>Este é um projeto de um painel interativo utilizando a linguagem R, em conjunto com as bibliotecas shinydashboard, ggplot2, plotly, lubridate, dplyr, explore o projeto de minha autoria "Análise de Clima". que proporciona uma experiência envolvente para visualização e compreensão de dados climáticos, oferecendo gráficos interativos, estatísticas mensais, anuais e muito mais. Explore a dinâmica meteorológica de forma acessível e informativa.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>R Studio, Linguagem R</li>
+                        <p>
+                        <p><strong>Bibliotecas:</strong></p>
+                        <li>shinydashboard, ggplot2, plotly, lubridate, dplyr</li>
+                        <p>
+                        <p><strong>Estrutura do Projeto:</strong>
+                        <li>ui.R: Este arquivo contém a definição da interface do usuário (UI) da sua aplicação Shiny.</li>
+                        <li>server.R: Neste arquivo, você define a lógica do servidor. </li>
+                        <li>data.R: Etapa dedicada à manipulação de dados.</li>
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+                        <li>Servidor Web: Você precisará de um servidor web para hospedar sua página. Alguns servidores web populares incluem o Apache, Nginx, ou servidores específicos para R, como o Rook ou Shiny.</li>
+                        <li>Configuração do Servidor: Configure o servidor para lidar com a execução de scripts R, se necessário.</li>
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/ClimaTempo"> Clique aqui </a>
+                </div>
+<p><p>                
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/Py/1.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Py/2.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Py/4.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Py/2.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Py/3.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                </div>
+    
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Análise de Desempenho de Vendas</strong></p>
+                    <p>jan de 2024 - jan de 2024</p>
+    
+                    <p>Este é um projeto de um painel interativo em Python utilizando as bibliotecas Streamlit, Pandas, Plotly e Numpy, explore o projeto de minha autoria "Análise de Desempenho de Vendas" que oferece uma experiência envolvente na visualização e compreensão dos dados de vendas, apresentando gráficos interativos, estatísticas mensais, anuais e outros insights. Explore a dinâmica de desempenho de vendas de forma acessível e informativa, proporcionando uma análise abrangente e atraente para os usuários.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>Python, Anaconda, Visual Studio Code</li>
+                        <p>
+                        <p><strong>Bibliotecas:</strong></p>
+                        <li>Streamlit, Pandas, Plotly e Numpy</li>
+                        <p>
+                        <p><strong>Estrutura do Projeto:</strong>
+                        <li>app.py: Este arquivo contém a definição da interface do usuário, dados e a lógica.</li>
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+                        <li>Servidor Web tais como (Heroku, PythonAnywhere, AWS, Google Cloud Platform, Microsoft Azure) que são plataformas de hospedagem na web que oferecem serviços para implantar, gerenciar e executar aplicativos na nuvem.</li>
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/vendas"> Clique aqui </a>
+                </div>
+<p><p>    
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/Django/1.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Django/2.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Django/6.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Django/8.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                </div>
+  
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Saúde Pública - Sistema de Gestão de Consultas</strong></p>
+                    <p>jan de 2024 - jan de 2024</p>
+    
+                    <p>Este é um sistema de gerenciamento para dados de saúde pública. Ele permite o registro de hospitais, pacientes e registros médicos, além de fornecer funcionalidades como mapas de leitos, dashboards e relatórios. (Os dados aqui são fictícios gerados pela biblioteca faker).</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>Python e Django: Framework web em Python para desenvolvimento rápido.</li>
+                        <li>HTML/CSS: Linguagens padrão para marcação e estilo de páginas web.</li>
+                        <li>JavaScript / jQuery: Para interatividade do lado do cliente.</li>
+                        </li>
+                        <p>
+                        <p><strong>Bibliotecas:</strong></p>
+                       
+                        <li>Bootstrap: Biblioteca de código aberto para design e estilização.</li>
+                        <li>DataTables: Biblioteca JavaScript para tabelas interativas.</li>
+                        <li>Font Awesome: Biblioteca de ícones vetoriais.</li>
+                        
+                        <p>
+                        <p><strong>Estrutura do Projeto:</strong>
+                        
+                            <li>lista_hospitais.html</li>
+                            <li>lista_pacientes.html</li>
+                            <li>lista_registros_medicos.html</li>
+                            <li>adicionar_registro_medico.html</li>
+                            <li>adicionar_paciente.html</li>
+                            <li>login.html</li>
+                            <li>inicio.html</li>
+                            <li>mapa_leitos.html</li>
+                            <li>relatorio.html</li>
+                            <li>dashboards.html</li> 
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+                        Servidor Web tais como 
+                        <li>Heroku</li>
+                        <li>PythonAnywhere</li>
+                        <li>AWS</li>
+                        <li>Google Cloud Platform</li>
+                        <li>Microsoft Azure</li>
+                        <p><p>
+                        que são plataformas de hospedagem na web que oferecem serviços para implantar, gerenciar e executar aplicativos na nuvem.</li>
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/DjangoLivre"> Clique aqui </a>
+                </div>
+
+<p><p> 
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/Gestão/1.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Gestão/2.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Gestão/8.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Gestão/10.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Gestão/11.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Gestão/12.png" width="100%" alt="Análise de Desempenho de Vendas"><p style="margin-bottom: 5px;"></p>
+                </div>
+  
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Sistema de Gerenciamento de Projetos</strong></p>
+                    <p>ago de 2023 - ago de 2023</p>
+    
+                    <p>Visa gerenciar os projetos, proporcionando uma visão geral abrangente, oferecendo funcionalidades para cadastrar, consultar e editar informações relacionadas aos projetos. (Os dados apresentados aqui são fictícios).</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>Python e Django: Framework web em Python para desenvolvimento rápido.</li>
+                        <li>HTML/CSS: Linguagens padrão para marcação e estilo de páginas web.</li>
+                        <li>JavaScript / jQuery: Para interatividade do lado do cliente.</li>
+                        </li>
+                        <p>
+
+                            <p><strong>Bibliotecas:</strong></p>
+                       
+                        <li>Bootstrap: Biblioteca de código aberto para design e estilização.</li>
+                        <li>DataTables: Biblioteca JavaScript para tabelas interativas.</li>
+                        <li>Font Awesome: Biblioteca de ícones vetoriais.</li>
+
+                        <p>
+                            
+                            <p><strong>Principais Funcionalidades:</strong></p>
+                           
+                            <li>Sistema de Login: Permite a conexão com o sistema conforme os usuários cadastrados no banco de dados.</li>
+                            <li>Cadastro de Projetos: Permite o cadastro de novos projetos, fornecendo informações como tipo de projeto, subtipo, situação, prioridade, gerente responsável, coordenadoria e outros detalhes relevantes.</li>
+                            <li>Consulta e Edição de Projetos: Oferece uma interface para consultar e editar informações de projetos existentes, garantindo uma atualização constante e precisa dos dados.</li>
+                            <li>Gestão de Demandas e Atividades: Permite o cadastro e monitoramento de demandas associadas aos projetos, bem como o registro e acompanhamento das atividades relacionadas a cada projeto.</li>
+                            <li>Controle de Entregas: Facilita o registro e acompanhamento das entregas associadas a cada projeto, fornecendo uma visão clara do progresso.</li>
+                            <li>Dashboards e Indicadores: Apresenta dashboards que exibem indicadores importantes sobre o desempenho dos projetos, fornecendo insights valiosos para a tomada de decisões.</li>
+                            <li>Gestão de Contatos: Permite o cadastro de contatos relevantes para os projetos, facilitando a comunicação e colaboração entre as partes envolvidas.</li>
+                            <li>Personalização por Gerente: Inclui a capacidade de personalizar as visualizações e relatórios com base nos gerentes de projeto, permitindo uma análise mais específica e direcionada.</li>
+                        
+                            <p>
+                            
+                            <p><strong>Benefícios Esperados:</strong></p>
+                               
+                            <li>Eficiência Operacional: Agiliza os processos de gerenciamento de projetos, reduzindo redundâncias e melhorando a eficiência operacional.</li>
+                            <li>Tomada de Decisões Embasada: Fornece dados e indicadores relevantes para apoiar a tomada de decisões informadas em relação aos projetos em andamento.</li>
+                            <li>Comunicação Facilitada: Melhora a comunicação entre as equipes, gerentes e demais stakeholders, promovendo uma colaboração mais eficaz.</li>
+                            <li>Monitoramento em Tempo Real: Possibilita o monitoramento em tempo real do status dos projetos, identificando áreas que precisam de atenção imediata.</li>
+                            <li>Visão Holística: Proporciona uma visão holística dos projetos, subtipos, situações, prioridades, gerentes e coordenadorias, contribuindo para uma gestão mais abrangente.</li>
+                        <p>
+                            <p><strong>Requisitos:</strong></p>
+
+                            <li>Servidor Web (ex. Apache)</li>
+                            <li>PHP 8.2.4</li>
+                            <li>MySQL ou MariaDB 10.4.28</li>
+                        <p><p>
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/Gestao_Projetos"> Clique aqui </a>
+                </div>  
+<p><p> 
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/SSL/1.png" width="100%" alt="Certificado SSL Checker"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/SSL/3.png" width="100%" alt="Certificado SSL Checker"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/SSL/3.png" width="100%" alt="Certificado SSL Checker"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/SSL/2.png" width="100%" alt="Certificado SSL Checker"><p style="margin-bottom: 5px;"></p>
+                </div>
+  
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Certificado SSL Checker</strong></p>
+                    <p>jul de 2023 - jul de 2023</p>
+    
+                    <p>Este projeto é um Certificado SSL Checker, que verifica e exibe informações sobre os certificados SSL de uma lista de URLs. Ele permite visualizar o status de validade dos certificados SSL, o domínio, o emissor e a data de validade.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>PHP: linguagem de programação utilizada para a lógica do servidor e manipulação dos certificados SSL.</li>
+                        <li>HTML: linguagem de marcação utilizada para a estrutura da página web.</li>
+                        <li>CSS: linguagem de estilo utilizada para a aparência e o design da página web.</li>
+                        <li>GitHub: plataforma utilizada para hospedar o código-fonte do projeto.</li>
+                        <p>
+                        <p><strong>Bibliotecas:</strong></p>
+                       
+                        <li>Bootstrap: Biblioteca de código aberto para design e estilização.</li>
+                        <li>OpenSSL: biblioteca utilizada para obter informações dos certificados SSL.</li>
+                        
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+                        <li>Servidor Web (ex. Apache)</li>
+                        <li>PHP 8.2.4</li>
+                        <p><p>
+                        
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/Certificados-SSL-Web"> Clique aqui </a>
+                </div>
+
+<p><p><p>                 
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/TI/1.png" width="100%" alt="Gestão de Estoque de TI"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/TI/2.png" width="100%" alt="Gestão de Estoque de TI"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/TI/3.png" width="100%" alt="Gestão de Estoque de TI"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/TI/4.png" width="100%" alt="Gestão de Estoque de TI"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/TI/5.png" width="100%" alt="Gestão de Estoque de TI"><p style="margin-bottom: 5px;"></p>
+                </div>
+  
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Gestão de Estoque de TI</strong></p>
+                    <p>jul de 2023 - jul de 2023</p>
+    
+                    <p>Este projeto é um sistema de gestão de equipamentos de TI que permite o registro e controle de entrada e saída de diversos tipos de equipamentos, como CPUs, monitores, teclados, mouses, notebooks, impressoras e componentes.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        </li>
+                        <p>
+                        <p><strong>Bibliotecas:</strong></p>
+                       
+                        <li>Bootstrap: Biblioteca de código aberto para design e estilização.</li>
+                        <li>DataTables: Biblioteca JavaScript para tabelas interativas.</li>
+                        
+                        <p>
+                        <p><strong>Funcionalidades:</strong>
+                        
+                        <li>Registro de entrada e saída de equipamentos, incluindo marca, modelo, série, tipo, layout, preço e observação.</li>
+                        <li>Armazenamento dos dados em um banco de dados MySQL.</li>    
+                        <li>Exibição dos equipamentos registrados em tabelas separadas para entrada e saída, permitindo fácil visualização e filtragem.</li>    
+                        <li>Possibilidade de edição e exclusão de registros existentes.</li>
+                        
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+                            <li>Servidor web com suporte a PHP</li>
+                            <li>Banco de dados MySQL para armazenar os dados dos equipamentos.</li>
+                        <p><p>
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/Gestao-de-Inventario-de-TI"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/Calendário/3.png" width="100%" alt="Calendário de Eventos"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Calendário/2.png" width="100%" alt="Calendário de Eventos"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Calendário/4.png" width="100%" alt="Calendário de Eventos"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Calendário/5.png" width="100%" alt="Calendário de Eventos"><p style="margin-bottom: 5px;"></p>
+                </div>
+  
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Calendário de Eventos</strong></p>
+                    <p>jul de 2023 - jul de 2023</p>
+    
+                    <p>O Calendário de Eventos é uma aplicação web que permite criar, visualizar e remover eventos de equipes de TI como BD, Linux, Windows, Redes, em um calendário interativo. A aplicação foi desenvolvida com o objetivo de demonstrar a integração de tecnologias front-end e back-end para criar um calendário completo.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>PHP</li>
+                        <li>MySQL</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        </li>
+                        <p>
+                        <p><strong>Bibliotecas:</strong></p>
+                       
+                        <li>Bootstrap: Biblioteca de código aberto para design e estilização.</li>
+                        <li>DataTables: Biblioteca para tabelas interativas.</li>
+                        
+                        <p>
+                        <p><strong>Funcionalidades:</strong>
+                        
+                        <li>Exibição de eventos em um calendário interativo.</li>
+                        <li>Adição de novos eventos com título, data, hora, descrição, equipe e cor personalizada.</li>
+                        <li>Exibição dos detalhes de um evento ao clicar</li>
+                        <li>Remoção de eventos do calendário.</li>
+                        
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+
+                        <li>Servidor web (como Apache ou Nginx)</li>
+                        <li>PHP 5.6 ou superior.</li>
+                        <li>MySQL para o banco de dados.</li>
+                        <p><p>
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/Calendario-de-Eventos"> Clique aqui </a>
+                </div>
+<p><p>                
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/Painel/1.png" width="100%" alt="Painel Online - Observatório"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Painel/2.png" width="100%" alt="Painel Online - Observatório"><p style="margin-bottom: 5px;"></p>
+                </div>
+  
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Painel Online - Observatório</strong></p>
+                    <p>set de 2023 - set de 2023</p>
+    
+                    <p>O objetivo deste projeto é oferecer uma visualização detalhada de todos os indicadores, reunidos numa página em PHP, incluindo análises geoespaciais, métricas de desempenho e tendências ao longo do tempo. Os dashboards são alimentados por dados em tempo real e podem ser personalizados para atender às necessidades específicas da sua organização.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>Linguagens: PHP, HTML, CSS, JavaScript</li>
+                        <li>Integração de Dashboards: Power BI</li>
+                        <li>Versionamento de Código: Git e GitHub</li>
+                        <p>
+
+                        <p><strong>Bibliotecas:</strong></p>
+                       
+                        <li>Bootstrap: Biblioteca para design e estilização.</li>
+                        
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+                        <li>Servidor Web (ex. Apache)</li>
+                        <li>PHP 8.2.4</li>
+                        <p><p>
+                        
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/painel-online"> Clique aqui </a>
+                </div>
+<p><p> 
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Projetos/Grafana/1.png" width="100%" alt="Gestão de Tickets OTRS no Grafana"><p style="margin-bottom: 5px;"></p>
+                    <img src="Projetos/Grafana/2.png" width="100%" alt="Gestão de Tickets OTRS no Grafana"><p style="margin-bottom: 5px;"></p>
+                </div>
+  
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>Gestão de Tickets OTRS no Grafana</strong></p>
+                    <p>abr de 2023 - abr de 2023</p>
+    
+                    <p>Este projeto consiste em uma coleção de dashboards no Grafana para monitorar e visualizar métricas relacionadas a um sistema de chamados do OTRS.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+                        <li>Queries</li>
+                        <p>
+                        
+                        <p>
+                        <p><strong>Funcionalidades:</strong>
+                        
+                        <li>Tickets Abertos, Fechados, Prioridades, etc</li> 
+                        
+                        <p>
+                        <p><strong>Requisitos:</strong></p>
+
+                        <li>Sistema Grafana</li>
+                        <li>Banco de dados PostgreSQL</li>
+                        <p><p>
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/Gestao-de-Tickets-Service-Desk"> Clique aqui </a>
+                </div>
+
         </section>
 
         <section id="livros">
             <h2>Livros Publicados</h2>
-            <!-- Seu conteúdo de livros aqui -->
+    
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Livros/Fuja da Corrida dos Ratos.png" width="50%" alt="Capa do Livro: Fuja da Corrida dos Ratos">
+                </div>
+    
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>📚 "Fuja da Corrida dos Ratos" 🐭✨</strong></p>
+                    <p>EbookPlay · 16 de mar de 2023</p>
+    
+                    <p>Este livro aborda sobre a corrida dos ratos que é um termo usado para descrever a vida frenética e competitiva que muitas pessoas levam, onde elas trabalham longas horas, têm pouco tempo livre e gastam muito dinheiro para manter um estilo de vida que muitas vezes é insustentável. Se você está procurando sair da corrida dos ratos, aqui estão sugestões de tudo que precisa.</p>
+    
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Insights valiosos sobre como escapar da armadilha da monotonia e criar alternativas significativas.</li>
+                        <li>Descubra como quebrar padrões para trilhar um caminho autêntico para o sucesso.</li>
+                    </ul>
+                    Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/fuja-da-corrida-dos-ratos-wycyt/S80886588R?_hi=eyJjaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJiaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJzaWQiOiIwNmNiMGNkZTQ3OTg0YmJmYWEwMDU0MGQxYjAzOWQwNCJ9.1706996944835"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+            <div class="col-md-6">
+                <img src="Livros/Focus.png" width="50%" alt="Capa do Livro: Como ter Mais Foco e Disciplina">
+            </div>
+    
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🎯 "Como ter Foco e Disciplina: Estratégias para Alcançar Seus Objetivos" 🚀</strong></p>
+                    <p>EbookPlay · 19 de mar de 2023</p>
+    
+                    <p>Em um mundo cheio de distrações, manter o foco e a disciplina é um desafio constante. Se você tem metas pessoais e profissionais que parecem inalcançáveis, meu novo livro é feito para você.</p>
+    
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Profundas reflexões sobre a importância do foco e disciplina.</li>
+                        <li>Estratégias práticas para superar obstáculos e manter a motivação.</li>
+                        <li>Exercícios para aprimorar sua concentração e cultivar a disciplina diária.</li>
+                    </ul>
+                    Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/como-ter-mais-foco-e-disciplina/G80924924U?_hi=eyJjaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJiaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJzaWQiOiIwNmNiMGNkZTQ3OTg0YmJmYWEwMDU0MGQxYjAzOWQwNCJ9.1706997021426"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+            <div class="col-md-6">
+                <img src="Livros/Perseverança.png" width="50%" alt="Perseverança: Um Caminho de Persistência Infinita">
+            </div>
+        
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🌟 "Perseverança: Um Caminho de Persistência Infinita" 🌟</strong></p>
+                    <p>EbookPlay · 18 de mar de 2023</p>
+        
+                    <p>Em meu novo livro, mergulho no poder transformador da perseverança. Ao longo das páginas, descubra histórias inspiradoras, lições valiosas e estratégias práticas para cultivar a persistência em sua jornada.</p>
+        
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Narrativas de resiliência que iluminam o potencial da perseverança.</li>
+                        <li>Dicas para superar desafios e seguir em frente com determinação.</li>
+                        <li>Exercícios práticos para fortalecer sua mentalidade resiliente.</li>
+                    </ul>
+                        Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/perseveranca/U80896336Y?_hi=eyJjaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJiaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJzaWQiOiIwNmNiMGNkZTQ3OTg0YmJmYWEwMDU0MGQxYjAzOWQwNCJ9.1706997402946"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+            <div class="col-md-6">
+                <img src="Livros/The Crypto Code.png" width="50%" alt="O Código Criptográfico: Navegando com Segurança no Mundo das Criptomoedas">
+            </div>
+            
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🔐 "O Código Criptográfico: Navegando com Segurança no Mundo das Criptomoedas" 🚀</strong></p>
+                    <p>EbookPlay · 22 de mar de 2023</p>
+            
+                    <p>Você já se perguntou como se destacar no mercado volátil das criptomoedas? Meu novo livro, "O Código Criptográfico," é seu guia confiável para se tornar um trader de criptomoedas bem-sucedido.</p>
+            
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Uma introdução completa ao The Crypto Code e sua plataforma segura.</li>
+                        <li>Estratégias para navegar pelas flutuações do mercado de criptomoedas.</li>
+                        <li>Dicas para tomar decisões informadas e reduzir riscos.</li>
+                    </ul>
+                            Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/o-codigo-criptografico/L81064574F?_hi=eyJjaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJiaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJzaWQiOiIwNmNiMGNkZTQ3OTg0YmJmYWEwMDU0MGQxYjAzOWQwNCJ9.1706997669242"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Livros/Burnout.png" width="50%" alt="Burnout: A Chama que Consome e Como Preveni-la">
+                </div>
+                
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🔥 "Burnout: A Chama que Consome e Como Preveni-la" 🔥</strong></p>
+                    <p>EbookPlay · 28 de mar de 2023</p>
+                
+                    <p>O burnout, uma chama que consome, é uma realidade enfrentada por muitos em nossa sociedade moderna. Em meu novo livro, explorarei profundamente esse estado de exaustão emocional, fornecendo insights cruciais para a prevenção e tratamento.</p>
+                
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Compreensão detalhada dos sinais de burnout.</li>
+                        <li>Estratégias para indivíduos lidarem com a exaustão emocional.</li>
+                        <li>Um foco especial em como as empresas podem criar ambientes de trabalho saudáveis.</li>
+                    </ul>
+                            Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/burnout/S81306770N?_hi=eyJjaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJiaWQiOiIxNzA0NjU3MDQ3OTkwMTkxMDM1NTA0MTQ2OTU2OTIiLCJzaWQiOiIwNmNiMGNkZTQ3OTg0YmJmYWEwMDU0MGQxYjAzOWQwNCJ9.1706998038323"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Livros/Alpilean.png" width="50%" alt="O Segredo Alpino Para Perda de Peso Saudável">
+                </div>
+                    
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🏔️ "O Segredo Alpino Para Perda de Peso Saudável" 🍃</strong></p>
+                    <p>EbookPlay · 31 de mar de 2023</p>
+                    
+                    <p>Descubra o Alpilean, o segredo alpino que revoluciona a jornada de perda de peso de maneira saudável e natural. Guia completo, repleto de informações essenciais sobre este suplemento alimentar que vai além da simples perda de peso.</p>
+                    
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Detalhes sobre a composição do Alpilean e sua abordagem única.</li>
+                        <li>Como o suplemento pode impulsionar a perda de peso de maneira equilibrada.
+                        <li>Benefícios que vão desde o aumento de energia até a melhoria do humor.</li>
+                    </ul>
+                            Saiba mais <a href="https://alpilean.com/discover/?hop=levilucena"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Livros/A Sorte Favorece os Corajosos.png" width="50%" alt="A Sorte Favorece os Corajosos: Desvendando o Poder do Lema Fortis Fortuna Adiuvat">
+                </div>
+                            
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🌟 "A Sorte Favorece os Corajosos: Desvendando o Poder do Lema Fortis Fortuna Adiuvat" 🌟</strong></p>
+                    <p>EbookPlay · 11 de abr de 2023</p>
+                            
+                    <p>Em meu novo livro, mergulho no significado profundo da expressão em latim "Fortis Fortuna Adiuvat". Este lema, enraizado na história, é mais do que palavras; é uma filosofia que transcende os desafios.</p>
+                            
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Exploração da origem histórica e cultural da frase inspiradora.</li>
+                        <li>Histórias envolventes de indivíduos corajosos que superaram adversidades.</li>
+                        <li>Estratégias práticas para cultivar a coragem e enfrentar desafios com confiança.</li>
+                    </ul>
+                            Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/a-sorte-favorece-os-corajosos/T81805355K"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Livros/Crachá não é legado.png" width="50%" alt="Crachá não é Legado: Além da Carreira em Busca de um Propósito Duradouro">
+                </div>
+                                    
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🌱 "Crachá não é Legado: Além da Carreira em Busca de um Propósito Duradouro" 🌟</strong></p>
+                    <p>EbookPlay · 14 de abr de 2023</p>
+                                    
+                    <p>Em meu novo livro, mergulho na reflexão profunda de como, muitas vezes, as pessoas se perdem na jornada profissional, esquecendo-se de que a vida é vasta e repleta de oportunidades para construir um legado além do crachá.</p>
+                                    
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Experiências e histórias reais de quem superou a identidade ligada ao trabalho.</li>
+                        <li>Estratégias práticas para reconectar-se com interesses pessoais e relacionamentos significativos.</li>
+                        <li>Um guia para descobrir e construir um legado que transcende a carreira.</li>
+                        <li>Aposentadoria ou transições de carreira não precisam ser momentos de perda; podem ser oportunidades.</li>
+                    </ul>
+                            Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/cracha-nao-e-legado/Y81900570R"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Livros/A Superstição do Pombo.png" width="50%" alt="A Superstição do Pombo: Uma Jornada Fascinante pelos Ritos e Reflexões">
+                </div>
+                                            
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🐦 "A Superstição do Pombo: Uma Jornada Fascinante pelos Ritos e Reflexões" 🌌</strong></p>
+                    <p>EbookPlay · 23 de set de 2023</p>
+                                            
+                    <p>Embarque em uma viagem única e cativante através das tramas da superstição com meu novo livro, "A Superstição do Pombo". Descubra como essas crenças profundas, que muitas vezes transcendem as barreiras entre espécies, conectam os pombos e os seres humanos de maneiras surpreendentes.</p>
+                                            
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                    <ul>
+                        <li>Uma exploração aprofundada da psicologia por trás da superstição.</li>
+                        <li>Conexões inusitadas entre comportamentos supersticiosos em humanos e pombos.</li>
+                    </ul>
+                            Saiba mais <a href="https://hotmart.com/pt-br/marketplace/produtos/a-supersticao-do-pombo/H87000067T"> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Livros/Construção.png" width="50%" alt="Abracadabra: Desperte Seus Poderes Curativos">
+                </div>
+                                                    
+            <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>✨ "Abracadabra: Desperte Seus Poderes Curativos" ✨</strong></p>
+                    <p>EbookPlay · (Em fase de revisão)</p>
+                                                    
+                    <p>Este livro aborda sobre uma jornada de autodescoberta e transformação. "Abracadabra" envolve o incrível poder que você tem dentro de si para curar, crescer e criar uma vida extraordinária.</p>
+                                                    
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                        <ul>
+                            <li>Técnicas práticas para fortalecer sua mentalidade.</li>
+                            <li>Exercícios poderosos para promover o autocuidado.</li>
+                            <li>Estratégias para superar desafios e encontrar a cura interior.</li>
+                            <li>Prepare-se para desvendar os mistérios da sua própria magia interior. Esteja pronto para dizer "Abracadabra" e manifestar uma vida cheia de positividade e bem-estar.</li>
+                        </ul>
+                            Saiba mais <a href=""> Clique aqui </a>
+                </div>
+<p><p>
+            <!-- Primeira coluna para a imagem da capa do livro -->
+            <div class="col-md-6">
+                <img src="Livros/Construção.png" width="50%" alt="Abracadabra: Desperte Seus Poderes Curativos">
+            </div>
+                                                
+        <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>🚀 "Despertando a Proatividade: Vencendo a Procrastinação e Alcançando o Sucesso" 🚀</strong></p>
+                    <p>EbookPlay · (Em fase de revisão)</p>
+                                                    
+                    <p>Você já se viu adiando o que sabe ser importante? Se sim, você não está sozinho. Em meu novo livro, mergulho fundo no universo da procrastinação e apresento estratégias práticas para libertar todo o seu potencial.</p>
+                                                    
+                    <p><strong>📘 O que você encontrará:</strong></p>
+                        <ul>
+                            <li>Uma análise abrangente da psicologia por trás da procrastinação.</li>
+                            <li>Revelações sobre as causas subjacentes desse hábito destrutivo.</li>
+                            <li>Inspiradoras histórias de superação e sucesso.</li>
+                            <li>Este não é apenas um livro sobre vencer a procrastinação; é um guia para despertar a sua proatividade e alcançar o sucesso que você merece. Junte-se a mim nesta jornada de autodescoberta e transformação.</li>
+                        </ul>
+                            Saiba mais <a href=""> Clique aqui </a>
+                </div>
+            
+           <!-- Adicione mais livros aqui -->           
+
+            </div>
         </section>
 
         <section id="curriculo">
@@ -70,6 +752,29 @@
         <section id="certificados">
             <h2>Certificados</h2>
             <!-- Seus certificados aqui -->
+
+            <!-- Primeira coluna para a imagem da capa do livro -->
+            <!-- Utilizando a classe 'row' para criar uma nova linha -->
+            <div class="row">
+                <!-- Primeira coluna para a imagem da capa do livro -->
+                <div class="col-md-6">
+                    <img src="Certificados/Oracle/OCIF2023CA.png" width="100%" alt="1Z0-1085-23"><p style="margin-bottom: 5px;"></p>
+                </div>
+    
+                <!-- Segunda coluna para o conteúdo do livro -->
+                <div class="col-md-6 livro">
+                    <p><strong>1Z0-1085-23 - Oracle Cloud Infrastructure 2023 Foundations Associate</strong></p>
+                    <p>jul de 2023</p>
+    
+                    <p>A certificação Oracle Cloud Infrastructure (OCI) Foundations é para indivíduos que pretendem demonstrar conhecimento fundamental de serviços de nuvem pública fornecidos pela Oracle Cloud Infrastructure (OCI). Esta certificação é para candidatos com formação não técnica, como aqueles envolvidos na venda ou aquisição de soluções em nuvem, bem como aqueles com formação técnica que desejam validar seu conhecimento de nível fundamental em torno dos principais serviços OCI.</p>
+    
+                    <p><strong>📘 Este projeto foi desenvolvido usando:</strong></p>
+                    <ul>
+
+                    </ul>
+                    Saiba mais <a href="https://github.com/LeviLucena/vendas"> Clique aqui </a>
+                </div>
+
         </section>
     </div>
 
