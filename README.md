@@ -17,6 +17,6 @@ Para explorar meu portfólio, visite meu [portfólio](https://levilucena.github.
 ## Contato
 Estou sempre aberto a oportunidades de colaboração e novos desafios. Se você estiver interessado em discutir projetos, oportunidades profissionais ou simplesmente compartilhar experiências, não hesite em entrar em contato comigo.
 
-- **LinkedIn:** [https://www.linkedin.com/in/levilucena]
+- **LinkedIn:** [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/levilucena/)](https://www.linkedin.com/in/levilucena/)
 
 Vamos conectar e explorar juntos as possibilidades emocionantes que a área de programação tem a oferecer!
