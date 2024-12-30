@@ -114,6 +114,98 @@
             </a>
             </a>
 
+            <a class="navbar-brand2" href="https://www.paypal.com/donate/?hosted_button_id=58DYCL22CTERG"
+                target="_blank" style="font-size: 14px;">
+                <span class="animated-text">Buy me a coffee!</span>
+                <span class="coffee-container">
+                    <i class="fas fa-coffee coffee-icon"></i>
+                    <span class="steam"></span> <!-- Fumaça alinhada ao ícone -->
+                </span>
+            </a>
+
+            <style>
+                /* Estilo e animação do texto */
+                @keyframes text-fade {
+
+                    0%,
+                    100% {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        opacity: 0.8;
+                        transform: scale(1.05);
+                    }
+                }
+
+                .animated-text {
+                    display: inline-block;
+                    animation: text-fade 2s infinite ease-in-out;
+                    font-size: 14px;
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 600;
+                    color: #6c757d;
+                    margin-right: 5px;
+                }
+
+                .navbar-brand2 {
+                    font-size: 14px;
+                    text-decoration: none;
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                }
+
+                /* Contêiner para alinhar a fumaça com o ícone */
+                .coffee-container {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                /* Animação da fumaça */
+                @keyframes steam-rise {
+                    0% {
+                        opacity: 0.8;
+                        transform: translateY(10px) scale(0.8);
+                    }
+
+                    50% {
+                        opacity: 0.5;
+                        transform: translateY(-10px) scale(1);
+                    }
+
+                    100% {
+                        opacity: 0;
+                        transform: translateY(-20px) scale(1.2);
+                    }
+                }
+
+                .steam {
+                    position: absolute;
+                    top: -19px;
+                    /* Ajuste vertical para a fumaça */
+                    left: 30%;
+                    /* Centraliza horizontalmente em relação ao ícone */
+                    transform: translateX(-50%);
+                    width: 10px;
+                    height: 30px;
+                    background: linear-gradient(to top, rgba(211, 211, 211, 0.3), transparent);
+                    border-radius: 50%;
+                    animation: steam-rise 2s infinite ease-in-out;
+                    pointer-events: none;
+                    /* Evita interferência no clique */
+                }
+
+                .coffee-icon {
+                    color: #D3D3D3;
+                    font-size: 16px;
+                    position: relative;
+                }
+            </style>
+
+
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
