@@ -119,12 +119,11 @@
                 <span class="animated-text">Buy me a coffee!</span>
                 <span class="coffee-container">
                     <i class="fas fa-coffee coffee-icon"></i>
-                    <span class="steam"></span> <!-- Fumaça alinhada ao ícone -->
+                    <span class="steam"></span>
                 </span>
             </a>
 
             <style>
-                /* Estilo e animação do texto */
                 @keyframes text-fade {
 
                     0%,
@@ -142,11 +141,16 @@
                 .animated-text {
                     display: inline-block;
                     animation: text-fade 2s infinite ease-in-out;
-                    font-size: 14px;
+                    font-size: 16px;
+                    /* Aumente o tamanho da fonte */
                     font-family: 'Poppins', sans-serif;
-                    font-weight: 600;
-                    color: #6c757d;
+                    font-weight: 700;
+                    /* Aumente o peso da fonte */
+                    color: #495057;
+                    /* Cor do texto */
                     margin-right: 5px;
+                    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+                    /* Sombra do texto */
                 }
 
                 .navbar-brand2 {
@@ -155,15 +159,21 @@
                     position: relative;
                     display: inline-flex;
                     align-items: center;
+                    background-color: #f8f9fa;
+                    /* Fundo claro */
+                    padding: 5px 10px;
+                    /* Espaçamento interno */
+                    border-radius: 5px;
+                    /* Bordas arredondadas */
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                    /* Sombra do contorno */
                 }
 
-                /* Contêiner para alinhar a fumaça com o ícone */
                 .coffee-container {
                     position: relative;
                     display: inline-block;
                 }
 
-                /* Animação da fumaça */
                 @keyframes steam-rise {
                     0% {
                         opacity: 0.8;
@@ -183,22 +193,19 @@
 
                 .steam {
                     position: absolute;
-                    top: -19px;
-                    /* Ajuste vertical para a fumaça */
-                    left: 30%;
-                    /* Centraliza horizontalmente em relação ao ícone */
+                    top: -24px;
+                    left: 22%;
                     transform: translateX(-50%);
                     width: 10px;
                     height: 30px;
-                    background: linear-gradient(to top, rgba(211, 211, 211, 0.3), transparent);
+                    background: linear-gradient(to top, rgba(255, 107, 107, 0.5), transparent);
                     border-radius: 50%;
                     animation: steam-rise 2s infinite ease-in-out;
                     pointer-events: none;
-                    /* Evita interferência no clique */
                 }
 
                 .coffee-icon {
-                    color: #D3D3D3;
+                    color: #FF6B6B;
                     font-size: 16px;
                     position: relative;
                 }
