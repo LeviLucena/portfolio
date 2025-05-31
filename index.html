@@ -69,6 +69,99 @@
         span {
             text-align: center;
         }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            /* Remove o underline */
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            text-decoration: none;
+            /* Garante que não apareça underline no hover */
+        }
+
+        .whatsapp-float i {
+            margin-top: 5px;
+        }
+
+        /* Para dispositivos móveis */
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 15px;
+                left: 15px;
+            }
+        }
+
+        /* Estilo para o efeito popup */
+        .image-popup-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .thumbnail {
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .thumbnail:hover {
+            border-color: #25d366;
+        }
+
+        .image-popup {
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            background: white;
+            padding: 5px;
+        }
+
+        .image-popup-container:hover .image-popup {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .image-popup img {
+            max-width: 100%;
+            max-height: 80vh;
+            width: auto;
+            height: auto;
+            display: block;
+        }
     </style>
 </head>
 
@@ -79,6 +172,11 @@
         data-client-key="Z29vZ2xlLW9hdXRoMnwxMDQyOTIyNDQyMjc0MjQ3NTU5MDc6WFUxMmVyZVJOUWQtcERsS0g5SXZn"
         data-agent-id="agt_OcBVyouk" data-monitor="true">
         </script>
+
+    <!-- Botão flutuante do WhatsApp -->
+    <a href="https://wa.me/5511990195957" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
 
     <!-- Barra de Navegação -->
@@ -255,16 +353,73 @@
 
                 <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/ClimaBlue_Brasil/1.png" width="100%" alt="ClimaBlue_Brasil">
-                    <img src="Projetos/ClimaBlue_Brasil/2.PNG" width="49%" alt="ClimaBlue_Brasil">
-                    <img src="Projetos/ClimaBlue_Brasil/3.PNG" width="49%" alt="ClimaBlue_Brasil">
-                    <img src="Projetos/ClimaBlue_Brasil/4.PNG" width="49%" alt="ClimaBlue_Brasil">
-                    <img src="Projetos/ClimaBlue_Brasil/5.PNG" width="49%" alt="ClimaBlue_Brasil">
-                    <img src="Projetos/ClimaBlue_Brasil/6.PNG" width="49%" alt="ClimaBlue_Brasil">
-                    <img src="Projetos/ClimaBlue_Brasil/7.PNG" width="49%" alt="ClimaBlue_Brasil">
+                    <!-- Container para a primeira imagem (largura total) -->
+                    <div class="image-popup-container" style="margin-bottom: 15px;">
+                        <img src="Projetos/ClimaBlue_Brasil/1.png" class="thumbnail" width="100%"
+                            alt="ClimaBlue_Brasil">
+                        <div class="image-popup">
+                            <img src="Projetos/ClimaBlue_Brasil/1.png" alt="ClimaBlue_Brasil Ampliada">
+                        </div>
+                    </div>
+
+                    <!-- Containers para as imagens menores (49%) - primeira linha -->
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <!-- Imagem 2 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/ClimaBlue_Brasil/2.PNG" class="thumbnail" width="100%"
+                                alt="ClimaBlue_Brasil">
+                            <div class="image-popup">
+                                <img src="Projetos/ClimaBlue_Brasil/2.PNG" alt="ClimaBlue_Brasil Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 3 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/ClimaBlue_Brasil/3.PNG" class="thumbnail" width="100%"
+                                alt="ClimaBlue_Brasil">
+                            <div class="image-popup">
+                                <img src="Projetos/ClimaBlue_Brasil/3.PNG" alt="ClimaBlue_Brasil Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 4 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/ClimaBlue_Brasil/4.PNG" class="thumbnail" width="100%"
+                                alt="ClimaBlue_Brasil">
+                            <div class="image-popup">
+                                <img src="Projetos/ClimaBlue_Brasil/4.PNG" alt="ClimaBlue_Brasil Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 5 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/ClimaBlue_Brasil/5.PNG" class="thumbnail" width="100%"
+                                alt="ClimaBlue_Brasil">
+                            <div class="image-popup">
+                                <img src="Projetos/ClimaBlue_Brasil/5.PNG" alt="ClimaBlue_Brasil Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 6 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/ClimaBlue_Brasil/6.PNG" class="thumbnail" width="100%"
+                                alt="ClimaBlue_Brasil">
+                            <div class="image-popup">
+                                <img src="Projetos/ClimaBlue_Brasil/6.PNG" alt="ClimaBlue_Brasil Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 7 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/ClimaBlue_Brasil/7.PNG" class="thumbnail" width="100%"
+                                alt="ClimaBlue_Brasil">
+                            <div class="image-popup">
+                                <img src="Projetos/ClimaBlue_Brasil/7.PNG" alt="ClimaBlue_Brasil Ampliada">
+                            </div>
+                        </div>
+                    </div>
 
                     <p style="margin-bottom: 5px;"></p>
-
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -316,16 +471,72 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/AmazonFireGuard/1.png" width="100%" alt="AmazonFireGuard">
-                    <img src="Projetos/AmazonFireGuard/2.png" width="49%" alt="AmazonFireGuard">
-                    <img src="Projetos/AmazonFireGuard/3.png" width="49%" alt="AmazonFireGuard">
-                    <img src="Projetos/AmazonFireGuard/4.png" width="49%" alt="AmazonFireGuard">
-                    <img src="Projetos/AmazonFireGuard/5.png" width="49%" alt="AmazonFireGuard">
-                    <img src="Projetos/AmazonFireGuard/6.png" width="49%" alt="AmazonFireGuard">
-                    <img src="Projetos/AmazonFireGuard/7.png" width="49%" alt="AmazonFireGuard">
+                    <!-- Imagem principal (100% width) -->
+                    <div class="image-popup-container" style="margin-bottom: 15px;">
+                        <img src="Projetos/AmazonFireGuard/1.png" class="thumbnail" width="100%" alt="AmazonFireGuard">
+                        <div class="image-popup">
+                            <img src="Projetos/AmazonFireGuard/1.png" alt="AmazonFireGuard Ampliada">
+                        </div>
+                    </div>
+
+                    <!-- Grupo de imagens menores (49% width) -->
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <!-- Imagem 2 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/AmazonFireGuard/2.png" class="thumbnail" width="100%"
+                                alt="AmazonFireGuard">
+                            <div class="image-popup">
+                                <img src="Projetos/AmazonFireGuard/2.png" alt="AmazonFireGuard Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 3 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/AmazonFireGuard/3.png" class="thumbnail" width="100%"
+                                alt="AmazonFireGuard">
+                            <div class="image-popup">
+                                <img src="Projetos/AmazonFireGuard/3.png" alt="AmazonFireGuard Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 4 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/AmazonFireGuard/4.png" class="thumbnail" width="100%"
+                                alt="AmazonFireGuard">
+                            <div class="image-popup">
+                                <img src="Projetos/AmazonFireGuard/4.png" alt="AmazonFireGuard Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 5 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/AmazonFireGuard/5.png" class="thumbnail" width="100%"
+                                alt="AmazonFireGuard">
+                            <div class="image-popup">
+                                <img src="Projetos/AmazonFireGuard/5.png" alt="AmazonFireGuard Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 6 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/AmazonFireGuard/6.png" class="thumbnail" width="100%"
+                                alt="AmazonFireGuard">
+                            <div class="image-popup">
+                                <img src="Projetos/AmazonFireGuard/6.png" alt="AmazonFireGuard Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 7 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/AmazonFireGuard/7.png" class="thumbnail" width="100%"
+                                alt="AmazonFireGuard">
+                            <div class="image-popup">
+                                <img src="Projetos/AmazonFireGuard/7.png" alt="AmazonFireGuard Ampliada">
+                            </div>
+                        </div>
+                    </div>
 
                     <p style="margin-bottom: 5px;"></p>
-
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -368,16 +579,66 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/IntelliDocAI/6.png" width="100%" alt="IntelliDocAI">
-                    <img src="Projetos/IntelliDocAI/1.png" width="49%" alt="IntelliDocAI">
-                    <img src="Projetos/IntelliDocAI/2.png" width="49%" alt="IntelliDocAI">
-                    <img src="Projetos/IntelliDocAI/3.png" width="49%" alt="IntelliDocAI">
-                    <img src="Projetos/IntelliDocAI/4.png" width="49%" alt="IntelliDocAI">
-                    <img src="Projetos/IntelliDocAI/5.png" width="49%" alt="IntelliDocAI">
-                    <img src="Projetos/IntelliDocAI/7.png" width="49%" alt="IntelliDocAI">
+                    <!-- Imagem principal (100% width) -->
+                    <div class="image-popup-container" style="margin-bottom: 15px;">
+                        <img src="Projetos/IntelliDocAI/6.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                        <div class="image-popup">
+                            <img src="Projetos/IntelliDocAI/6.png" alt="IntelliDocAI Ampliada">
+                        </div>
+                    </div>
+
+                    <!-- Grupo de imagens menores (49% width) -->
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <!-- Imagem 1 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/IntelliDocAI/1.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <div class="image-popup">
+                                <img src="Projetos/IntelliDocAI/1.png" alt="IntelliDocAI Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 2 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/IntelliDocAI/2.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <div class="image-popup">
+                                <img src="Projetos/IntelliDocAI/2.png" alt="IntelliDocAI Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 3 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/IntelliDocAI/3.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <div class="image-popup">
+                                <img src="Projetos/IntelliDocAI/3.png" alt="IntelliDocAI Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 4 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/IntelliDocAI/4.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <div class="image-popup">
+                                <img src="Projetos/IntelliDocAI/4.png" alt="IntelliDocAI Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 5 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/IntelliDocAI/5.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <div class="image-popup">
+                                <img src="Projetos/IntelliDocAI/5.png" alt="IntelliDocAI Ampliada">
+                            </div>
+                        </div>
+
+                        <!-- Imagem 7 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/IntelliDocAI/7.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <div class="image-popup">
+                                <img src="Projetos/IntelliDocAI/7.png" alt="IntelliDocAI Ampliada">
+                            </div>
+                        </div>
+                    </div>
 
                     <p style="margin-bottom: 5px;"></p>
-
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -418,16 +679,52 @@
                 <p>
                 <p>
 
-                    <!-- Primeira coluna para a imagem da capa do livro -->
+                    <!-- WeatherApp Project Gallery Column -->
                 <div class="col-md-6">
-                    <img src="Projetos/weatherapp/1.png" width="100%" alt="WeatherApp">
-                    <img src="Projetos/weatherapp/2.png" width="49%" alt="WeatherApp">
-                    <img src="Projetos/weatherapp/3.PNG" width="49%" alt="WeatherApp">
-                    <img src="Projetos/weatherapp/4.PNG" width="49%" alt="WeatherApp">
-                    <img src="Projetos/weatherapp/5.PNG" width="49%" alt="WeatherApp">
+                    <!-- Main Image (100% width) -->
+                    <div class="image-popup-container" style="margin-bottom: 15px;">
+                        <img src="Projetos/weatherapp/1.png" class="thumbnail" width="100%" alt="WeatherApp">
+                        <div class="image-popup">
+                            <img src="Projetos/weatherapp/1.png" alt="WeatherApp (Expanded View)">
+                        </div>
+                    </div>
+
+                    <!-- Thumbnail Images Grid (49% width each) -->
+                    <div class="d-flex flex-wrap justify-content-between">
+                        <!-- Image 2 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/weatherapp/2.png" class="thumbnail" width="100%" alt="WeatherApp">
+                            <div class="image-popup">
+                                <img src="Projetos/weatherapp/2.png" alt="WeatherApp (Expanded View)">
+                            </div>
+                        </div>
+
+                        <!-- Image 3 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/weatherapp/3.PNG" class="thumbnail" width="100%" alt="WeatherApp">
+                            <div class="image-popup">
+                                <img src="Projetos/weatherapp/3.PNG" alt="WeatherApp (Expanded View)">
+                            </div>
+                        </div>
+
+                        <!-- Image 4 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/weatherapp/4.PNG" class="thumbnail" width="100%" alt="WeatherApp">
+                            <div class="image-popup">
+                                <img src="Projetos/weatherapp/4.PNG" alt="WeatherApp (Expanded View)">
+                            </div>
+                        </div>
+
+                        <!-- Image 5 -->
+                        <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
+                            <img src="Projetos/weatherapp/5.PNG" class="thumbnail" width="100%" alt="WeatherApp">
+                            <div class="image-popup">
+                                <img src="Projetos/weatherapp/5.PNG" alt="WeatherApp (Expanded View)">
+                            </div>
+                        </div>
+                    </div>
 
                     <p style="margin-bottom: 5px;"></p>
-
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
