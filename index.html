@@ -21,148 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- Seu CSS personalizado -->
-    <style>
-        body {
-            padding-top: 56px;
-            /* Altura da barra de navegação */
-            font-family: 'Orbitron', sans-serif;
-            /* Adicionando a fonte Orbitron */
-        }
-
-        /* Adaptação para telas menores */
-        @media (max-width: 992px) {
-            body {
-                padding-top: 0;
-            }
-        }
-
-        /* Estilo do cabeçalho */
-        header {
-            background: #343a40;
-            color: #ffffff;
-            text-align: center;
-            padding: 80px 0;
-        }
-
-        /* Estilo das seções */
-        section {
-            padding: 60px 0;
-        }
-
-        /* Aumentar o tamanho do ícone no cabeçalho */
-        header i {
-            font-size: 2em;
-        }
-
-        .imagem-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        p {
-            text-align: justify;
-        }
-
-        span {
-            text-align: center;
-        }
-
-        .whatsapp-float {
-            position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px #999;
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            /* Remove o underline */
-        }
-
-        .whatsapp-float:hover {
-            background-color: #128C7E;
-            transform: scale(1.1);
-            text-decoration: none;
-            /* Garante que não apareça underline no hover */
-        }
-
-        .whatsapp-float i {
-            margin-top: 5px;
-        }
-
-        /* Para dispositivos móveis */
-        @media screen and (max-width: 767px) {
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 25px;
-                bottom: 15px;
-                left: 15px;
-            }
-        }
-
-        /* Estilo para o efeito popup */
-        .image-popup-container {
-            position: relative;
-            display: inline-block;
-        }
-
-        .thumbnail {
-            cursor: pointer;
-            border: 2px solid #ddd;
-            border-radius: 4px;
-            transition: border-color 0.3s;
-        }
-
-        .thumbnail:hover {
-            border-color: #25d366;
-        }
-
-        .image-popup {
-            position: fixed;
-            z-index: 1000;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            max-width: 90vw;
-            max-height: 90vh;
-            width: auto;
-            height: auto;
-            overflow: hidden;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s, visibility 0.3s;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            border-radius: 4px;
-            background: white;
-            padding: 5px;
-        }
-
-        .image-popup-container:hover .image-popup {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .image-popup img {
-            max-width: 100%;
-            max-height: 80vh;
-            width: auto;
-            height: auto;
-            display: block;
-        }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
@@ -230,93 +89,7 @@
                 </span>
             </a>
 
-            <style>
-                @keyframes text-fade {
-
-                    0%,
-                    100% {
-                        opacity: 1;
-                        transform: scale(1);
-                    }
-
-                    50% {
-                        opacity: 0.8;
-                        transform: scale(1.05);
-                    }
-                }
-
-                .animated-text {
-                    display: inline-block;
-                    animation: text-fade 2s infinite ease-in-out;
-                    font-size: 16px;
-                    /* Aumente o tamanho da fonte */
-                    font-family: 'Poppins', sans-serif;
-                    font-weight: 700;
-                    /* Aumente o peso da fonte */
-                    color: #495057;
-                    /* Cor do texto */
-                    margin-right: 5px;
-                    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
-                    /* Sombra do texto */
-                }
-
-                .navbar-brand2 {
-                    font-size: 14px;
-                    text-decoration: none;
-                    position: relative;
-                    display: inline-flex;
-                    align-items: center;
-                    background-color: #f8f9fa;
-                    /* Fundo claro */
-                    padding: 5px 10px;
-                    /* Espaçamento interno */
-                    border-radius: 5px;
-                    /* Bordas arredondadas */
-                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
-                    /* Sombra do contorno */
-                }
-
-                .coffee-container {
-                    position: relative;
-                    display: inline-block;
-                }
-
-                @keyframes steam-rise {
-                    0% {
-                        opacity: 0.8;
-                        transform: translateY(10px) scale(0.8);
-                    }
-
-                    50% {
-                        opacity: 0.5;
-                        transform: translateY(-10px) scale(1);
-                    }
-
-                    100% {
-                        opacity: 0;
-                        transform: translateY(-20px) scale(1.2);
-                    }
-                }
-
-                .steam {
-                    position: absolute;
-                    top: -24px;
-                    left: 22%;
-                    transform: translateX(-50%);
-                    width: 10px;
-                    height: 30px;
-                    background: linear-gradient(to top, rgba(255, 107, 107, 0.5), transparent);
-                    border-radius: 50%;
-                    animation: steam-rise 2s infinite ease-in-out;
-                    pointer-events: none;
-                }
-
-                .coffee-icon {
-                    color: #FF6B6B;
-                    font-size: 16px;
-                    position: relative;
-                }
-            </style>
+            
 
 
 
@@ -364,9 +137,9 @@
                 <div class="col-md-6">
                     <!-- Container para a primeira imagem (largura total) -->
                     <div class="image-popup-container" style="margin-bottom: 15px;">
-                        <img src="Projetos/JurisGPTAdvisor/1.png" class="thumbnail" width="100%" alt="JurisGPTAdvisor">
+                        <img loading="lazy" src="Projetos/JurisGPTAdvisor/1.png" class="thumbnail" width="100%" alt="JurisGPTAdvisor">
                         <div class="image-popup">
-                            <img src="Projetos/JurisGPTAdvisor/1.png" alt="JurisGPTAdvisor Ampliada">
+                            <img loading="lazy" src="Projetos/JurisGPTAdvisor/1.png" alt="JurisGPTAdvisor Ampliada">
                         </div>
                     </div>
 
@@ -374,37 +147,37 @@
                     <div class="d-flex flex-wrap justify-content-between">
                         <!-- Imagem 2 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/JurisGPTAdvisor/2.PNG.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/JurisGPTAdvisor/2.PNG.png" class="thumbnail" width="100%"
                                 alt="JurisGPTAdvisor">
                             <div class="image-popup">
-                                <img src="Projetos/JurisGPTAdvisor/2.PNG.png" alt="JurisGPTAdvisor Ampliada">
+                                <img loading="lazy" src="Projetos/JurisGPTAdvisor/2.PNG.png" alt="JurisGPTAdvisor Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 3 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/JurisGPTAdvisor/3.PNG" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/JurisGPTAdvisor/3.PNG" class="thumbnail" width="100%"
                                 alt="JurisGPTAdvisor">
                             <div class="image-popup">
-                                <img src="Projetos/JurisGPTAdvisor/3.PNG" alt="JurisGPTAdvisor Ampliada">
+                                <img loading="lazy" src="Projetos/JurisGPTAdvisor/3.PNG" alt="JurisGPTAdvisor Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 4 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/JurisGPTAdvisor/4.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/JurisGPTAdvisor/4.png" class="thumbnail" width="100%"
                                 alt="JurisGPTAdvisor">
                             <div class="image-popup">
-                                <img src="Projetos/JurisGPTAdvisor/4.png" alt="JurisGPTAdvisor Ampliada">
+                                <img loading="lazy" src="Projetos/JurisGPTAdvisor/4.png" alt="JurisGPTAdvisor Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 5 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/JurisGPTAdvisor/5.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/JurisGPTAdvisor/5.png" class="thumbnail" width="100%"
                                 alt="JurisGPTAdvisor">
                             <div class="image-popup">
-                                <img src="Projetos/JurisGPTAdvisor/5.png" alt="JurisGPTAdvisor Ampliada">
+                                <img loading="lazy" src="Projetos/JurisGPTAdvisor/5.png" alt="JurisGPTAdvisor Ampliada">
                             </div>
                         </div>
 
@@ -462,10 +235,10 @@
                 <div class="col-md-6">
                     <!-- Container para a primeira imagem (largura total) -->
                     <div class="image-popup-container" style="margin-bottom: 15px;">
-                        <img src="Projetos/NeoCore_Systems/logo.png" class="thumbnail" width="100%"
+                        <img loading="lazy" src="Projetos/NeoCore_Systems/logo.png" class="thumbnail" width="100%"
                             alt="NeoCore_Systems">
                         <div class="image-popup">
-                            <img src="Projetos/NeoCore_Systems/logo.png" alt="NeoCore_Systems Ampliada">
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/logo.png" alt="NeoCore_Systems Ampliada">
                         </div>
                     </div>
 
@@ -473,91 +246,91 @@
                     <div class="d-flex flex-wrap justify-content-between">
                         <!-- Imagem 2 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/2.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/2.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/2.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/2.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 3 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/10.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/10.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/10.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/10.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 4 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/4.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/4.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/4.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/4.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 5 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/5.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/5.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/5.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/5.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 6 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/6.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/6.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/6.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/6.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 7 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/7.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/7.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/7.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/7.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 8 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/8.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/8.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/8.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/8.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 9 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/9.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/9.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/9.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/9.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 11 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/11.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/11.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/11.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/11.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 12 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/NeoCore_Systems/12.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/NeoCore_Systems/12.png" class="thumbnail" width="100%"
                                 alt="NeoCore_Systems">
                             <div class="image-popup">
-                                <img src="Projetos/NeoCore_Systems/12.png" alt="NeoCore_Systems Ampliada">
+                                <img loading="lazy" src="Projetos/NeoCore_Systems/12.png" alt="NeoCore_Systems Ampliada">
                             </div>
                         </div>
                     </div>
@@ -622,9 +395,9 @@
                 <div class="col-md-6">
                     <!-- Container para a primeira imagem (largura total) -->
                     <div class="image-popup-container" style="margin-bottom: 15px;">
-                        <img src="Projetos/Conecta-Aí/logo.png" class="thumbnail" width="100%" alt="Conecta-Aí">
+                        <img loading="lazy" src="Projetos/Conecta-Aí/logo.png" class="thumbnail" width="100%" alt="Conecta-Aí">
                         <div class="image-popup">
-                            <img src="Projetos/Conecta-Aí/logo.png" alt="Conecta-Aí Ampliada">
+                            <img loading="lazy" src="Projetos/Conecta-Aí/logo.png" alt="Conecta-Aí Ampliada">
                         </div>
                     </div>
 
@@ -632,17 +405,17 @@
                     <div class="d-flex flex-wrap justify-content-between">
                         <!-- Imagem 2 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/Conecta-Aí/7.png" class="thumbnail" width="100%" alt="Conecta-Aí">
+                            <img loading="lazy" src="Projetos/Conecta-Aí/7.png" class="thumbnail" width="100%" alt="Conecta-Aí">
                             <div class="image-popup">
-                                <img src="Projetos/Conecta-Aí/7.png" alt="Conecta-Aí Ampliada">
+                                <img loading="lazy" src="Projetos/Conecta-Aí/7.png" alt="Conecta-Aí Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 8 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/Conecta-Aí/8.png" class="thumbnail" width="100%" alt="Conecta-Aí">
+                            <img loading="lazy" src="Projetos/Conecta-Aí/8.png" class="thumbnail" width="100%" alt="Conecta-Aí">
                             <div class="image-popup">
-                                <img src="Projetos/Conecta-Aí/8.png" alt="Conecta-Aí Ampliada">
+                                <img loading="lazy" src="Projetos/Conecta-Aí/8.png" alt="Conecta-Aí Ampliada">
                             </div>
                         </div>
                     </div>
@@ -698,10 +471,10 @@
                 <div class="col-md-6">
                     <!-- Container para a primeira imagem (largura total) -->
                     <div class="image-popup-container" style="margin-bottom: 15px;">
-                        <img src="Projetos/ClimaBlue_Brasil/1.png" class="thumbnail" width="100%"
+                        <img loading="lazy" src="Projetos/ClimaBlue_Brasil/1.png" class="thumbnail" width="100%"
                             alt="ClimaBlue_Brasil">
                         <div class="image-popup">
-                            <img src="Projetos/ClimaBlue_Brasil/1.png" alt="ClimaBlue_Brasil Ampliada">
+                            <img loading="lazy" src="Projetos/ClimaBlue_Brasil/1.png" alt="ClimaBlue_Brasil Ampliada">
                         </div>
                     </div>
 
@@ -709,55 +482,55 @@
                     <div class="d-flex flex-wrap justify-content-between">
                         <!-- Imagem 2 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/ClimaBlue_Brasil/2.PNG" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/ClimaBlue_Brasil/2.PNG" class="thumbnail" width="100%"
                                 alt="ClimaBlue_Brasil">
                             <div class="image-popup">
-                                <img src="Projetos/ClimaBlue_Brasil/2.PNG" alt="ClimaBlue_Brasil Ampliada">
+                                <img loading="lazy" src="Projetos/ClimaBlue_Brasil/2.PNG" alt="ClimaBlue_Brasil Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 3 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/ClimaBlue_Brasil/3.PNG" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/ClimaBlue_Brasil/3.PNG" class="thumbnail" width="100%"
                                 alt="ClimaBlue_Brasil">
                             <div class="image-popup">
-                                <img src="Projetos/ClimaBlue_Brasil/3.PNG" alt="ClimaBlue_Brasil Ampliada">
+                                <img loading="lazy" src="Projetos/ClimaBlue_Brasil/3.PNG" alt="ClimaBlue_Brasil Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 4 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/ClimaBlue_Brasil/4.PNG" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/ClimaBlue_Brasil/4.PNG" class="thumbnail" width="100%"
                                 alt="ClimaBlue_Brasil">
                             <div class="image-popup">
-                                <img src="Projetos/ClimaBlue_Brasil/4.PNG" alt="ClimaBlue_Brasil Ampliada">
+                                <img loading="lazy" src="Projetos/ClimaBlue_Brasil/4.PNG" alt="ClimaBlue_Brasil Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 5 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/ClimaBlue_Brasil/5.PNG" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/ClimaBlue_Brasil/5.PNG" class="thumbnail" width="100%"
                                 alt="ClimaBlue_Brasil">
                             <div class="image-popup">
-                                <img src="Projetos/ClimaBlue_Brasil/5.PNG" alt="ClimaBlue_Brasil Ampliada">
+                                <img loading="lazy" src="Projetos/ClimaBlue_Brasil/5.PNG" alt="ClimaBlue_Brasil Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 6 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/ClimaBlue_Brasil/6.PNG" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/ClimaBlue_Brasil/6.PNG" class="thumbnail" width="100%"
                                 alt="ClimaBlue_Brasil">
                             <div class="image-popup">
-                                <img src="Projetos/ClimaBlue_Brasil/6.PNG" alt="ClimaBlue_Brasil Ampliada">
+                                <img loading="lazy" src="Projetos/ClimaBlue_Brasil/6.PNG" alt="ClimaBlue_Brasil Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 7 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/ClimaBlue_Brasil/7.PNG" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/ClimaBlue_Brasil/7.PNG" class="thumbnail" width="100%"
                                 alt="ClimaBlue_Brasil">
                             <div class="image-popup">
-                                <img src="Projetos/ClimaBlue_Brasil/7.PNG" alt="ClimaBlue_Brasil Ampliada">
+                                <img loading="lazy" src="Projetos/ClimaBlue_Brasil/7.PNG" alt="ClimaBlue_Brasil Ampliada">
                             </div>
                         </div>
                     </div>
@@ -816,9 +589,9 @@
                 <div class="col-md-6">
                     <!-- Imagem principal (100% width) -->
                     <div class="image-popup-container" style="margin-bottom: 15px;">
-                        <img src="Projetos/AmazonFireGuard/1.png" class="thumbnail" width="100%" alt="AmazonFireGuard">
+                        <img loading="lazy" src="Projetos/AmazonFireGuard/1.png" class="thumbnail" width="100%" alt="AmazonFireGuard">
                         <div class="image-popup">
-                            <img src="Projetos/AmazonFireGuard/1.png" alt="AmazonFireGuard Ampliada">
+                            <img loading="lazy" src="Projetos/AmazonFireGuard/1.png" alt="AmazonFireGuard Ampliada">
                         </div>
                     </div>
 
@@ -826,55 +599,55 @@
                     <div class="d-flex flex-wrap justify-content-between">
                         <!-- Imagem 2 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/AmazonFireGuard/2.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/AmazonFireGuard/2.png" class="thumbnail" width="100%"
                                 alt="AmazonFireGuard">
                             <div class="image-popup">
-                                <img src="Projetos/AmazonFireGuard/2.png" alt="AmazonFireGuard Ampliada">
+                                <img loading="lazy" src="Projetos/AmazonFireGuard/2.png" alt="AmazonFireGuard Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 3 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/AmazonFireGuard/3.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/AmazonFireGuard/3.png" class="thumbnail" width="100%"
                                 alt="AmazonFireGuard">
                             <div class="image-popup">
-                                <img src="Projetos/AmazonFireGuard/3.png" alt="AmazonFireGuard Ampliada">
+                                <img loading="lazy" src="Projetos/AmazonFireGuard/3.png" alt="AmazonFireGuard Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 4 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/AmazonFireGuard/4.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/AmazonFireGuard/4.png" class="thumbnail" width="100%"
                                 alt="AmazonFireGuard">
                             <div class="image-popup">
-                                <img src="Projetos/AmazonFireGuard/4.png" alt="AmazonFireGuard Ampliada">
+                                <img loading="lazy" src="Projetos/AmazonFireGuard/4.png" alt="AmazonFireGuard Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 5 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/AmazonFireGuard/5.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/AmazonFireGuard/5.png" class="thumbnail" width="100%"
                                 alt="AmazonFireGuard">
                             <div class="image-popup">
-                                <img src="Projetos/AmazonFireGuard/5.png" alt="AmazonFireGuard Ampliada">
+                                <img loading="lazy" src="Projetos/AmazonFireGuard/5.png" alt="AmazonFireGuard Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 6 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/AmazonFireGuard/6.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/AmazonFireGuard/6.png" class="thumbnail" width="100%"
                                 alt="AmazonFireGuard">
                             <div class="image-popup">
-                                <img src="Projetos/AmazonFireGuard/6.png" alt="AmazonFireGuard Ampliada">
+                                <img loading="lazy" src="Projetos/AmazonFireGuard/6.png" alt="AmazonFireGuard Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 7 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/AmazonFireGuard/7.png" class="thumbnail" width="100%"
+                            <img loading="lazy" src="Projetos/AmazonFireGuard/7.png" class="thumbnail" width="100%"
                                 alt="AmazonFireGuard">
                             <div class="image-popup">
-                                <img src="Projetos/AmazonFireGuard/7.png" alt="AmazonFireGuard Ampliada">
+                                <img loading="lazy" src="Projetos/AmazonFireGuard/7.png" alt="AmazonFireGuard Ampliada">
                             </div>
                         </div>
                     </div>
@@ -924,9 +697,9 @@
                 <div class="col-md-6">
                     <!-- Imagem principal (100% width) -->
                     <div class="image-popup-container" style="margin-bottom: 15px;">
-                        <img src="Projetos/IntelliDocAI/6.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                        <img loading="lazy" src="Projetos/IntelliDocAI/6.png" class="thumbnail" width="100%" alt="IntelliDocAI">
                         <div class="image-popup">
-                            <img src="Projetos/IntelliDocAI/6.png" alt="IntelliDocAI Ampliada">
+                            <img loading="lazy" src="Projetos/IntelliDocAI/6.png" alt="IntelliDocAI Ampliada">
                         </div>
                     </div>
 
@@ -934,49 +707,49 @@
                     <div class="d-flex flex-wrap justify-content-between">
                         <!-- Imagem 1 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/IntelliDocAI/1.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <img loading="lazy" src="Projetos/IntelliDocAI/1.png" class="thumbnail" width="100%" alt="IntelliDocAI">
                             <div class="image-popup">
-                                <img src="Projetos/IntelliDocAI/1.png" alt="IntelliDocAI Ampliada">
+                                <img loading="lazy" src="Projetos/IntelliDocAI/1.png" alt="IntelliDocAI Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 2 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/IntelliDocAI/2.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <img loading="lazy" src="Projetos/IntelliDocAI/2.png" class="thumbnail" width="100%" alt="IntelliDocAI">
                             <div class="image-popup">
-                                <img src="Projetos/IntelliDocAI/2.png" alt="IntelliDocAI Ampliada">
+                                <img loading="lazy" src="Projetos/IntelliDocAI/2.png" alt="IntelliDocAI Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 3 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/IntelliDocAI/3.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <img loading="lazy" src="Projetos/IntelliDocAI/3.png" class="thumbnail" width="100%" alt="IntelliDocAI">
                             <div class="image-popup">
-                                <img src="Projetos/IntelliDocAI/3.png" alt="IntelliDocAI Ampliada">
+                                <img loading="lazy" src="Projetos/IntelliDocAI/3.png" alt="IntelliDocAI Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 4 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/IntelliDocAI/4.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <img loading="lazy" src="Projetos/IntelliDocAI/4.png" class="thumbnail" width="100%" alt="IntelliDocAI">
                             <div class="image-popup">
-                                <img src="Projetos/IntelliDocAI/4.png" alt="IntelliDocAI Ampliada">
+                                <img loading="lazy" src="Projetos/IntelliDocAI/4.png" alt="IntelliDocAI Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 5 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/IntelliDocAI/5.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <img loading="lazy" src="Projetos/IntelliDocAI/5.png" class="thumbnail" width="100%" alt="IntelliDocAI">
                             <div class="image-popup">
-                                <img src="Projetos/IntelliDocAI/5.png" alt="IntelliDocAI Ampliada">
+                                <img loading="lazy" src="Projetos/IntelliDocAI/5.png" alt="IntelliDocAI Ampliada">
                             </div>
                         </div>
 
                         <!-- Imagem 7 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/IntelliDocAI/7.png" class="thumbnail" width="100%" alt="IntelliDocAI">
+                            <img loading="lazy" src="Projetos/IntelliDocAI/7.png" class="thumbnail" width="100%" alt="IntelliDocAI">
                             <div class="image-popup">
-                                <img src="Projetos/IntelliDocAI/7.png" alt="IntelliDocAI Ampliada">
+                                <img loading="lazy" src="Projetos/IntelliDocAI/7.png" alt="IntelliDocAI Ampliada">
                             </div>
                         </div>
                     </div>
@@ -1026,9 +799,9 @@
                 <div class="col-md-6">
                     <!-- Main Image (100% width) -->
                     <div class="image-popup-container" style="margin-bottom: 15px;">
-                        <img src="Projetos/weatherapp/1.png" class="thumbnail" width="100%" alt="WeatherApp">
+                        <img loading="lazy" src="Projetos/weatherapp/1.png" class="thumbnail" width="100%" alt="WeatherApp">
                         <div class="image-popup">
-                            <img src="Projetos/weatherapp/1.png" alt="WeatherApp (Expanded View)">
+                            <img loading="lazy" src="Projetos/weatherapp/1.png" alt="WeatherApp (Expanded View)">
                         </div>
                     </div>
 
@@ -1036,33 +809,33 @@
                     <div class="d-flex flex-wrap justify-content-between">
                         <!-- Image 2 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/weatherapp/2.png" class="thumbnail" width="100%" alt="WeatherApp">
+                            <img loading="lazy" src="Projetos/weatherapp/2.png" class="thumbnail" width="100%" alt="WeatherApp">
                             <div class="image-popup">
-                                <img src="Projetos/weatherapp/2.png" alt="WeatherApp (Expanded View)">
+                                <img loading="lazy" src="Projetos/weatherapp/2.png" alt="WeatherApp (Expanded View)">
                             </div>
                         </div>
 
                         <!-- Image 3 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/weatherapp/3.PNG" class="thumbnail" width="100%" alt="WeatherApp">
+                            <img loading="lazy" src="Projetos/weatherapp/3.PNG" class="thumbnail" width="100%" alt="WeatherApp">
                             <div class="image-popup">
-                                <img src="Projetos/weatherapp/3.PNG" alt="WeatherApp (Expanded View)">
+                                <img loading="lazy" src="Projetos/weatherapp/3.PNG" alt="WeatherApp (Expanded View)">
                             </div>
                         </div>
 
                         <!-- Image 4 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/weatherapp/4.PNG" class="thumbnail" width="100%" alt="WeatherApp">
+                            <img loading="lazy" src="Projetos/weatherapp/4.PNG" class="thumbnail" width="100%" alt="WeatherApp">
                             <div class="image-popup">
-                                <img src="Projetos/weatherapp/4.PNG" alt="WeatherApp (Expanded View)">
+                                <img loading="lazy" src="Projetos/weatherapp/4.PNG" alt="WeatherApp (Expanded View)">
                             </div>
                         </div>
 
                         <!-- Image 5 -->
                         <div class="image-popup-container" style="width: 49%; margin-bottom: 15px;">
-                            <img src="Projetos/weatherapp/5.PNG" class="thumbnail" width="100%" alt="WeatherApp">
+                            <img loading="lazy" src="Projetos/weatherapp/5.PNG" class="thumbnail" width="100%" alt="WeatherApp">
                             <div class="image-popup">
-                                <img src="Projetos/weatherapp/5.PNG" alt="WeatherApp (Expanded View)">
+                                <img loading="lazy" src="Projetos/weatherapp/5.PNG" alt="WeatherApp (Expanded View)">
                             </div>
                         </div>
                     </div>
@@ -1108,11 +881,11 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Weather_app/1.jpg" width="100%" alt="Weather App">
-                    <img src="Projetos/Weather_app/2.png" width="49%" alt="Weather App">
-                    <img src="Projetos/Weather_app/3.png" width="49%" alt="Weather App">
-                    <img src="Projetos/Weather_app/4.png" width="49%" alt="Weather App">
-                    <img src="Projetos/Weather_app/5.png" width="49%" alt="Weather App">
+                    <img loading="lazy" src="Projetos/Weather_app/1.jpg" width="100%" alt="Weather App">
+                    <img loading="lazy" src="Projetos/Weather_app/2.png" width="49%" alt="Weather App">
+                    <img loading="lazy" src="Projetos/Weather_app/3.png" width="49%" alt="Weather App">
+                    <img loading="lazy" src="Projetos/Weather_app/4.png" width="49%" alt="Weather App">
+                    <img loading="lazy" src="Projetos/Weather_app/5.png" width="49%" alt="Weather App">
 
                     <p style="margin-bottom: 5px;"></p>
 
@@ -1155,7 +928,7 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Firewall_ai/1.png" width="95%" alt="Firewall_ai">
+                    <img loading="lazy" src="Projetos/Firewall_ai/1.png" width="95%" alt="Firewall_ai">
 
                     <p style="margin-bottom: 5px;"></p>
 
@@ -1197,11 +970,11 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/BalancePro/logo.jpeg" width="100%" alt="BalancePro">
-                    <img src="Projetos/BalancePro/1.png" width="49%" alt="BalancePro">
-                    <img src="Projetos/BalancePro/2.png" width="49%" alt="BalancePro">
-                    <img src="Projetos/BalancePro/3.png" width="49%" alt="BalancePro">
-                    <img src="Projetos/BalancePro/4.png" width="49%" alt="BalancePro">
+                    <img loading="lazy" src="Projetos/BalancePro/logo.jpeg" width="100%" alt="BalancePro">
+                    <img loading="lazy" src="Projetos/BalancePro/1.png" width="49%" alt="BalancePro">
+                    <img loading="lazy" src="Projetos/BalancePro/2.png" width="49%" alt="BalancePro">
+                    <img loading="lazy" src="Projetos/BalancePro/3.png" width="49%" alt="BalancePro">
+                    <img loading="lazy" src="Projetos/BalancePro/4.png" width="49%" alt="BalancePro">
 
                     <p style="margin-bottom: 5px;"></p>
 
@@ -1254,12 +1027,12 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Narigudos/nari0.png" width="49%" alt="Softskills0">
-                    <img src="Projetos/Narigudos/nari1.png" width="49%" alt="Softskills1">
-                    <img src="Projetos/Narigudos/nari2.png" width="49%" alt="Softskills2">
-                    <img src="Projetos/Narigudos/nari3.png" width="49%" alt="Softskills2">
-                    <img src="Projetos/Narigudos/nari5.png" width="49%" alt="Softskills2">
-                    <img src="Projetos/Narigudos/nari6.png" width="49%" alt="Softskills2">
+                    <img loading="lazy" src="Projetos/Narigudos/nari0.png" width="49%" alt="Softskills0">
+                    <img loading="lazy" src="Projetos/Narigudos/nari1.png" width="49%" alt="Softskills1">
+                    <img loading="lazy" src="Projetos/Narigudos/nari2.png" width="49%" alt="Softskills2">
+                    <img loading="lazy" src="Projetos/Narigudos/nari3.png" width="49%" alt="Softskills2">
+                    <img loading="lazy" src="Projetos/Narigudos/nari5.png" width="49%" alt="Softskills2">
+                    <img loading="lazy" src="Projetos/Narigudos/nari6.png" width="49%" alt="Softskills2">
 
 
                     <p style="margin-bottom: 5px;"></p>
@@ -1326,10 +1099,10 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Softskills/soft0.png" width="49%" alt="Softskills0">
-                    <img src="Projetos/Softskills/soft3.png" width="49%" alt="Softskills3">
-                    <img src="Projetos/Softskills/soft1.png" width="49%" alt="Softskills1">
-                    <img src="Projetos/Softskills/soft2.png" width="49%" alt="Softskills2">
+                    <img loading="lazy" src="Projetos/Softskills/soft0.png" width="49%" alt="Softskills0">
+                    <img loading="lazy" src="Projetos/Softskills/soft3.png" width="49%" alt="Softskills3">
+                    <img loading="lazy" src="Projetos/Softskills/soft1.png" width="49%" alt="Softskills1">
+                    <img loading="lazy" src="Projetos/Softskills/soft2.png" width="49%" alt="Softskills2">
 
                     <p style="margin-bottom: 5px;"></p>
 
@@ -1392,7 +1165,7 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/NPS/Card0.png" width="100%" alt="Card0">
+                    <img loading="lazy" src="Projetos/NPS/Card0.png" width="100%" alt="Card0">
 
                     <p style="margin-bottom: 5px;"></p>
 
@@ -1431,7 +1204,7 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Jarvis/Jarvis.gif" width="100%" alt="Jarvis">
+                    <img loading="lazy" src="Projetos/Jarvis/Jarvis.gif" width="100%" alt="Jarvis">
                     <p style="margin-bottom: 5px;"></p>
 
                 </div>
@@ -1469,9 +1242,9 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Insights/inicio.png" width="100%" alt="Insights">
+                    <img loading="lazy" src="Projetos/Insights/inicio.png" width="100%" alt="Insights">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Insights/home.png" width="100%" alt="Insights">
+                    <img loading="lazy" src="Projetos/Insights/home.png" width="100%" alt="Insights">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1509,11 +1282,11 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/ICPC/login.png" width="100%" alt="Insights">
+                    <img loading="lazy" src="Projetos/ICPC/login.png" width="100%" alt="Insights">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/ICPC/inicio1.png" width="100%" alt="Insights">
+                    <img loading="lazy" src="Projetos/ICPC/inicio1.png" width="100%" alt="Insights">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/ICPC/inicio2.png" width="100%" alt="Insights">
+                    <img loading="lazy" src="Projetos/ICPC/inicio2.png" width="100%" alt="Insights">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1579,9 +1352,9 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Helodocs/logoHeloDocs.png" width="100%" alt="HeloDocs">
+                    <img loading="lazy" src="Projetos/Helodocs/logoHeloDocs.png" width="100%" alt="HeloDocs">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Helodocs/Screenshot_28.png" width="100%" alt="HeloDocs">
+                    <img loading="lazy" src="Projetos/Helodocs/Screenshot_28.png" width="100%" alt="HeloDocs">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1615,9 +1388,9 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Checkdocs/logo.png" width="100%" alt="Checkdocs">
+                    <img loading="lazy" src="Projetos/Checkdocs/logo.png" width="100%" alt="Checkdocs">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Checkdocs/Screenshot_28.png" width="100%" alt="Checkdocs">
+                    <img loading="lazy" src="Projetos/Checkdocs/Screenshot_28.png" width="100%" alt="Checkdocs">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1651,7 +1424,7 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/NDA/nda.png" width="100%" alt="Checkdocs">
+                    <img loading="lazy" src="Projetos/NDA/nda.png" width="100%" alt="Checkdocs">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1687,11 +1460,11 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/R/R.png" width="100%" alt="Análise de Clima Tempo">
+                    <img loading="lazy" src="Projetos/R/R.png" width="100%" alt="Análise de Clima Tempo">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/R/2.png" width="100%" alt="Análise de Clima Tempo">
+                    <img loading="lazy" src="Projetos/R/2.png" width="100%" alt="Análise de Clima Tempo">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/R/3.png" width="100%" alt="Análise de Clima Tempo">
+                    <img loading="lazy" src="Projetos/R/3.png" width="100%" alt="Análise de Clima Tempo">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1733,15 +1506,15 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Py/1.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Py/1.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Py/2.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Py/2.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Py/4.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Py/4.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Py/2.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Py/2.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Py/3.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Py/3.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1780,13 +1553,13 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Django/1.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Django/1.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Django/2.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Django/2.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Django/6.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Django/6.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Django/8.png" width="100%" alt="Análise de Desempenho de Vendas">
+                    <img loading="lazy" src="Projetos/Django/8.png" width="100%" alt="Análise de Desempenho de Vendas">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1847,14 +1620,14 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Gestão/1.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
+                    <img loading="lazy" src="Projetos/Gestão/1.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Gestão/2.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
-                    <img src="Projetos/Gestão/8.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
+                    <img loading="lazy" src="Projetos/Gestão/2.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
+                    <img loading="lazy" src="Projetos/Gestão/8.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Gestão/11.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
+                    <img loading="lazy" src="Projetos/Gestão/11.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Gestão/12.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
+                    <img loading="lazy" src="Projetos/Gestão/12.png" width="100%" alt="Sistema de Gerenciamento de Projetos">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -1934,13 +1707,13 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/SSL/1.png" width="100%" alt="Certificado SSL Checker">
+                    <img loading="lazy" src="Projetos/SSL/1.png" width="100%" alt="Certificado SSL Checker">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/SSL/3.PNG" width="100%" alt="Certificado SSL Checker">
+                    <img loading="lazy" src="Projetos/SSL/3.PNG" width="100%" alt="Certificado SSL Checker">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/SSL/3.PNG" width="100%" alt="Certificado SSL Checker">
+                    <img loading="lazy" src="Projetos/SSL/3.PNG" width="100%" alt="Certificado SSL Checker">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/SSL/2.png" width="100%" alt="Certificado SSL Checker">
+                    <img loading="lazy" src="Projetos/SSL/2.png" width="100%" alt="Certificado SSL Checker">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -1986,11 +1759,11 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/TI/1.png" width="100%" alt="Gestão de Estoque de TI">
-                    <img src="Projetos/TI/2.png" width="49%" alt="Gestão de Estoque de TI">
-                    <img src="Projetos/TI/3.png" width="49%" alt="Gestão de Estoque de TI">
-                    <img src="Projetos/TI/4.png" width="49%" alt="Gestão de Estoque de TI">
-                    <img src="Projetos/TI/5.png" width="49%" alt="Gestão de Estoque de TI">
+                    <img loading="lazy" src="Projetos/TI/1.png" width="100%" alt="Gestão de Estoque de TI">
+                    <img loading="lazy" src="Projetos/TI/2.png" width="49%" alt="Gestão de Estoque de TI">
+                    <img loading="lazy" src="Projetos/TI/3.png" width="49%" alt="Gestão de Estoque de TI">
+                    <img loading="lazy" src="Projetos/TI/4.png" width="49%" alt="Gestão de Estoque de TI">
+                    <img loading="lazy" src="Projetos/TI/5.png" width="49%" alt="Gestão de Estoque de TI">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -2042,13 +1815,13 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Calendário/3.png" width="100%" alt="Calendário de Eventos">
+                    <img loading="lazy" src="Projetos/Calendário/3.png" width="100%" alt="Calendário de Eventos">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Calendário/2.png" width="100%" alt="Calendário de Eventos">
+                    <img loading="lazy" src="Projetos/Calendário/2.png" width="100%" alt="Calendário de Eventos">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Calendário/4.png" width="100%" alt="Calendário de Eventos">
+                    <img loading="lazy" src="Projetos/Calendário/4.png" width="100%" alt="Calendário de Eventos">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Calendário/5.png" width="100%" alt="Calendário de Eventos">
+                    <img loading="lazy" src="Projetos/Calendário/5.png" width="100%" alt="Calendário de Eventos">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -2105,11 +1878,11 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Mapa/1.png" width="100%" alt="Mapa">
+                    <img loading="lazy" src="Projetos/Mapa/1.png" width="100%" alt="Mapa">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Mapa/2.png" width="100%" alt="Mapa">
+                    <img loading="lazy" src="Projetos/Mapa/2.png" width="100%" alt="Mapa">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Mapa/3.PNG" width="100%" alt="Mapa">
+                    <img loading="lazy" src="Projetos/Mapa/3.PNG" width="100%" alt="Mapa">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -2180,13 +1953,13 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Hemocentros/0.png" width="100%" alt="Hemocentros">
-                    <img src="Projetos/Hemocentros/1.PNG" width="49%" alt="Hemocentros">
-                    <img src="Projetos/Hemocentros/3.png" width="49%" alt="Hemocentros">
-                    <img src="Projetos/Hemocentros/4.5.png" width="49%" alt="Hemocentros">
-                    <img src="Projetos/Hemocentros/5.PNG" width="49%" alt="Hemocentros">
-                    <img src="Projetos/Hemocentros/6.png" width="49%" alt="Hemocentros">
-                    <img src="Projetos/Hemocentros/7.png" width="49%" alt="Hemocentros">
+                    <img loading="lazy" src="Projetos/Hemocentros/0.png" width="100%" alt="Hemocentros">
+                    <img loading="lazy" src="Projetos/Hemocentros/1.PNG" width="49%" alt="Hemocentros">
+                    <img loading="lazy" src="Projetos/Hemocentros/3.png" width="49%" alt="Hemocentros">
+                    <img loading="lazy" src="Projetos/Hemocentros/4.5.png" width="49%" alt="Hemocentros">
+                    <img loading="lazy" src="Projetos/Hemocentros/5.PNG" width="49%" alt="Hemocentros">
+                    <img loading="lazy" src="Projetos/Hemocentros/6.png" width="49%" alt="Hemocentros">
+                    <img loading="lazy" src="Projetos/Hemocentros/7.png" width="49%" alt="Hemocentros">
 
                 </div>
 
@@ -2262,13 +2035,13 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Arbovirose/tela1.png" width="100%" alt="Arbovirose">
-                    <img src="Projetos/Arbovirose/logo artigo.PNG" width="49%" alt="Arbovirose">
-                    <img src="Projetos/Arbovirose/tela2.PNG" width="49%" alt="Arbovirose">
-                    <img src="Projetos/Arbovirose/tela3.PNG" width="49%" alt="Arbovirose">
-                    <img src="Projetos/Arbovirose/tela4.PNG" width="49%" alt="Arbovirose">
-                    <img src="Projetos/Arbovirose/tela5.PNG" width="49%" alt="Arbovirose">
-                    <img src="Projetos/Arbovirose/tela6.PNG" width="49%" alt="Arbovirose">
+                    <img loading="lazy" src="Projetos/Arbovirose/tela1.png" width="100%" alt="Arbovirose">
+                    <img loading="lazy" src="Projetos/Arbovirose/logo artigo.PNG" width="49%" alt="Arbovirose">
+                    <img loading="lazy" src="Projetos/Arbovirose/tela2.PNG" width="49%" alt="Arbovirose">
+                    <img loading="lazy" src="Projetos/Arbovirose/tela3.PNG" width="49%" alt="Arbovirose">
+                    <img loading="lazy" src="Projetos/Arbovirose/tela4.PNG" width="49%" alt="Arbovirose">
+                    <img loading="lazy" src="Projetos/Arbovirose/tela5.PNG" width="49%" alt="Arbovirose">
+                    <img loading="lazy" src="Projetos/Arbovirose/tela6.PNG" width="49%" alt="Arbovirose">
 
                 </div>
 
@@ -2314,13 +2087,13 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Bolsa/0.png" width="100%" alt="Bolsa de Valores">
-                    <img src="Projetos/Bolsa/1.PNG" width="49%" alt="Bolsa de Valores">
-                    <img src="Projetos/Bolsa/2.PNG" width="49%" alt="Bolsa de Valores">
-                    <img src="Projetos/Bolsa/3.PNG" width="49%" alt="Bolsa de Valores">
-                    <img src="Projetos/Bolsa/4.PNG" width="49%" alt="Bolsa de Valores">
-                    <img src="Projetos/Bolsa/5.PNG" width="49%" alt="Bolsa de Valores">
-                    <img src="Projetos/Bolsa/6.PNG" width="49%" alt="Bolsa de Valores">
+                    <img loading="lazy" src="Projetos/Bolsa/0.png" width="100%" alt="Bolsa de Valores">
+                    <img loading="lazy" src="Projetos/Bolsa/1.PNG" width="49%" alt="Bolsa de Valores">
+                    <img loading="lazy" src="Projetos/Bolsa/2.PNG" width="49%" alt="Bolsa de Valores">
+                    <img loading="lazy" src="Projetos/Bolsa/3.PNG" width="49%" alt="Bolsa de Valores">
+                    <img loading="lazy" src="Projetos/Bolsa/4.PNG" width="49%" alt="Bolsa de Valores">
+                    <img loading="lazy" src="Projetos/Bolsa/5.PNG" width="49%" alt="Bolsa de Valores">
+                    <img loading="lazy" src="Projetos/Bolsa/6.PNG" width="49%" alt="Bolsa de Valores">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -2396,9 +2169,9 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Painel/1.png" width="100%" alt="Painel Online - Observatório">
+                    <img loading="lazy" src="Projetos/Painel/1.png" width="100%" alt="Painel Online - Observatório">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Painel/2.png" width="100%" alt="Painel Online - Observatório">
+                    <img loading="lazy" src="Projetos/Painel/2.png" width="100%" alt="Painel Online - Observatório">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -2441,9 +2214,9 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Grafana/1.png" width="100%" alt="Gestão de Tickets OTRS no Grafana">
+                    <img loading="lazy" src="Projetos/Grafana/1.png" width="100%" alt="Gestão de Tickets OTRS no Grafana">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Grafana/2.png" width="100%" alt="Gestão de Tickets OTRS no Grafana">
+                    <img loading="lazy" src="Projetos/Grafana/2.png" width="100%" alt="Gestão de Tickets OTRS no Grafana">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -2483,13 +2256,13 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Arte/2D.png" width="100%" alt="Conceito Arte Central de Serviços">
+                    <img loading="lazy" src="Projetos/Arte/2D.png" width="100%" alt="Conceito Arte Central de Serviços">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Arte/Visão da Mesa.png" width="100%" alt="Conceito Arte Central de Serviços">
+                    <img loading="lazy" src="Projetos/Arte/Visão da Mesa.png" width="100%" alt="Conceito Arte Central de Serviços">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Arte/lousa e TVs.png" width="100%" alt="Conceito Arte Central de Serviços">
+                    <img loading="lazy" src="Projetos/Arte/lousa e TVs.png" width="100%" alt="Conceito Arte Central de Serviços">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/Arte/Impressora.png" width="100%" alt="Conceito Arte Central de Serviços">
+                    <img loading="lazy" src="Projetos/Arte/Impressora.png" width="100%" alt="Conceito Arte Central de Serviços">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -2545,15 +2318,15 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/dokuwiki/1.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
+                    <img loading="lazy" src="Projetos/dokuwiki/1.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/dokuwiki/2.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
+                    <img loading="lazy" src="Projetos/dokuwiki/2.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/dokuwiki/3.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
+                    <img loading="lazy" src="Projetos/dokuwiki/3.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/dokuwiki/7.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
+                    <img loading="lazy" src="Projetos/dokuwiki/7.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
                     <p style="margin-bottom: 5px;"></p>
-                    <img src="Projetos/dokuwiki/8.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
+                    <img loading="lazy" src="Projetos/dokuwiki/8.png" width="100%" alt="Base de Conhecimento na Dokuwiki">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -2667,7 +2440,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Pygame/pygame.png" width="100%" alt="Pygame">
+                    <img loading="lazy" src="Projetos/Pygame/pygame.png" width="100%" alt="Pygame">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -2728,7 +2501,7 @@
             <div class="row">
                 <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Fuja da Corrida dos Ratos.png" width="50%"
+                    <img loading="lazy" src="Livros/Fuja da Corrida dos Ratos.png" width="50%"
                         alt="Capa do Livro: Fuja da Corrida dos Ratos">
                 </div>
 
@@ -2757,7 +2530,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Focus.png" width="50%" alt="Capa do Livro: Como ter Mais Foco e Disciplina">
+                    <img loading="lazy" src="Livros/Focus.png" width="50%" alt="Capa do Livro: Como ter Mais Foco e Disciplina">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -2783,7 +2556,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Perseverança.png" width="50%"
+                    <img loading="lazy" src="Livros/Perseverança.png" width="50%"
                         alt="Perseverança: Um Caminho de Persistência Infinita">
                 </div>
 
@@ -2811,7 +2584,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/The Crypto Code.png" width="50%"
+                    <img loading="lazy" src="Livros/The Crypto Code.png" width="50%"
                         alt="O Código Criptográfico: Navegando com Segurança no Mundo das Criptomoedas">
                 </div>
 
@@ -2840,7 +2613,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Burnout.png" width="50%" alt="Burnout: A Chama que Consome e Como Preveni-la">
+                    <img loading="lazy" src="Livros/Burnout.png" width="50%" alt="Burnout: A Chama que Consome e Como Preveni-la">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -2867,7 +2640,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Alpilean.png" width="50%" alt="O Segredo Alpino Para Perda de Peso Saudável">
+                    <img loading="lazy" src="Livros/Alpilean.png" width="50%" alt="O Segredo Alpino Para Perda de Peso Saudável">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -2891,7 +2664,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/A Sorte Favorece os Corajosos.png" width="50%"
+                    <img loading="lazy" src="Livros/A Sorte Favorece os Corajosos.png" width="50%"
                         alt="A Sorte Favorece os Corajosos: Desvendando o Poder do Lema Fortis Fortuna Adiuvat">
                 </div>
 
@@ -2920,7 +2693,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Crachá não é legado.png" width="50%"
+                    <img loading="lazy" src="Livros/Crachá não é legado.png" width="50%"
                         alt="Crachá não é Legado: Além da Carreira em Busca de um Propósito Duradouro">
                 </div>
 
@@ -2951,7 +2724,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/A Superstição do Pombo.png" width="50%"
+                    <img loading="lazy" src="Livros/A Superstição do Pombo.png" width="50%"
                         alt="A Superstição do Pombo: Uma Jornada Fascinante pelos Ritos e Reflexões">
                 </div>
 
@@ -2979,7 +2752,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Abracadabra_.png" width="50%" alt="Abracadabra: Desperte Seus Poderes Curativos">
+                    <img loading="lazy" src="Livros/Abracadabra_.png" width="50%" alt="Abracadabra: Desperte Seus Poderes Curativos">
                 </div>
 
                 <!-- Segunda coluna para o conteúdo do livro -->
@@ -3005,7 +2778,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Livros/Procrastinação.png" width="50%"
+                    <img loading="lazy" src="Livros/Procrastinação.png" width="50%"
                         alt="Despertando a Proatividade: Vencendo a Procrastinação e Alcançando o Sucesso">
                 </div>
 
@@ -3047,7 +2820,7 @@
 
                 <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Curriculo/Harvard University.png" width="50%"
+                    <img loading="lazy" src="Curriculo/Harvard University.png" width="50%"
                         alt="CS50's Inteligência Artificial com Python">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3081,7 +2854,7 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Curriculo/Harvard University.png" width="50%"
+                    <img loading="lazy" src="Curriculo/Harvard University.png" width="50%"
                         alt="CS50's Introdução à programação com Python">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3114,7 +2887,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Curriculo/Harvard University.png" width="50%"
+                    <img loading="lazy" src="Curriculo/Harvard University.png" width="50%"
                         alt="CS50x: Introdução à Ciência da Computação">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3143,7 +2916,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Curriculo/Harvard University.png" width="50%" alt="PH125.9x Ciência de Dados: Capstone ">
+                    <img loading="lazy" src="Curriculo/Harvard University.png" width="50%" alt="PH125.9x Ciência de Dados: Capstone ">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -3175,7 +2948,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Curriculo/faculdade_impacta.jpeg" width="50%"
+                    <img loading="lazy" src="Curriculo/faculdade_impacta.jpeg" width="50%"
                         alt="Pós Graduação em Engenharia de Software">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3204,7 +2977,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Curriculo/logo-drumond.svg" width="40%"
+                    <img loading="lazy" src="Curriculo/logo-drumond.svg" width="40%"
                         alt="Graduação em Análise e Desenvolvimento de Sistemas">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3234,7 +3007,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Curriculo/etec.png" width="40%" alt=" Administração, Gestão e Negócios">
+                    <img loading="lazy" src="Curriculo/etec.png" width="40%" alt=" Administração, Gestão e Negócios">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
 
@@ -3266,7 +3039,7 @@
 
                 <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Senai/Básico.png" style="margin-left: 130px;" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Senai/Básico.png" style="margin-left: 130px;" width="50%"
                         alt="Nivelamento">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3296,7 +3069,7 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Senai/Nivelamento.png" style="margin-left: 130px;" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Senai/Nivelamento.png" style="margin-left: 130px;" width="50%"
                         alt="Nivelamento">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3326,7 +3099,7 @@
 
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Oracle/OCIF2023CA1.png" style="margin-left: 130px;" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Oracle/OCIF2023CA1.png" style="margin-left: 130px;" width="50%"
                         alt="1Z0-1085-23">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3352,7 +3125,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Oracle/OCDMF20231.png" style="margin-left: 130px;" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Oracle/OCDMF20231.png" style="margin-left: 130px;" width="50%"
                         alt="1Z0-1105-23">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3380,7 +3153,7 @@
                     <!-- Primeira coluna para a imagem da capa do livro -->
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Microsoft/azure-data-fundamentals.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Microsoft/azure-data-fundamentals.png" width="50%"
                         style="margin-left: 130px;" alt="DP-900 Azure Data Fundamentals">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3404,7 +3177,7 @@
                     <!-- Primeira coluna para a imagem da capa do livro -->
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Microsoft/azure-fundamentals.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Microsoft/azure-fundamentals.png" width="50%"
                         style="margin-left: 130px;" alt="AZ-900 Azure Fundamentals">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3429,7 +3202,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Microsoft/Microsoft Ads.png" width="50%" style="margin-left: 130px;"
+                    <img loading="lazy" src="Projetos/Certificados/Microsoft/Microsoft Ads.png" width="50%" style="margin-left: 130px;"
                         alt="Microsoft Advertising Fundamentals">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3454,7 +3227,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Microsoft/Ads Search.png" width="50%" style="margin-left: 130px;"
+                    <img loading="lazy" src="Projetos/Certificados/Microsoft/Ads Search.png" width="50%" style="margin-left: 130px;"
                         alt="Microsoft Advertising Search Certification">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3479,7 +3252,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Microsoft/Ads Shopping.png" width="50%" style="margin-left: 130px;"
+                    <img loading="lazy" src="Projetos/Certificados/Microsoft/Ads Shopping.png" width="50%" style="margin-left: 130px;"
                         alt="Microsoft Advertising Shopping Certification">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3503,7 +3276,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Microsoft/Ads NativeDisplay.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Microsoft/Ads NativeDisplay.png" width="50%"
                         style="margin-left: 130px;" alt="Microsoft Advertising Native & Display Certification">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3527,7 +3300,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Fortinet/cybersecurity.png" width="50%" style="margin-left: 130px;"
+                    <img loading="lazy" src="Projetos/Certificados/Fortinet/cybersecurity.png" width="50%" style="margin-left: 130px;"
                         alt="Fortinet Certified Fundamentals Cybersecurity">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3551,7 +3324,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Fortinet/1-associate-logo.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Fortinet/1-associate-logo.png" width="50%"
                         style="margin-left: 130px;" alt="NSE 1 Network Security Associate">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3575,7 +3348,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Fortinet/2-associate-logo.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Fortinet/2-associate-logo.png" width="50%"
                         style="margin-left: 130px;" alt="NSE 2 Network Security Associate">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3599,7 +3372,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Fortinet/3-associate-logo.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Fortinet/3-associate-logo.png" width="50%"
                         style="margin-left: 130px;" alt="NSE 3 Network Security Associate">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3624,7 +3397,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Fortinet/Getting Started in Cybersecurity 1.0.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Fortinet/Getting Started in Cybersecurity 1.0.png" width="50%"
                         style="margin-left: 130px;" alt="Getting Started in Cybersecurity 1.0">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3648,7 +3421,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Fortinet/Introduction to the Threat Landscape 1.0.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Fortinet/Introduction to the Threat Landscape 1.0.png" width="50%"
                         style="margin-left: 130px;" alt="Introduction to the Threat Landscape 1.0">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3673,7 +3446,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Cloud_Native_Sec_Conf_-_App_Security.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Cloud_Native_Sec_Conf_-_App_Security.png" width="50%"
                         style="margin-left: 130px;" alt="Cloud Native Security Conference - App Security">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3697,7 +3470,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Project Management Essentials.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Project Management Essentials.png" width="50%"
                         style="margin-left: 130px;" alt="Project Management Essentials">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3721,7 +3494,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Data Science for Business - Level 1.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Data Science for Business - Level 1.png" width="50%"
                         style="margin-left: 130px;" alt="Data Science for Business - Level 1">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3745,7 +3518,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Cloud Core.png" width="50%" style="margin-left: 130px;"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Cloud Core.png" width="50%" style="margin-left: 130px;"
                         alt="Cloud Core">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3769,7 +3542,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Building Cloud-Native and Multicloud Applications.png"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Building Cloud-Native and Multicloud Applications.png"
                         width="50%" style="margin-left: 130px;" alt="Building Cloud-Native and Multicloud Applications">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3793,7 +3566,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/IBM Cybersecurity Analyst Professional Certificate.png"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/IBM Cybersecurity Analyst Professional Certificate.png"
                         width="50%" style="margin-left: 130px;" alt="Cybersecurity Analyst Professional Certificate">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3817,7 +3590,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Cybersecurity Breach Case Studies.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Cybersecurity Breach Case Studies.png" width="50%"
                         style="margin-left: 130px;" alt="Cybersecurity Breach Case Studies">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3843,7 +3616,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Penetration Testing, Incident Response and Forensics.png"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Penetration Testing, Incident Response and Forensics.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Penetration Testing, Incident Response and Forensics">
                     <p style="margin-bottom: 5px;"></p>
@@ -3868,7 +3641,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Cybersecurity Compliance Framework & System Administration.png"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Cybersecurity Compliance Framework & System Administration.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Cybersecurity Compliance Framework & System Administration">
                     <p style="margin-bottom: 5px;"></p>
@@ -3893,7 +3666,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Cybersecurity Roles, Processes & Operating System Security.png"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Cybersecurity Roles, Processes & Operating System Security.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Cybersecurity Roles, Processes & Operating System Security">
                     <p style="margin-bottom: 5px;"></p>
@@ -3919,7 +3692,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Cyber Threat Intelligence.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Cyber Threat Intelligence.png" width="50%"
                         style="margin-left: 130px;" alt="Cyber Threat Intelligence">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3945,7 +3718,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Network Security & Database Vulnerabilities.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Network Security & Database Vulnerabilities.png" width="50%"
                         style="margin-left: 130px;" alt="Network Security & Database Vulnerabilities">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -3968,7 +3741,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/IBM/Introduction to Cybersecurity Tools & Cyber Attacks.png"
+                    <img loading="lazy" src="Projetos/Certificados/IBM/Introduction to Cybersecurity Tools & Cyber Attacks.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Introduction to Cybersecurity Tools & Cyber Attacks">
                     <p style="margin-bottom: 5px;"></p>
@@ -3994,7 +3767,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Lean Six Sigma White Belt Professional Certification - LSSWBPC.png"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Lean Six Sigma White Belt Professional Certification - LSSWBPC.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Lean Six Sigma White Belt Professional Certification - LSSWBPC">
                     <p style="margin-bottom: 5px;"></p>
@@ -4020,7 +3793,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Business Intelligence Foundation Professional Certification - BIFPC™.png"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Business Intelligence Foundation Professional Certification - BIFPC™.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Business Intelligence Foundation Professional Certification - BIFPC™">
                     <p style="margin-bottom: 5px;"></p>
@@ -4047,7 +3820,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Business Model Canvas Essentials Professional Certification - BMCEPC™.png"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Business Model Canvas Essentials Professional Certification - BMCEPC™.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Business Model Canvas Essentials Professional Certification - BMCEPC™">
                     <p style="margin-bottom: 5px;"></p>
@@ -4073,7 +3846,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Remote Work Professional Certification - RWPC™.png"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Remote Work Professional Certification - RWPC™.png"
                         width="50%" style="margin-left: 130px;" alt="Remote Work Professional Certification - RWPC™">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -4098,7 +3871,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Scrum Foundation Professional Certification - SFPC™.png"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Scrum Foundation Professional Certification - SFPC™.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Scrum Foundation Professional Certification - SFPC™">
                     <p style="margin-bottom: 5px;"></p>
@@ -4123,7 +3896,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Kanban Essentials Professional Certification - KEPC.png"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Kanban Essentials Professional Certification - KEPC.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Kanban Essentials Professional Certification - KEPC™">
                     <p style="margin-bottom: 5px;"></p>
@@ -4148,7 +3921,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™.png"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™.png"
                         width="50%" style="margin-left: 130px;"
                         alt="Fundamentos Na Lei Geral De Proteção De Dados - LGPD™">
                     <p style="margin-bottom: 5px;"></p>
@@ -4174,7 +3947,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Certiprof/Lifelong Learning.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Certiprof/Lifelong Learning.png" width="50%"
                         style="margin-left: 130px;" alt="Lifelong Learning">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -4199,7 +3972,7 @@
                 <p>
                     <!-- Primeira coluna para a imagem da capa do livro -->
                 <div class="col-md-6">
-                    <img src="Projetos/Certificados/Cisco/Introduction to IoT.png" width="50%"
+                    <img loading="lazy" src="Projetos/Certificados/Cisco/Introduction to IoT.png" width="50%"
                         style="margin-left: 130px;" alt="Introduction to IoT">
                     <p style="margin-bottom: 5px;"></p>
                 </div>
@@ -4226,6 +3999,7 @@
 
     <!-- Bootstrap JS (opcional, necessário para funcionalidades como o menu responsivo) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 
 </html>

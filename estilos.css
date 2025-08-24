@@ -1,0 +1,225 @@
+body {
+            padding-top: 56px;
+            /* Altura da barra de navegação */
+            font-family: 'Orbitron', sans-serif;
+            /* Adicionando a fonte Orbitron */
+        }
+
+        /* Adaptação para telas menores */
+        @media (max-width: 992px) {
+            body {
+                padding-top: 0;
+            }
+        }
+
+        /* Estilo do cabeçalho */
+        header {
+            background: #343a40;
+            color: #ffffff;
+            text-align: center;
+            padding: 80px 0;
+        }
+
+        /* Estilo das seções */
+        section {
+            padding: 60px 0;
+        }
+
+        /* Aumentar o tamanho do ícone no cabeçalho */
+        header i {
+            font-size: 2em;
+        }
+
+        .imagem-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        p {
+            text-align: justify;
+        }
+
+        span {
+            text-align: center;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            /* Remove o underline */
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+            text-decoration: none;
+            /* Garante que não apareça underline no hover */
+        }
+
+        .whatsapp-float i {
+            margin-top: 5px;
+        }
+
+        /* Para dispositivos móveis */
+        @media screen and (max-width: 767px) {
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 15px;
+                left: 15px;
+            }
+        }
+
+        /* Estilo para o efeito popup */
+        .image-popup-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .thumbnail {
+            cursor: pointer;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            transition: border-color 0.3s;
+        }
+
+        .thumbnail:hover {
+            border-color: #25d366;
+        }
+
+        .image-popup {
+            position: fixed;
+            z-index: 1000;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            max-width: 90vw;
+            max-height: 90vh;
+            width: auto;
+            height: auto;
+            overflow: hidden;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s, visibility 0.3s;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+            background: white;
+            padding: 5px;
+        }
+
+        .image-popup-container:hover .image-popup {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .image-popup img {
+            max-width: 100%;
+            max-height: 80vh;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+@keyframes text-fade {
+
+                    0%,
+                    100% {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+
+                    50% {
+                        opacity: 0.8;
+                        transform: scale(1.05);
+                    }
+                }
+
+                .animated-text {
+                    display: inline-block;
+                    animation: text-fade 2s infinite ease-in-out;
+                    font-size: 16px;
+                    /* Aumente o tamanho da fonte */
+                    font-family: 'Poppins', sans-serif;
+                    font-weight: 700;
+                    /* Aumente o peso da fonte */
+                    color: #495057;
+                    /* Cor do texto */
+                    margin-right: 5px;
+                    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+                    /* Sombra do texto */
+                }
+
+                .navbar-brand2 {
+                    font-size: 14px;
+                    text-decoration: none;
+                    position: relative;
+                    display: inline-flex;
+                    align-items: center;
+                    background-color: #f8f9fa;
+                    /* Fundo claro */
+                    padding: 5px 10px;
+                    /* Espaçamento interno */
+                    border-radius: 5px;
+                    /* Bordas arredondadas */
+                    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+                    /* Sombra do contorno */
+                }
+
+                .coffee-container {
+                    position: relative;
+                    display: inline-block;
+                }
+
+                @keyframes steam-rise {
+                    0% {
+                        opacity: 0.8;
+                        transform: translateY(10px) scale(0.8);
+                    }
+
+                    50% {
+                        opacity: 0.5;
+                        transform: translateY(-10px) scale(1);
+                    }
+
+                    100% {
+                        opacity: 0;
+                        transform: translateY(-20px) scale(1.2);
+                    }
+                }
+
+                .steam {
+                    position: absolute;
+                    top: -24px;
+                    left: 22%;
+                    transform: translateX(-50%);
+                    width: 10px;
+                    height: 30px;
+                    background: linear-gradient(to top, rgba(255, 107, 107, 0.5), transparent);
+                    border-radius: 50%;
+                    animation: steam-rise 2s infinite ease-in-out;
+                    pointer-events: none;
+                }
+
+                .coffee-icon {
+                    color: #FF6B6B;
+                    font-size: 16px;
+                    position: relative;
+                }
