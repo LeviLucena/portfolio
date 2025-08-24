@@ -1,22 +1,36 @@
-# github.io - Portfólio
+# 💼 Portfólio - Levi Lucena
 
-![image](https://github.com/LeviLucena/github.io/assets/34045910/445f9cce-a7b6-44b5-98b5-5e28f0c9a8b0)
+![Banner](https://github.com/LeviLucena/github.io/assets/34045910/445f9cce-a7b6-44b5-98b5-5e28f0c9a8b0)
 
-## Objetivo
-Meu objetivo é destacar meu comprometimento com a excelência e inovação, proporcionando a você uma visão abrangente das minhas habilidades e conhecimentos na área.
+---
 
-## O Que Você Encontrará no Meu Portfólio
-- **Projetos:** Uma variedade de projetos que demonstrem minha experiência e habilidades.
-- **Certificações:** Informações sobre certificações relevantes que obtive ao longo da minha carreira.
-- **Formação Acadêmica:** Detalhes sobre minha formação educacional.
-- **Contato:** Como entrar em contato comigo para oportunidades de colaboração e novos desafios.
+## 🎯 Objetivo
+Este portfólio foi criado para apresentar minha trajetória, projetos e conquistas na área de **Tecnologia, Inteligência Artificial e Desenvolvimento Full Stack**.  Meu foco é **transformar ideias em soluções escaláveis, inteligentes e de impacto real**, sempre unindo inovação, performance e experiência do usuário.
 
-## Como Acessar Meu Portfólio
-Para explorar meu portfólio, visite meu [portfólio](https://levilucena.github.io/github.io/). Sinta-se à vontade para navegar pelas seções e conhecer mais sobre minha jornada na área de programação.
+---
 
-## Contato
-Estou sempre aberto a oportunidades de colaboração e novos desafios. Se você estiver interessado em discutir projetos, oportunidades profissionais ou simplesmente compartilhar experiências, não hesite em entrar em contato comigo.
+## 📂 O que você encontrará aqui
+✨ **Projetos Reais** – Aplicações, APIs e sistemas desenvolvidos com foco em performance, AI e boas práticas de arquitetura.  
+📜 **Certificações** – Badges e conquistas que comprovam minha atualização constante no setor.  
+🎓 **Formação Acadêmica** – Minha base de estudos em Administração, Tecnologia e Data Science.  
+🤝 **Contato & Redes** – Meios para se conectar comigo, trocar ideias ou iniciar uma colaboração.
 
-- **LinkedIn:** [![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/levilucena/)](https://www.linkedin.com/in/levilucena/)
+---
 
-Vamos conectar e explorar juntos as possibilidades emocionantes que a área de programação tem a oferecer!
+## 🌐 Acesse meu portfólio
+🔗 [Clique aqui para explorar meu portfólio](https://levilucena.github.io/github.io/)  
+
+Navegue pelas seções e conheça melhor minha jornada, projetos e áreas de especialização.
+
+---
+
+## 📬 Contato & Conexões
+Estou sempre aberto a **novos desafios, colaborações e oportunidades**.  
+Sinta-se à vontade para entrar em contato:
+
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/levilucena/)  
+
+---
+
+🚀 **Vamos construir o futuro juntos!**  
+Seja através de **IA, sistemas inteligentes ou soluções digitais**, acredito que a tecnologia deve sempre gerar **valor e impacto positivo**.
