@@ -3,11 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Levi Lucena - Portfolio IDE</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self' data: https:;">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome/all.min.css">
 </head>
 
 <body class="vscode-dark">
@@ -50,6 +48,9 @@
                 </div>
                 <div class="activity-icon" data-tab="extensions">
                     <i class="fas fa-puzzle-piece"></i>
+                </div>
+                <div class="activity-icon" data-tab="ai">
+                    <i class="fas fa-robot"></i>
                 </div>
                 <div class="activity-icon" data-tab="theme-toggle">
                     <i class="fas fa-adjust"></i>
@@ -121,6 +122,28 @@
                             <button class="git-btn">Stash</button>
                             <button class="git-btn">Commit</button>
                             <button class="git-btn">Push</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel" data-panel="ai">
+                    <div class="panel-header">
+                        <span>ASSISTENTE DE IA</span>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="ai-chat-container">
+                        <div class="ai-chat-messages" id="aiChatMessages">
+                            <div class="ai-message">
+                                <div class="ai-avatar">🤖</div>
+                                <div class="ai-message-content">
+                                    <p>Olá! Sou o assistente de IA de Levi Lucena.</p>
+                                    <p>Pergunte-me sobre meus projetos, habilidades ou experiências com inteligência artificial!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ai-chat-input">
+                            <input type="text" id="aiChatInput" placeholder="Digite sua pergunta sobre IA, projetos ou habilidades...">
+                            <button id="aiSendMessage"><i class="fas fa-paper-plane"></i></button>
                         </div>
                     </div>
                 </div>
