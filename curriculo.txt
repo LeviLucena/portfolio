@@ -1,0 +1,252 @@
+Levi Gustavo Oliveira Lucena
+Brazilian, Single, 38 years old
+Address: R. Clarear, 398, Jardim São Carlos – São Paulo, SP – ZIP: 08062-590
+Whatsapp: +55 11990195957 | E-mail: sr_lucen@yahoo.com.br
+LinkedIn: https://www.linkedin.com/in/levilucena
+Portfólio: https://levilucena.github.io/portfolio
+Main Qualifications / Summary
+• Over 3 years of hands-on experience working with AI solutions, process automation, and 
+data   analysis,   with   projects   in   the   public   sector   (healthcare),   private   sector   (legal   and 
+customer service), and technology. 
+• Specializing   in   Generative   AI   and   developing   intelligent   agents   using   Large   Language 
+Models (LLMs) such as GPT, Hugging Face, LangChain, and working on projects involving 
+Prompt Engineering, YOLO (You Only Look Once), OCR (Optical Character Recognition), 
+NLP   (Natural   Language   Processing),   embeddings,   RAG   (Retrieval-Augmented 
+Generation), RESTful APIs, and automated workflows.
+• Proficient   Python   developer   with   solid   experience   in   frameworks   like   Flask,   FastAPI, 
+Streamlit, Dash, and Django, as well as data manipulation with Pandas and NumPy, and 
+integration with relational databases (PostgreSQL, MySQL, SQLite) and vector databases 
+(FAISS, Supabase).
+• Developed solutions with OCR, NLP, and computer vision (YOLOv8, Pytesseract, OpenCV) 
+applied to document automation and image analysis.
+• Experienced   in   ETL   (Extract,   Transform,   Load)   pipelines,   data   transformation   and 
+enrichment   in   controlled   environments,   with   a   focus   on   information   security   (LGPD,   ISO 
+27001).
+• Created and managed analytical dashboards using Power BI, Grafana, and visualizations 
+with Plotly and Chart.js, focusing on operational and strategic KPIs.
+• Follow   best   practices   in   version   control   (Git),   technical   documentation,   and   project 
+organization, emphasizing standardization, collaboration, and technical governance.
+• Worked on end-to-end projects, from solution architecture to production deployment, with a 
+focus on real impact and scalability.
+• Collaborative,   self-taught,   solutions-oriented   professional   with   strong   alignment   between 
+technology and business needs.
+Academic Background
+•Technical Course: Business Administration – ETEC Centro Paula Souza, 2013 
+•Graduation: Systems Analysis and Development – Faculdade Drummond, 2016 
+•Post-Graduation: Software Engineering – Faculdade Impacta, 2018 
+•Specialization: Computer Science – Harvard University, 2023
+•Specialization: Data Science – Harvard University, 2023
+•Specialization: Programming with Python – Harvard University, 2024
+•Specialization: Artificial Intelligence with Python – Harvard University, 2025 
+Professional Background
+Stefanini IT Solutions (Feb/23 - Mar/25) 2 year and 1  month
+Global IT and Digital Transformation Company (35,000+ employees) 
+Position: AI Solutions Specialist – Generative AI 
+•   Developed   and   deployed   intelligent   solutions   with   AI-connected   agents   using   natural 
+language processing models such as OpenAI,  Gemini, Hugging Face,  Qwen, and Groq, 
+focused   on   process   automation,   smart   customer   service,   legal   products,   and   healthcare  
+applications.
+• Automated operational workflows using Python, Flask, Streamlit, and Dash, integrating AI 
+agents   via   APIs   with   customized   prompts   and   scripts   aligned   with   business   objectives.
+• Created intelligent agents utilizing LangChain, RAG, embeddings, and workflows in n8n, 
+REST APIs, and vector databases (FAISS, Supabase). 
+Stefanini IT Solutions (Nov/22 - Feb/23) 3 month
+Global IT and Digital Transformation Company (35,000+ employees) 
+Position: Process Analyst 
+• Conducted time and motion studies, mapped activity workflows, and identified bottlenecks 
+to develop strategies for problem resolution and continuous process improvement.
+•   Prepared   reports   on   key   performance   indicators,   metrics,   and   dashboards   using   tools 
+such as Power BI, Grafana, and Excel.
+• Provided clarifications and conducted training sessions on developed processes to share  
+knowledge and align team understanding. 
+Stefanini IT Solutions (Nov/22 - Feb/23) 1 year
+Global IT and Digital Transformation Company (35,000+ employees)
+Position: IT Support Analyst 
+• Provided support for the installation and configuration of IT equipment in networked and  
+operating   system   environments.   Developed   procedures   for   managing   implemented 
+solutions,   including   troubleshooting   issues   and   incidents,   as   well   as   creating   operational 
+documentation.
+•   Managed   technical   support   tickets,   created   dashboards   and   reports   to   monitor  
+performance   metrics.   Identified   activities   suitable   for   automation   and   proposed   tools   to 
+streamline these processes.
+•   Proficient   in   installing,   configuring,   and   customizing   software   and   products   on 
+workstations,   with   experience   in   Windows   OS   infrastructure   (Active   Directory)   and   Linux 
+(application deployment on servers). 
+Projects
+• JurisGPT Advisor – AI-powered Legal Assistant  https://jurisgpt-advisor.com/
+Description: Simulates   the   role   of   a   virtual   lawyer   using   large   language   models   (GPT-4),   with 
+automatic   classification   of   legal   areas,   accessible   language,   and   support   across   multiple   legal 
+fields. Developed as a responsive SaaS solution aimed at professionals, students, and citizens.
+Areas   Worked   On: Digital   law,   corporate   legal   affairs,   UX   design,   generative   AI,   semantic 
+classification.
+Level of Influence: Original project with direct applications in legaltech, digital legal services, and 
+automation of legal responses.
+Stakeholders: Developed   individually,   with   end-to-end   involvement   from   architecture   to 
+deployment.
+Integrated Technologies: React   +   TypeScript   +   Vite   (high-performance   frontend),   shadcn/ui   + 
+Tailwind CSS (modern and accessible styling), OpenAI GPT-4 (generative AI for legal responses), 
+SQLite (local persistence and history management), NLP classifier for semantic detection of legal 
+areas.
+Solution   Scope: Local   with   SaaS   focus,   scalable   for   law   firms,   universities,   and   digital   legal 
+service platforms.
+• IntelliDoc AI – Intelligent Document Analysis with OCR and RAG
+https://github.com/LeviLucena/IntellidocAI
+Description:  Designed   for   legal   and   administrative   records,   incorporating   OCR,   Retrieval-
+Augmented Generation (RAG), NLP, and GPT integration.
+Areas Worked On: Legal, governance, back-office automation, IT.
+Level of Influence: Personal project with real-world applications; potential adoption by law firms 
+and analysts.
+Stakeholders: Developed   individually,   with   end-to-end   ownership   from   architecture   to 
+deployment.
+Integrated Technologies: Python, Streamlit, LangChain, Tesseract, Hugging Face, FAISS.
+Solution Scope: Local/Regional, with potential for broader application in legal and administrative 
+sectors.
+• Clima Blue – Intelligent Weather Forecast System for Agriculture 
+https://github.com/LeviLucena/ClimaBlue_Brasil
+Description:  A   system   of   meteograms   designed   to   support   decision-making   in   agriculture, 
+featuring an interactive web interface, segmented weather forecasts, and reliable meteorological 
+data for applications in irrigation, harvesting, spraying, and crop management.
+Areas Worked On: Agriculture, meteorology, environmental data, automation, web systems.
+Level of Influence: Solo project with potential for corporate use within the agricultural sector.
+Stakeholders: Developed   individually,   with   end-to-end   involvement   from   architecture   to 
+deployment.
+Integrated   Technologies: Python   (main   language),   Flask   (web   backend),   Meteoblue   API 
+(external weather data), Jinja2 (dynamic templates), Docker (packaging and deployment), Dotenv  
+(environment variables for security).
+Solution Scope: Local/Regional,   with   scalability   potential   in   cooperatives   and   internal   systems 
+supporting agriculture.
+• AmazonFireGuard – Amazon Fire Monitoring System 
+https://github.com/LeviLucena/amazonfireguard
+Description:  Monitoring   System: An   intelligent   environmental   alert   system   focused   on   forest 
+fires in the Amazon, integrating public data sources (NASA, INPE) with predictive AI.
+Areas Worked On: Environment, geoprocessing, public data, security.
+Level of Influence: Strategic – an educational, analytical, and advocacy tool.
+Stakeholders: Developed   individually,   with   end-to-end   involvement   from   architecture   to 
+deployment.
+Integrated Technologies: Public APIs, Python, Dash, Plotly, n8n, pandas, Mapbox.
+Solution Scope: Global (using international data with a local/regional interface).
+• Hemocenters – Blood Stock Management System 
+https://github.com/LeviLucena/hemocentro
+Description: A comprehensive web-based system for managing and monitoring blood stocks in 
+hemocenters, featuring dynamic visualizations, user authentication, and analytical functionalities to  
+support strategic public health decision-making.
+Areas Worked On: Public health, blood banks, hospital management, data analysis.
+Level of Influence: Technical and strategic – a system with potential use in regional and hospital 
+networks.
+Stakeholders: Developed   individually,   with   end-to-end   involvement   from   architecture   to 
+deployment.
+Integrated Technologies: Backend and Framework: Python, Django (MVC structure). Database: 
+PostgreSQL   (relational   database).   Frontend:   Bootstrap,   jQuery,   DataTables   (responsive   and 
+dynamic   front-end).   Data   Visualization:   Chart.js.   Deployment:   Gunicorn   (for   production 
+deployment)
+Solution Scope: Local, with potential application in public and private blood collection/transfusion 
+units.
+• HealthCare – Hospital Bed Management System 
+https://github.com/LeviLucena/DjangoLivre 
+Description: A web platform developed for hospital monitoring and management, enabling real-
+time tracking of bed occupancy in healthcare units. The solution offers comprehensive registration 
+of   hospitals,   patients,   and   medical   records,   along   with   interactive   maps,  dashboards,   and 
+analytical report generation.
+Areas Worked On: Public health, hospital management, data visualization, operational analysis, 
+web systems.
+Level of Influence: Technical project with high potential for institutional use in public and private 
+health networks, focused on organizing and visualizing hospital occupancy.
+Stakeholders: Developed   independently,   with   end-to-end   involvement   from   data   modeling   to 
+interface design and local deployment.
+Integrated   Technologies:  Back-end   and   Business   Logic:   Python,   Django   (MVC   framework). 
+SQLite   (lightweight   relational   database).   Frontend:   HTML/CSS,   Bootstrap,   JavaScript,   jQuery, 
+DataTables. Data Visualization and UX: Interactive bed maps, analytical dashboards, PDF reports.  
+Other   Features:   Faker   (for   generating   dummy   data),   Font   Awesome   (vector   icons),   user 
+authentication, and custom templates
+Solution Scope: Local/Regional – with potential application in hospital units, health networks, and 
+public real-time hospital monitoring projects.
+Technical Skills
+Programming   Languages:  Python   (main   language),   JavaScript/TypeScript   (for   React 
+applications), PHP (legacy and web solutions), SQL (PostgreSQL, SQLite, MySQL)
+Python   Frameworks   &   Libraries:  FastAPI,   Flask,   Django,   Streamlit,   Dash,   Pandas,   NumPy, 
+Scikit-learn, SQLAlchemy, Plotly, Chart.js, LangChain
+Artificial   Intelligence   and   Generative   AI:  LLM   models   (GPT-4,   Gemini,   PaLM,   DeepSeek), 
+embeddings   (OpenAI,   FAISS,   Supabase),   RAG   (Retrieval-Augmented   Generation),   NLP, 
+semantic classification, OCR (Tesseract), prompt engineering, agents with LangChain and n8n
+Databases & Storage:  PostgreSQL,   SQLite,   Supabase   (relational   and   vector),   MySQL,   query 
+structuring, semantic vector integration, data pipelines, session history
+Visualization & Business Intelligence: Power BI, Grafana, Streamlit, Dash, DataTables, Plotly – 
+dashboards for public health, legal, operational analysis, and performance indicators
+Automation   &   Orchestration:  n8n   (low-code   for   API,   WhatsApp,   OCR,   voice   integrations), 
+Google   Speech-to-Text,   AI-driven   flow   automation,   fallback   mechanisms,   context   and   memory 
+control
+Infrastructure   &   DevOps:  Git/GitHub   (version   control),   Markdown/OpenAPI   documentation, 
+environment variables (.env), API security, best practices in modularization, Uvicorn (ASGI server  
+for asynchronous Python applications)
+Project   and   Process   Management:  Agile   methodologies   (Scrum,   Kanban),   ITIL   practices 
+(Change   Management,   SLA),   technical   documentation,   controlled   versioning,   multidisciplinary 
+team collaboration, diagram rendering with Graphviz
+Training & Certifications
+Cybersecurity
+• Hackers do Bem – Cybersecurity Foundations
+• Cybersecurity Analyst Assessment
+• IBM Cyber Threat Intelligence
+• IBM Capstone: Data Breach Response
+• IBM Tools & Attacks
+• IBM Pen Testing & Incident Response
+• IBM Network & Database Security
+• Fortinet NSE 1, 2, 3 – Network Security Expert
+Cloud Computing
+• Oracle Cloud Infrastructure 2023 Foundations (1Z0-1085-23)
+• Oracle Cloud Data Management 2023 Foundations (1Z0-1105-23)
+• Microsoft Azure Fundamentals (AZ-900)
+• Microsoft Data Fundamentals (DP-900)
+• IBM Cloud Core & Multicloud Apps
+Scrum & Agile
+• Associate in Scrum Fundamentals (CASF)
+• Scrum Foundation Professional Certificate (SFPC)
+Business & Analysis
+• Business Intelligence Foundation (BIFP)
+• Business Model Canvas Essentials (BMCEP)
+• Remote Work & Virtual Collaboration (RWVC)
+Security & Governance
+• LGPD – Brazilian Data Protection Law
+• ISO/IEC 27001 and 9001 – Information Security Associate
+Digital Marketing
+• Microsoft Advertising Certifications: Search, Native & Display, Shopping, Professional
+Lean & Management
+• Kanban Essentials Professional Certificate (KEPC)
+• Lean Foundations (LFPC)
+AI & Data
+• Introduction to Artificial Intelligence
+• Data Analysis for Decision Support
+• Data Analysis with R
+Cloud Technology (AWS)
+• AWS: Technical Essentials, Serverless, Networking, and Security Foundations
+• Introduction to Cloud Computing
+Professional Associations 
+•Member of the International Association of Engineers (IAENG), since February 2025.
+Languages
+•Portuguese: Native
+•English: Intermediate (B1)
+Publications
+•The   Pigeon   Superstition   (09/23/2023)   Explores   the   roots   of   superstition   in   human   and 
+animal psychology, uniting behaviors in a thought-provoking narrative.
+•Badge is not a legacy (04/14/2023) Reflections on the search for a legacy, emphasizing the 
+importance of balance between professional and personal life.
+•Fortune Favors the Brave (04/11/2023) Encourages facing challenges with determination, 
+highlighting the value of courage for success.
+•Burnout (03/28/2023) Addresses strategies to prevent and treat emotional exhaustion in the 
+workplace, promoting healthy environments.
+•The   Crypto   Code   (03/22/2023)   Guide   to   safe   navigation   in   the   cryptocurrency   market, 
+guiding traders to make informed 
+•How to Have More Focus and Discipline (03/19/2023) Strategies to improve concentration 
+and discipline in the pursuit of personal and professional goals.
+•Perseverance (03/18/2023) Reflections on the importance of determination and adaptation 
+to overcome challenges and achieve goals.
+•Escape the Rat Race (03/16/2023) Suggestions for abandoning the exhausting routine and 
+seeking a sustainable balance between work and personal life.
+•Awakening   Proactivity:   Overcoming   Procrastination   and   Achieving   Success   (09/27/2024) 
+In-depth   analysis   of   procrastination   and   strategies   for   transforming   inertia   into   action, 
+promoting personal and professional success.
+Final RemarksA   multidisciplinary   professional   with   solid   experience   in   software   engineering,   artificial 
+intelligence, and process automation, working end-to-end in designing, developing, and delivering 
+scalable,   data-driven   solutions.   Driven   by   innovation   and   continuous   learning,   I   turn   technical 
+challenges into intelligent and functional products, focused on creating real impact in business, 
+healthcare, legal, and digital customer service domains. Open to opportunities that value purpose, 
+technology, and ongoing professional growth
