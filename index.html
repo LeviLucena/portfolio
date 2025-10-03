@@ -55,6 +55,12 @@
                 <div class="activity-icon" data-tab="theme-toggle">
                     <i class="fas fa-adjust"></i>
                 </div>
+                <div class="activity-icon" data-tab="tools">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <div class="activity-icon" data-tab="certifications">
+                    <i class="fas fa-certificate"></i>
+                </div>
             </div>
 
             <!-- Sidebar panels -->
@@ -78,6 +84,14 @@
                             <div class="file" data-content="skills">
                                 <i class="fas fa-file-code"></i>
                                 <span>skills-stack.ts</span>
+                            </div>
+                            <div class="file" data-content="tools">
+                                <i class="fas fa-file-code"></i>
+                                <span>tools.ts</span>
+                            </div>
+                            <div class="file" data-content="certifications">
+                                <i class="fas fa-file-code"></i>
+                                <span>certifications.json</span>
                             </div>
                             <div class="file" data-content="projects">
                                 <i class="fas fa-file-code"></i>
@@ -161,6 +175,14 @@
                         <span>skills-stack.ts</span>
                         <i class="fas fa-times tab-close"></i>
                     </div>
+                    <div class="tab" data-content="tools">
+                        <span>tools.ts</span>
+                        <i class="fas fa-times tab-close"></i>
+                    </div>
+                    <div class="tab" data-content="certifications">
+                        <span>certifications.json</span>
+                        <i class="fas fa-times tab-close"></i>
+                    </div>
                     <div class="tab" data-content="projects">
                         <span>projects.json</span>
                         <i class="fas fa-times tab-close"></i>
@@ -223,7 +245,8 @@
                             <span class="function">console</span>.<span class="method">log</span>(developer.bio);
                         </div>
                         <div class="code-line">
-                            <span class="comment">/*</span>
+                            <span class="comment">/*
+</span>
                         </div>
                         <div class="code-line">
                             <span class="comment">Movido por inovação e aprendizado contínuo, transformo desafios
@@ -499,6 +522,614 @@
                         </div>
                     </div>
 
+                    <!-- Tools section -->
+                    <div class="content" id="tools-content">
+                        <div class="code-line">
+                            <span class="comment">// Ferramentas e Tecnologias</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="comment">// Categorias de Ferramentas e Tecnologias Utilizadas</span>
+                        </div>
+                        
+                        <div class="tools-container">
+                            <div class="tools-category">
+                                <h3>Linguagens de Programação</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-python"></i>
+                                        <span class="tool-name">Python</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-r-project"></i>
+                                        <span class="tool-name">R</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-js"></i>
+                                        <span class="tool-name">JavaScript</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-typescript"></i>
+                                        <span class="tool-name">TypeScript</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-php"></i>
+                                        <span class="tool-name">PHP</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-database"></i>
+                                        <span class="tool-name">SQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>Frameworks</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-bolt"></i>
+                                        <span class="tool-name">FastAPI</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-fire"></i>
+                                        <span class="tool-name">Flask</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-cube"></i>
+                                        <span class="tool-name">Django</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-react"></i>
+                                        <span class="tool-name">Next.js</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-chart-line"></i>
+                                        <span class="tool-name">Dash</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-rocket"></i>
+                                        <span class="tool-name">Streamlit</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-react"></i>
+                                        <span class="tool-name">React</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>Frontend</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-react"></i>
+                                        <span class="tool-name">React</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-wind"></i>
+                                        <span class="tool-name">Tailwind CSS</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-puzzle-piece"></i>
+                                        <span class="tool-name">shadcn/ui</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-magic"></i>
+                                        <span class="tool-name">Framer Motion</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-html5"></i>
+                                        <span class="tool-name">HTML5</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-css3-alt"></i>
+                                        <span class="tool-name">CSS3</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-bootstrap"></i>
+                                        <span class="tool-name">Bootstrap</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>IA e Machine Learning</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-openai"></i>
+                                        <span class="tool-name">OpenAI</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-brain"></i>
+                                        <span class="tool-name">Scikit-learn</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-python"></i>
+                                        <span class="tool-name">PyTorch</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-seedling"></i>
+                                        <span class="tool-name">TensorFlow</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-calculator"></i>
+                                        <span class="tool-name">NumPy</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-table"></i>
+                                        <span class="tool-name">Pandas</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-robot"></i>
+                                        <span class="tool-name">LangChain</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-robot"></i>
+                                        <span class="tool-name">Hugging Face</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-comments"></i>
+                                        <span class="tool-name">Sentence Transformers</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-search"></i>
+                                        <span class="tool-name">FAISS</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-project-diagram"></i>
+                                        <span class="tool-name">RAG</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-leaf"></i>
+                                        <span class="tool-name">MLflow</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-warehouse"></i>
+                                        <span class="tool-name">DVC</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>Visualização de Dados</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-chart-bar"></i>
+                                        <span class="tool-name">Matplotlib</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-chart-line"></i>
+                                        <span class="tool-name">Plotly</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-chart-pie"></i>
+                                        <span class="tool-name">Seaborn</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-chart-network"></i>
+                                        <span class="tool-name">Power BI</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-chart-bar"></i>
+                                        <span class="tool-name">Grafana</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>Visão Computacional</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-eye"></i>
+                                        <span class="tool-name">OpenCV</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-robot"></i>
+                                        <span class="tool-name">YOLOv8</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-text-height"></i>
+                                        <span class="tool-name">Tesseract</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-image"></i>
+                                        <span class="tool-name">Pillow</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>Nuvem e APIs</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-microsoft"></i>
+                                        <span class="tool-name">Azure</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-aws"></i>
+                                        <span class="tool-name">AWS</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-cloud"></i>
+                                        <span class="tool-name">Oracle Cloud</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-code"></i>
+                                        <span class="tool-name">REST</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-code"></i>
+                                        <span class="tool-name">JSON</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-cloud-sun"></i>
+                                        <span class="tool-name">WeatherAPI</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-cloud-sun-rain"></i>
+                                        <span class="tool-name">Meteoblue</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-cloud-sun"></i>
+                                        <span class="tool-name">OpenWeatherMap</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-satellite"></i>
+                                        <span class="tool-name">NASA FIRMS</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-tree"></i>
+                                        <span class="tool-name">INPE</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-fire"></i>
+                                        <span class="tool-name">Queimadas</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>Bancos de Dados</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-database"></i>
+                                        <span class="tool-name">PostgreSQL</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-database"></i>
+                                        <span class="tool-name">MySQL</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-database"></i>
+                                        <span class="tool-name">SQLite</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-database"></i>
+                                        <span class="tool-name">Supabase</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-database"></i>
+                                        <span class="tool-name">SQLAlchemy</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>DevOps</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-docker"></i>
+                                        <span class="tool-name">Docker</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-docker"></i>
+                                        <span class="tool-name">Docker Compose</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-github"></i>
+                                        <span class="tool-name">GitHub Actions</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-globe"></i>
+                                        <span class="tool-name">NGINX</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-vial"></i>
+                                        <span class="tool-name">Pytest</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-lock"></i>
+                                        <span class="tool-name">Dotenv</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-envelope"></i>
+                                        <span class="tool-name">Postman</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fab fa-linux"></i>
+                                        <span class="tool-name">Linux</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="tools-category">
+                                <h3>Segurança</h3>
+                                <div class="tools-grid">
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-shield-alt"></i>
+                                        <span class="tool-name">Fortinet</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-user-shield"></i>
+                                        <span class="tool-name">IAM</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-user-shield"></i>
+                                        <span class="tool-name">LGPD</span>
+                                    </div>
+                                    <div class="tool-item">
+                                        <i class="tool-icon fas fa-shield-alt"></i>
+                                        <span class="tool-name">DevSecOps</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="code-line">
+                            <span class="comment">// Total de ferramentas e tecnologias</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="keyword">const</span> <span class="function">toolCount</span> = {
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">languages</span>: 6,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">frameworks</span>: 7,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">frontend</span>: 7,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">ai_ml</span>: 13,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">data_viz</span>: 5,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">computer_vision</span>: 4,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">cloud</span>: 11,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">databases</span>: 5,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">devops</span>: 8,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">security</span>: 4
+                        </div>
+                        <div class="code-line">
+                            };
+                        </div>
+                        <br>
+                        <div class="code-line">
+                            <span class="function">console</span>.<span class="method">log</span>(<span
+                                class="string">'Total de ferramentas: '</span> + 
+                                (toolCount.languages + toolCount.frameworks + toolCount.frontend + 
+                                toolCount.ai_ml + toolCount.data_viz + toolCount.computer_vision + 
+                                toolCount.cloud + toolCount.databases + toolCount.devops + 
+                                toolCount.security));
+                        </div>
+                    </div>
+
+                    <!-- Certifications section -->
+                    <div class="content" id="certifications-content">
+                        <div class="code-line">
+                            <span class="comment">// Certificações Profissionais</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="comment">// Categorias de Certificações por Provedor</span>
+                        </div>
+                        
+                        <div class="certifications-container">
+                            <div class="certification-category">
+                                <h3>Certiprof</h3>
+                                <div class="certification-badges">
+                                    <a href="Certificados/Certiprof/Business Intelligence Foundation Professional Certification - BIFPC™.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Business Intelligence Foundation Professional Certification - BIFPC™.png" alt="Business Intelligence Foundation Professional Certification - BIFPC™" title="Business Intelligence Foundation Professional Certification - BIFPC™">
+                                    </a>
+                                    <a href="Certificados/Certiprof/Business Model Canvas Essentials Professional Certification - BMCEPC™.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Business Model Canvas Essentials Professional Certification - BMCEPC™.png" alt="Business Model Canvas Essentials Professional Certification - BMCEPC™" title="Business Model Canvas Essentials Professional Certification - BMCEPC™">
+                                    </a>
+                                    <a href="Certificados/Certiprof/Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™.png" alt="Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™" title="Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™">
+                                    </a>
+                                    <a href="Certificados/Certiprof/Kanban Essentials Professional Certification - KEPC.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Kanban Essentials Professional Certification - KEPC.png" alt="Kanban Essentials Professional Certification - KEPC" title="Kanban Essentials Professional Certification - KEPC">
+                                    </a>
+                                    <a href="Certificados/Certiprof/Lean Six Sigma White Belt Professional Certification - LSSWBPC.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Lean Six Sigma White Belt Professional Certification - LSSWBPC.png" alt="Lean Six Sigma White Belt Professional Certification - LSSWBPC" title="Lean Six Sigma White Belt Professional Certification - LSSWBPC">
+                                    </a>
+                                    <a href="Certificados/Certiprof/Lifelong Learning.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Lifelong Learning.png" alt="Lifelong Learning" title="Lifelong Learning">
+                                    </a>
+                                    <a href="Certificados/Certiprof/Remote Work Professional Certification - RWPC™.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Remote Work Professional Certification - RWPC™.png" alt="Remote Work Professional Certification - RWPC™" title="Remote Work Professional Certification - RWPC™">
+                                    </a>
+                                    <a href="Certificados/Certiprof/Scrum Foundation Professional Certification - SFPC™.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Certiprof/Scrum Foundation Professional Certification - SFPC™.png" alt="Scrum Foundation Professional Certification - SFPC™" title="Scrum Foundation Professional Certification - SFPC™">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="certification-category">
+                                <h3>Cisco</h3>
+                                <div class="certification-badges">
+                                    <a href="Certificados/Cisco/Introduction to IoT.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Cisco/Introduction to IoT.png" alt="Introduction to IoT" title="Introduction to IoT">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="certification-category">
+                                <h3>Fortinet</h3>
+                                <div class="certification-badges">
+                                    <a href="Certificados/Fortinet/Fortinet Certified Fundamentals - Cybersecurity.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Fortinet/Fortinet Certified Fundamentals - Cybersecurity.png" alt="Fortinet Certified Fundamentals - Cybersecurity" title="Fortinet Certified Fundamentals - Cybersecurity">
+                                    </a>
+                                    <a href="Certificados/Fortinet/Fortinet NSE 1 Associate.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Fortinet/Fortinet NSE 1 Associate.png" alt="Fortinet NSE 1 Associate" title="Fortinet NSE 1 Associate">
+                                    </a>
+                                    <a href="Certificados/Fortinet/Fortinet NSE 2 Associate.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Fortinet/Fortinet NSE 2 Associate.png" alt="Fortinet NSE 2 Associate" title="Fortinet NSE 2 Associate">
+                                    </a>
+                                    <a href="Certificados/Fortinet/Fortinet NSE 3 Associate.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Fortinet/Fortinet NSE 3 Associate.png" alt="Fortinet NSE 3 Associate" title="Fortinet NSE 3 Associate">
+                                    </a>
+                                    <a href="Certificados/Fortinet/Getting Started in Cybersecurity 1.0.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Fortinet/Getting Started in Cybersecurity 1.0.png" alt="Getting Started in Cybersecurity 1.0" title="Getting Started in Cybersecurity 1.0">
+                                    </a>
+                                    <a href="Certificados/Fortinet/Introduction to the Threat Landscape 1.0.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Fortinet/Introduction to the Threat Landscape 1.0.png" alt="Introduction to the Threat Landscape 1.0" title="Introduction to the Threat Landscape 1.0">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="certification-category">
+                                <h3>IBM</h3>
+                                <div class="certification-badges">
+                                    <a href="Certificados/IBM/Building Cloud-Native and Multicloud Applications.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Building Cloud-Native and Multicloud Applications.png" alt="Building Cloud-Native and Multicloud Applications" title="Building Cloud-Native and Multicloud Applications">
+                                    </a>
+                                    <a href="Certificados/IBM/Cloud Core.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Cloud Core.png" alt="Cloud Core" title="Cloud Core">
+                                    </a>
+                                    <a href="Certificados/IBM/Cloud Native Security Conference - Application Security Foundational.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Cloud Native Security Conference - Application Security Foundational.png" alt="Cloud Native Security Conference - Application Security Foundational" title="Cloud Native Security Conference - Application Security Foundational">
+                                    </a>
+                                    <a href="Certificados/IBM/Cyber Threat Intelligence.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Cyber Threat Intelligence.png" alt="Cyber Threat Intelligence" title="Cyber Threat Intelligence">
+                                    </a>
+                                    <a href="Certificados/IBM/Cybersecurity Breach Case Studies.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Cybersecurity Breach Case Studies.png" alt="Cybersecurity Breach Case Studies" title="Cybersecurity Breach Case Studies">
+                                    </a>
+                                    <a href="Certificados/IBM/Cybersecurity Compliance Framework & System Administration.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Cybersecurity Compliance Framework & System Administration.png" alt="Cybersecurity Compliance Framework & System Administration" title="Cybersecurity Compliance Framework & System Administration">
+                                    </a>
+                                    <a href="Certificados/IBM/Cybersecurity Roles, Processes & Operating System Security.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Cybersecurity Roles, Processes & Operating System Security.png" alt="Cybersecurity Roles, Processes & Operating System Security" title="Cybersecurity Roles, Processes & Operating System Security">
+                                    </a>
+                                    <a href="Certificados/IBM/Data Science for Business - Level 1.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Data Science for Business - Level 1.png" alt="Data Science for Business - Level 1" title="Data Science for Business - Level 1">
+                                    </a>
+                                    <a href="Certificados/IBM/IBM Cybersecurity Analyst Professional Certificate.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/IBM Cybersecurity Analyst Professional Certificate.png" alt="IBM Cybersecurity Analyst Professional Certificate" title="IBM Cybersecurity Analyst Professional Certificate">
+                                    </a>
+                                    <a href="Certificados/IBM/Introduction to Cybersecurity Tools & Cyber Attacks.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Introduction to Cybersecurity Tools & Cyber Attacks.png" alt="Introduction to Cybersecurity Tools & Cyber Attacks" title="Introduction to Cybersecurity Tools & Cyber Attacks">
+                                    </a>
+                                    <a href="Certificados/IBM/Network Security & Database Vulnerabilities.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Network Security & Database Vulnerabilities.png" alt="Network Security & Database Vulnerabilities" title="Network Security & Database Vulnerabilities">
+                                    </a>
+                                    <a href="Certificados/IBM/Penetration Testing, Incident Response and Forensics.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Penetration Testing, Incident Response and Forensics.png" alt="Penetration Testing, Incident Response and Forensics" title="Penetration Testing, Incident Response and Forensics">
+                                    </a>
+                                    <a href="Certificados/IBM/Project Management Essentials.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/IBM/Project Management Essentials.png" alt="Project Management Essentials" title="Project Management Essentials">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="certification-category">
+                                <h3>Microsoft</h3>
+                                <div class="certification-badges">
+                                    <a href="Certificados/Microsoft/AZ-900 Microsoft Certified Azure Fundamentals.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Microsoft/AZ-900 Microsoft Certified Azure Fundamentals.png" alt="AZ-900 Microsoft Certified Azure Fundamentals" title="AZ-900 Microsoft Certified Azure Fundamentals">
+                                    </a>
+                                    <a href="Certificados/Microsoft/DP-900 Microsoft Certified Azure Data Fundamentals.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Microsoft/DP-900 Microsoft Certified Azure Data Fundamentals.png" alt="DP-900 Microsoft Certified Azure Data Fundamentals" title="DP-900 Microsoft Certified Azure Data Fundamentals">
+                                    </a>
+                                    <a href="Certificados/Microsoft/Microsoft Advertising Certified Professional.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Microsoft/Microsoft Advertising Certified Professional.png" alt="Microsoft Advertising Certified Professional" title="Microsoft Advertising Certified Professional">
+                                    </a>
+                                    <a href="Certificados/Microsoft/Microsoft Advertising Native & Display Certification.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Microsoft/Microsoft Advertising Native & Display Certification.png" alt="Microsoft Advertising Native & Display Certification" title="Microsoft Advertising Native & Display Certification">
+                                    </a>
+                                    <a href="Certificados/Microsoft/Microsoft Advertising Search Certification.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Microsoft/Microsoft Advertising Search Certification.png" alt="Microsoft Advertising Search Certification" title="Microsoft Advertising Search Certification">
+                                    </a>
+                                    <a href="Certificados/Microsoft/Microsoft Advertising Shopping Certification.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Microsoft/Microsoft Advertising Shopping Certification.png" alt="Microsoft Advertising Shopping Certification" title="Microsoft Advertising Shopping Certification">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="certification-category">
+                                <h3>Oracle</h3>
+                                <div class="certification-badges">
+                                    <a href="Certificados/Oracle/Oracle Certified Foundations Associate Oracle Cloud Data Management 2023.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Oracle/Oracle Certified Foundations Associate Oracle Cloud Data Management 2023.png" alt="Oracle Certified Foundations Associate Oracle Cloud Data Management 2023" title="Oracle Certified Foundations Associate Oracle Cloud Data Management 2023">
+                                    </a>
+                                    <a href="Certificados/Oracle/Oracle Certified Foundations Associate Oracle Cloud Infrastructure 2023.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Oracle/Oracle Certified Foundations Associate Oracle Cloud Infrastructure 2023.png" alt="Oracle Certified Foundations Associate Oracle Cloud Infrastructure 2023" title="Oracle Certified Foundations Associate Oracle Cloud Infrastructure 2023">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="certification-category">
+                                <h3>Senai</h3>
+                                <div class="certification-badges">
+                                    <a href="Certificados/Senai/Hackers do Bem - Formação em Cibersegurança - Básico.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Senai/Hackers do Bem - Formação em Cibersegurança - Básico.png" alt="Hackers do Bem - Formação em Cibersegurança - Básico" title="Hackers do Bem - Formação em Cibersegurança - Básico">
+                                    </a>
+                                    <a href="Certificados/Senai/Hackers do Bem - Formação em Cibersegurança - Nivelamento.png" target="_blank">
+                                        <img class="certification-badge" src="Certificados/Senai/Hackers do Bem - Formação em Cibersegurança - Nivelamento.png" alt="Hackers do Bem - Formação em Cibersegurança - Nivelamento" title="Hackers do Bem - Formação em Cibersegurança - Nivelamento">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="code-line">
+                            <span class="comment">// Certificações organizadas por categoria</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="keyword">const</span> <span class="function">certifications</span> = {
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">Certiprof</span>: 8,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">Cisco</span>: 1,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">Fortinet</span>: 6,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">IBM</span>: 13,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">Microsoft</span>: 6,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">Oracle</span>: 2,
+                        </div>
+                        <div class="code-line indent">
+                            <span class="property">Senai</span>: 2
+                        </div>
+                        <div class="code-line">
+                            };
+                        </div>
+                        <br>
+                        <div class="code-line">
+                            <span class="function">console</span>.<span class="method">log</span>(<span
+                                class="string">'Total de certificações: '</span> + 
+                                (certifications.Certiprof + certifications.Cisco + certifications.Fortinet + 
+                                certifications.IBM + certifications.Microsoft + certifications.Oracle + 
+                                certifications.Senai));
+                        </div>
+                    </div>
+
                     <!-- Projects section -->
                     <div class="content" id="projects-content">
                         <div class="code-line">
@@ -716,6 +1347,202 @@
                             <span class="property">status</span>: <span class="string">'Concluído'</span>
                         </div>
                         <div class="code-line indent">
+                            },
+                        </div>
+                        <div class="code-line indent">
+                            {
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">name</span>: <span class="string">'MLPractical - Genetic Syndrome Classification'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">description</span>: <span class="string">'Implementação de um projeto de classificação de síndromes genéticas usando aprendizado de máquina com embeddings de imagem. O projeto implementa KNN com métricas de distância Euclidiana e Cosseno, alcançando AUC de 0.9630 usando distância cosseno com k=15, demonstrando eficácia na classificação de 1.116 amostras de 10 diferentes síndromes genéticas.'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">url</span>: <span class="string"><a
+                                    href="https://github.com/LeviLucena/MLPractical"
+                                    target="_blank">'https://github.com/LeviLucena/MLPractical'</a></span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">technologies</span>: [<span class="string">'Python'</span>, <span
+                                class="string">'scikit-learn'</span>, <span class="string">'numpy'</span>, <span
+                                class="string">'pandas'</span>, <span class="string">'matplotlib'</span>, <span
+                                class="string">'seaborn'</span>, <span class="string">'KNN'</span>, <span
+                                class="string">'t-SNE'</span>, <span class="string">'embeddings'</span>, <span
+                                class="string">'classification'</span>, <span class="string">'genetics'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">areas</span>: [<span class="string">'machine learning'</span>, <span
+                                class="string">'genética'</span>, <span class="string">'classificação de imagens'</span>,
+                            <span class="string">'análise de dados'</span>, <span class="string">'bioinformática'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">status</span>: <span class="string">'Concluído'</span>
+                        </div>
+                        <div class="code-line indent">
+                            },
+                        </div>
+                        <div class="code-line indent">
+                            {
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">name</span>: <span class="string">'HeloDocs'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">description</span>: <span class="string">'Sistema web que permite aos usuários fazer upload de documentos (PDF, DOCX, TXT), extrair informações deles e responder perguntas sobre o conteúdo. O sistema também oferece formatação de resultados e geração de certificados em formato DOCX com base nas informações extraídas, sendo especificamente projetado para análise de documentos de licitações e geração de atestados de comprovação de técnica.'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">url</span>: <span class="string"><a
+                                    href="https://github.com/LeviLucena/HeloDocs"
+                                    target="_blank">'https://github.com/LeviLucena/HeloDocs'</a></span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">technologies</span>: [<span class="string">'Python'</span>, <span
+                                class="string">'Flask'</span>, <span class="string">'Tesseract OCR'</span>, <span
+                                class="string">'Ollama'</span>, <span class="string">'Llama AI'</span>, <span
+                                class="string">'JavaScript'</span>, <span class="string">'jQuery'</span>, <span
+                                class="string">'Bootstrap'</span>, <span class="string">'docx.js'</span>, <span
+                                class="string">'HTML5'</span>, <span class="string">'CSS3'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">areas</span>: [<span class="string">'document processing'</span>, <span
+                                class="string">'OCR'</span>, <span class="string">'AI question answering'</span>,
+                            <span class="string">'document analysis'</span>, <span class="string">'licitações'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">status</span>: <span class="string">'Concluído'</span>
+                        </div>
+                        <div class="code-line indent">
+                            },
+                        </div>
+                        <div class="code-line indent">
+                            {
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">name</span>: <span class="string">'API-Data-Collector'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">description</span>: <span class="string">'API robusta baseada em FastAPI para coleta integrada de dados de três sistemas diferentes: Watio, Omie e HubSpot. O projeto oferece uma solução centralizada para integração com múltiplas APIs de negócios, com arquitetura modular, processamento assíncrono e mecanismos de retry para requisições falhas.'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">url</span>: <span class="string"><a
+                                    href="https://github.com/LeviLucena/API-Data-Collector"
+                                    target="_blank">'https://github.com/LeviLucena/API-Data-Collector'</a></span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">technologies</span>: [<span class="string">'Python'</span>, <span
+                                class="string">'FastAPI'</span>, <span class="string">'Pydantic'</span>, <span
+                                class="string">'Docker'</span>, <span class="string">'Docker Compose'</span>, <span
+                                class="string">'JWT'</span>, <span class="string">'Async/Await'</span>, <span
+                                class="string">'HTTP Client'</span>, <span class="string">'Uvicorn'</span>, <span
+                                class="string">'API Integration'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">areas</span>: [<span class="string">'API development'</span>, <span
+                                class="string">'data collection'</span>, <span class="string">'system integration'</span>,
+                            <span class="string">'business systems'</span>, <span class="string">'microservices'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">status</span>: <span class="string">'Concluído'</span>
+                        </div>
+                        <div class="code-line indent">
+                            },
+                        </div>
+                        <div class="code-line indent">
+                            {
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">name</span>: <span class="string">'NeoCore Systems'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">description</span>: <span class="string">'Interface visual experimental que simula um painel de controle futurista para uma inteligência artificial avançada operando em tempo real. O projeto é puramente educacional, com dados fictícios gerados aleatoriamente para testes visuais, criando um showcase artístico e técnico do que é possível com tecnologias modernas de front-end, com elementos visuais inspirados em filmes de ficção científica, painéis de controle de espaçonaves e centros de comando de IA.'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">url</span>: <span class="string"><a
+                                    href="https://github.com/LeviLucena/NeoCore_Systems"
+                                    target="_blank">'https://github.com/LeviLucena/NeoCore_Systems'</a></span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">technologies</span>: [<span class="string">'React'</span>, <span
+                                class="string">'Vite'</span>, <span class="string">'Recharts'</span>, <span
+                                class="string">'Framer Motion'</span>, <span class="string">'TSParticles'</span>, <span
+                                class="string">'Tailwind CSS'</span>, <span class="string">'React Icons'</span>, <span
+                                class="string">'JavaScript'</span>, <span class="string">'ES6+'</span>, <span
+                                class="string">'CSS3'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">areas</span>: [<span class="string">'front-end development'</span>, <span
+                                class="string">'data visualization'</span>, <span class="string">'UI/UX design'</span>,
+                            <span class="string">'real-time systems'</span>, <span class="string">'sci-fi interfaces'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">status</span>: <span class="string">'Concluído'</span>
+                        </div>
+                        <div class="code-line indent">
+                            },
+                        </div>
+                        <div class="code-line indent">
+                            {
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">name</span>: <span class="string">'DeepLearning'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">description</span>: <span class="string">'Implementação de uma rede neural de detecção de objetos em tempo real usando YOLO (Ultralytics), Collections, NumPy e OpenCV. O sistema é projetado para detecção e rastreamento de objetos com alta precisão, capturando imagens em tempo real de webcams e dispositivos de vídeo.'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">url</span>: <span class="string"><a
+                                    href="https://github.com/LeviLucena/DeepLearning"
+                                    target="_blank">'https://github.com/LeviLucena/DeepLearning'</a></span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">technologies</span>: [<span class="string">'Python'</span>, <span
+                                class="string">'Ultralytics YOLO'</span>, <span class="string">'OpenCV'</span>, <span
+                                class="string">'NumPy'</span>, <span class="string">'Collections'</span>, <span
+                                class="string">'Computer Vision'</span>, <span class="string">'Deep Learning'</span>, <span
+                                class="string">'Object Detection'</span>, <span class="string">'Real-time Processing'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">areas</span>: [<span class="string">'computer vision'</span>, <span
+                                class="string">'deep learning'</span>, <span class="string">'object detection'</span>,
+                            <span class="string">'real-time systems'</span>, <span class="string">'YOLO'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">status</span>: <span class="string">'Concluído'</span>
+                        </div>
+                        <div class="code-line indent">
+                            },
+                        </div>
+                        <div class="code-line indent">
+                            {
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">name</span>: <span class="string">'Gestao Projetos'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">description</span>: <span class="string">'Sistema completo de gerenciamento de projetos que permite o cadastro, consulta e edição de informações de projetos. O sistema oferece funcionalidades de gerenciamento de demandas, atividades e entregas, com painéis de controle e indicadores para tomada de decisão. Inclui cadastro de contatos e personalização por gerentes de projeto.'</span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">url</span>: <span class="string"><a
+                                    href="https://github.com/LeviLucena/Gestao_Projetos"
+                                    target="_blank">'https://github.com/LeviLucena/Gestao_Projetos'</a></span>,
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">technologies</span>: [<span class="string">'PHP'</span>, <span
+                                class="string">'MySQL'</span>, <span class="string">'JavaScript'</span>, <span
+                                class="string">'CSS'</span>, <span class="string">'HTML'</span>, <span
+                                class="string">'MariaDB'</span>, <span class="string">'Project Management'</span>, <span
+                                class="string">'Dashboards'</span>, <span class="string">'Database Management'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">areas</span>: [<span class="string">'project management'</span>, <span
+                                class="string">'web development'</span>, <span class="string">'database design'</span>,
+                            <span class="string">'dashboards'</span>, <span class="string">'business intelligence'</span>],
+                        </div>
+                        <div class="code-line double-indent">
+                            <span class="property">status</span>: <span class="string">'Concluído'</span>
+                        </div>
+                        <div class="code-line indent">
                             }
                         </div>
                         <div class="code-line">
@@ -858,7 +1685,7 @@
                                 const subject = encodeURIComponent('Contato via Portfólio');
                                 // Corpo formatado com quebras de linha
                                 const body = encodeURIComponent(
-                                    `Nome: ${name}\nEmail: ${email}\nMensagem:\n${message}`
+                                    `Nome: ${name}\\nEmail: ${email}\\nMensagem:\\n${message}`
                                 );
 
                                 // Destinatário fixo

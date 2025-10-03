@@ -111,6 +111,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Certifications functionality
+    // Make sure certification images are clickable
+    document.querySelectorAll('.certification-badge').forEach(badge => {
+        badge.addEventListener('click', function() {
+            // When clicked, the image will open in a new tab due to the <a> tag
+            // This is handled by the HTML structure, not JavaScript
+        });
+    });
+
     // Basic functionality for the editor
     document.addEventListener('keydown', function(e) {
         // Simulate editor shortcuts
@@ -648,5 +657,30 @@ document.addEventListener('DOMContentLoaded', function() {
         if (e.key === 'Enter') {
             sendMessage();
         }
+    });
+    
+    // Certifications functionality
+    // Make sure certification images are clickable
+    document.querySelectorAll('.certification-badge').forEach(badge => {
+        badge.addEventListener('click', function() {
+            // When clicked, the image will open in a new tab due to the <a> tag
+            // This is handled by the HTML structure, not JavaScript
+        });
+    });
+    
+    // Tools functionality - add interactivity to tool items
+    document.querySelectorAll('.tool-item').forEach(tool => {
+        tool.addEventListener('click', function() {
+            // Highlight the clicked tool for a short time
+            this.style.backgroundColor = 'var(--vscode-current-accent)';
+            this.style.color = 'white';
+            setTimeout(() => {
+                // Reset to default appearance after click
+                if (!this.matches(':hover')) {
+                    this.style.backgroundColor = '';
+                    this.style.color = '';
+                }
+            }, 300);
+        });
     });
 });
