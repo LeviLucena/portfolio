@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="pt-BR"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Automação de Processos com Python - Levi Lucena</title><meta name="description" content="Blog pessoal de Levi Lucena - Engenheiro de Software & Especialista em IA. Artigos sobre tecnologia, desenvolvimento, inteligência artificial e automação."><meta name="keywords" content="desenvolvimento, tecnologia, inteligência artificial, IA, software, programação, blog, artigos técnicos"><meta name="author" content="Levi Lucena"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://levilucena.github.io/blog/"><meta property="og:title" content="Levi Lucena - Blog"><meta property="og:description" content="Blog pessoal de Levi Lucena - Engenheiro de Software & Especialista em IA. Artigos sobre tecnologia, desenvolvimento, inteligência artificial e automação."><meta property="og:image" content="https://levilucena.github.io/blog/og-image.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://levilucena.github.io/blog/"><meta property="twitter:title" content="Levi Lucena - Blog"><meta property="twitter:description" content="Blog pessoal de Levi Lucena - Engenheiro de Software & Especialista em IA. Artigos sobre tecnologia, desenvolvimento, inteligência artificial e automação."><meta property="twitter:image" content="https://levilucena.github.io/blog/og-image.jpg"><!-- Fonte Martian Mono - Adicione o arquivo martian-mono.woff2 na pasta public/fonts/ --><link rel="preload" href="/fonts/martian-mono.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"><link rel="canonical" href="https://levilucena.github.io/blog/"><link rel="stylesheet" href="/_astro/about.D93I64Zz.css"></head> <body>  <div class="blog-container"> <header class="blog-header"> <div class="container"> <nav class="blog-nav"> <a href="/" class="nav-logo">LL</a> <ul class="nav-menu"> <li><a href="/" class="nav-link">Home</a></li> <li><a href="/archive" class="nav-link">Archive</a></li> <li><a href="/about" class="nav-link">About</a></li> <li><a href="/projects" class="nav-link">Projects</a></li> </ul> <button class="theme-toggle"> <i class="fas fa-moon"></i> </button> </nav> </div> </header> <main class="post-page"> <div class="container"> <article class="post-content"> <header class="post-header"> <h1>Automação de Processos com Python</h1> <div class="post-meta"> <time datetime="2024-01-10">9 de janeiro de 2024</time> <div class="post-tags"> <span class="tag">Python</span><span class="tag">Automação</span><span class="tag">Produtividade</span> </div> </div> </header> <div class="post-body">
+      <p>A automação de processos com Python é uma das habilidades mais valiosas para profissionais de diversas áreas. Python oferece uma infinidade de bibliotecas que permitem automatizar tarefas repetitivas de forma eficiente e prática.</p>
+
+      <h2>Por que usar Python para automação?</h2>
+      
+      <p>Python é conhecido por sua simplicidade e legibilidade, o que o torna ideal para automação de tarefas. Algumas razões pelas quais Python se destaca:</p>
+      
+      <ul>
+        <li>Sintaxe simples e intuitiva</li>
+        <li>Bibliotecas extensas e poderosas</li>
+        <li>Comunidade ativa e bem documentada</li>
+        <li>Capacidade de lidar com arquivos, planilhas, web scraping e mais</li>
+      </ul>
+
+      <h2>Ferramentas Populares</h2>
+      
+      <p>Algumas das bibliotecas mais utilizadas para automação com Python incluem:</p>
+      
+      <ul>
+        <li><strong>os</strong> e <strong>shutil</strong> para operações com arquivos</li>
+        <li><strong>selenium</strong> para automação web</li>
+        <li><strong>openpyxl</strong> e <strong>csv</strong> para manipulação de planilhas</li>
+        <li><strong>schedule</strong> para agendamento de tarefas</li>
+        <li><strong>pyautogui</strong> para automação de interface gráfica</li>
+      </ul>
+
+      <h2>Exemplo Prático</h2>
+      
+      <p>Um exemplo simples de automação com Python é a organização de arquivos em pastas com base em sua extensão:</p>
+      
+      <pre><code>
+import os
+import shutil
+
+def organizar_arquivos(pasta_origem):
+    for arquivo in os.listdir(pasta_origem):
+        if arquivo.endswith('.pdf'):
+            shutil.move(arquivo, os.path.join(pasta_origem, 'PDFs', arquivo))
+        elif arquivo.endswith('.jpg') or arquivo.endswith('.png'):
+            shutil.move(arquivo, os.path.join(pasta_origem, 'Imagens', arquivo))
+      </code></pre>
+
+      <h2>Considerações Finais</h2>
+      
+      <p>A automação com Python pode aumentar significativamente a produtividade, reduzir erros humanos e permitir que profissionais se concentrem em tarefas mais estratégicas e criativas.</p>
+    </div> <footer class="post-footer"> <div class="author-info"> <h3>Levi Lucena</h3> <p>Engenheiro de Software &amp; Especialista em IA</p> </div> </footer> </article> </div> </main> <footer class="blog-footer"> <div class="container"> <div class="footer-content"> <div class="footer-about"> <h3>Levi Lucena</h3> <p>Engenheiro de Software & Especialista em IA com 10+ anos de experiência em desenvolvimento, inteligência artificial e automação de processos.</p> <div class="social-links"> <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn"> <i class="fab fa-linkedin"></i> </a><a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub"> <i class="fab fa-github"></i> </a><a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle"> <i class="fab fa-kaggle"></i> </a> </div> </div> <div class="footer-contact"> <h4>Contato</h4> <p>sr_lucen@yahoo.com.br</p> </div> </div> <div class="footer-bottom"> <p>&copy; 2025 Levi Lucena. Todos os direitos reservados.</p> </div> </div> </footer> </div>  <script type="module">document.addEventListener("DOMContentLoaded",function(){const n=document.querySelector(".theme-toggle");n&&n.addEventListener("click",function(){document.body.classList.toggle("dark-theme")});const e=document.getElementById("contactForm");e&&e.addEventListener("submit",function(m){m.preventDefault();const o=document.getElementById("name").value.trim(),t=document.getElementById("email").value.trim(),c=document.getElementById("message").value.trim();if(!o||!t||!c){alert("Por favor, preencha todos os campos.");return}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)){alert("Por favor, insira um email válido.");return}const a=encodeURIComponent("Contato via Blog"),i=encodeURIComponent(`Nome: ${o}\\nEmail: ${t}\\nMensagem:\\n${c}`),s=`mailto:sr_lucen@yahoo.com.br?subject=${a}&body=${i}`;window.location.href=s,e.reset()})});</script> </body> </html>

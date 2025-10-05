@@ -1,11 +1,13 @@
 {
-  "name": "vscode-portfolio",
-  "version": "1.0.0",
-  "description": "Um portfólio criativo no formato de uma IDE como o VSCode",
-  "main": "index.html",
+  "name": "levi-lucena-professional-blog",
+  "version": "2.1.0",
+  "description": "Blog pessoal profissional de Levi Lucena desenvolvido com Astro - Engenheiro de Software & Especialista em IA com foco em projetos e tecnologias",
+  "main": "index.js",
   "scripts": {
-    "start": "npx serve .",
-    "dev": "npx serve -l 3000 .",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
     "test": "echo \"Nenhum teste configurado\" && exit 0"
   },
   "keywords": [
@@ -21,7 +23,10 @@
   "author": "DevFulano",
   "license": "MIT",
   "devDependencies": {
-    "serve": "^14.2.0"
+    "@astrojs/tailwind": "^6.0.2",
+    "@tailwindcss/typography": "^0.5.19",
+    "serve": "^14.2.0",
+    "tailwindcss": "^3.4.18"
   },
   "repository": {
     "type": "git",
@@ -30,5 +35,8 @@
   "bugs": {
     "url": "https://github.com/seu-usuario/seu-repositorio/issues"
   },
-  "homepage": "https://github.com/seu-usuario/seu-repositorio#readme"
+  "homepage": "https://github.com/seu-usuario/seu-repositorio#readme",
+  "dependencies": {
+    "astro": "^5.14.1"
+  }
 }

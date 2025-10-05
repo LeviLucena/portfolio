@@ -1,0 +1,154 @@
+---
+import BlogLayout from '../layouts/BlogLayout.astro';
+
+const posts = [
+  {
+    slug: 'introducao-ao-machine-learning',
+    title: 'Introdução ao Machine Learning',
+    date: '2024-01-15',
+    excerpt: 'Uma visão geral dos fundamentos de machine learning e suas aplicações práticas no mundo real.',
+    tags: ['IA', 'Python', 'Data Science']
+  },
+  {
+    slug: 'automacao-com-python',
+    title: 'Automação de Processos com Python',
+    date: '2024-01-10',
+    excerpt: 'Como usar Python para automatizar tarefas repetitivas e aumentar a produtividade.',
+    tags: ['Python', 'Automação', 'Produtividade']
+  },
+  {
+    slug: 'inteligencia-artificial-aplicada',
+    title: 'Aplicações Práticas de Inteligência Artificial',
+    date: '2024-01-05',
+    excerpt: 'Exemplos reais de como a IA está transformando diferentes setores e indústrias.',
+    tags: ['IA', 'Aplicações', 'Tecnologia']
+  },
+  {
+    slug: 'desenvolvimento-web-moderno',
+    title: 'Desenvolvimento Web Moderno com React',
+    date: '2023-12-28',
+    excerpt: 'Explorando as melhores práticas para desenvolvimento web com as tecnologias mais recentes.',
+    tags: ['React', 'JavaScript', 'Frontend']
+  },
+  {
+    slug: 'como-escolher-sua-primeira-stack',
+    title: 'Como Escolher Sua Primeira Stack de Desenvolvimento',
+    date: '2023-12-20',
+    excerpt: 'Guia prático para iniciantes na programação escolherem as tecnologias mais adequadas para seus projetos.',
+    tags: ['Desenvolvimento', 'Carreira', 'Iniciantes']
+  },
+  {
+    slug: 'estrategias-de-versionamento-no-git',
+    title: 'Estratégias de Versionamento no Git',
+    date: '2023-12-15',
+    excerpt: 'Melhores práticas para gerenciamento de versões de código em projetos de desenvolvimento de software.',
+    tags: ['Git', 'Versionamento', 'DevOps']
+  }
+];
+
+const author = {
+  name: 'Levi Lucena',
+  role: 'Engenheiro de Software & Especialista em IA'
+};
+
+const socialLinks = [
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/levilucena/', icon: 'fab fa-linkedin' },
+  { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
+  { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
+  { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
+  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' }
+];
+---
+
+<BlogLayout title="Arquivo - Levi Lucena">
+  <div class="blog-container">
+    <header class="blog-header">
+      <div class="container">
+        <nav class="blog-nav">
+          <a href="/" class="nav-logo">LL</a>
+          <ul class="nav-menu">
+            <li><a href="/" class="nav-link">Home</a></li>
+            <li><a href="/archive" class="nav-link active">Archive</a></li>
+            <li><a href="/about" class="nav-link">About</a></li>
+            <li><a href="/projects" class="nav-link">Projects</a></li>
+          </ul>
+          <button class="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="archive-page">
+      <div class="container">
+        <article class="archive-content">
+          <header class="archive-header">
+            <h1>Arquivo</h1>
+            <p class="archive-subtitle">Todos os artigos ({posts.length} posts)</p>
+          </header>
+          
+          <div class="archive-list">
+            {posts.map(post => (
+              <div class="archive-item">
+                <div class="archive-meta">
+                  <time datetime={post.date}>{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                  <div class="post-tags">
+                    {post.tags.map(tag => (
+                      <span class="tag">{tag}</span>
+                    ))}
+                  </div>
+                </div>
+                <h3 class="archive-title">
+                  <a href={`/posts/${post.slug}`}>{post.title}</a>
+                </h3>
+                <p class="archive-excerpt">{post.excerpt}</p>
+              </div>
+            ))}
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <footer class="blog-footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-about">
+            <h3>Levi Lucena</h3>
+            <p>Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos.</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://levilucena.github.io/portfolio/" target="_blank" aria-label="Portfolio">
+                <i class="fas fa-external-link-alt"></i>
+              </a>
+              <a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle">
+                <i class="fab fa-kaggle"></i>
+              </a>
+              <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
+                <i class="fas fa-award"></i>
+              </a>
+            </div>
+          </div>
+
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
+        </div>
+      </div>
+    </footer>
+    
+    <!-- Buy me a coffee floating button -->
+    <a class="coffee-button" href="https://www.paypal.com/donate/?hosted_button_id=58DYCL22CTERG" target="_blank">
+        <span class="coffee-text">Buy me a coffee!</span>
+        <span class="coffee-icon-wrapper">
+            <i class="fas fa-coffee"></i>
+            <span class="steam steam-1"></span>
+            <span class="steam steam-2"></span>
+        </span>
+    </a>
+  </div>
+</BlogLayout>

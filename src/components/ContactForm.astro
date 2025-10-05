@@ -1,0 +1,111 @@
+---
+// ContactForm.astro
+import { useState } from 'astro/hooks';
+
+const [formData, setFormData] = useState({
+  name: '',
+  email: '',
+  message: ''
+});
+const [isSubmitting, setIsSubmitting] = useState(false);
+const [submitMessage, setSubmitMessage] = useState('');
+---
+
+<form 
+  id="contactForm" 
+  class="contact-form" 
+  onSubmit={async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitMessage('');
+    
+    // Validate form
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitMessage('Por favor, preencha todos os campos.');
+      setIsSubmitting(false);
+      return;
+    }
+    
+    // Simple email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setSubmitMessage('Por favor, insira um email válido.');
+      setIsSubmitting(false);
+      return;
+    }
+    
+    try {
+      // In a real application, you would send the form data to a server
+      // For now, we'll open a mailto link as in the original implementation
+      const subject = encodeURIComponent('Contato via Portfólio');
+      const body = encodeURIComponent(
+        `Nome: ${formData.name}\nEmail: ${formData.email}\nMensagem:\n${formData.message}`
+      );
+      const recipient = 'sr_lucen@yahoo.com.br';
+      const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
+      
+      window.location.href = mailtoLink;
+      
+      // Reset form and show success message
+      setFormData({ name: '', email: '', message: '' });
+      setSubmitMessage('Mensagem enviada! Abrindo cliente de email...');
+    } catch (error) {
+      setSubmitMessage('Erro ao enviar mensagem. Por favor, tente novamente.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  }}
+>
+  <div class="form-group">
+    <label for="name">Nome:</label>
+    <input 
+      type="text" 
+      id="name" 
+      name="name" 
+      value={formData.name}
+      onInput={(e) => setFormData({ ...formData, name: e.target.value })}
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="email">Email:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      value={formData.email}
+      onInput={(e) => setFormData({ ...formData, email: e.target.value })}
+      required
+    />
+  </div>
+  <div class="form-group">
+    <label for="message">Mensagem:</label>
+    <textarea 
+      id="message" 
+      name="message" 
+      rows="5" 
+      value={formData.message}
+      onInput={(e) => setFormData({ ...formData, message: e.target.value })}
+      required
+    ></textarea>
+  </div>
+  <button 
+    type="submit" 
+    class="submit-btn" 
+    disabled={isSubmitting}
+  >
+    {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
+  </button>
+  
+  {submitMessage && (
+    <div class="form-message" style={{ 
+      marginTop: '10px', 
+      padding: '8px', 
+      borderRadius: '4px', 
+      backgroundColor: submitMessage.includes('Erro') ? '#ff4444' : '#44ff44',
+      color: 'white'
+    }}>
+      {submitMessage}
+    </div>
+  )}
+</form>
