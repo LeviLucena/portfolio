@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="pt-BR"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Estratégias de Versionamento no Git - Levi Lucena</title><meta name="description" content="Blog pessoal de Levi Lucena - Engenheiro de Software & Especialista em IA. Artigos sobre tecnologia, desenvolvimento, inteligência artificial e automação."><meta name="keywords" content="desenvolvimento, tecnologia, inteligência artificial, IA, software, programação, blog, artigos técnicos"><meta name="author" content="Levi Lucena"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://levilucena.github.io/blog/"><meta property="og:title" content="Levi Lucena - Blog"><meta property="og:description" content="Blog pessoal de Levi Lucena - Engenheiro de Software & Especialista em IA. Artigos sobre tecnologia, desenvolvimento, inteligência artificial e automação."><meta property="og:image" content="https://levilucena.github.io/blog/og-image.jpg"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://levilucena.github.io/blog/"><meta property="twitter:title" content="Levi Lucena - Blog"><meta property="twitter:description" content="Blog pessoal de Levi Lucena - Engenheiro de Software & Especialista em IA. Artigos sobre tecnologia, desenvolvimento, inteligência artificial e automação."><meta property="twitter:image" content="https://levilucena.github.io/blog/og-image.jpg"><!-- Fonte Martian Mono - Adicione o arquivo martian-mono.woff2 na pasta public/fonts/ --><link rel="preload" href="/fonts/martian-mono.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap"><link rel="canonical" href="https://levilucena.github.io/blog/"><link rel="stylesheet" href="/_astro/about.BTOeR3ZV.css"></head> <body>  <div class="blog-container"> <header class="blog-header"> <div class="container"> <nav class="blog-nav"> <a href="/" class="nav-logo">LL</a> <ul class="nav-menu"> <li><a href="/" class="nav-link">Home</a></li> <li><a href="/archive" class="nav-link">Archive</a></li> <li><a href="/about" class="nav-link">About</a></li> <li><a href="/projects" class="nav-link">Projects</a></li> </ul> <button class="theme-toggle"> <i class="fas fa-moon"></i> </button> </nav> </div> </header> <main class="post-page"> <div class="container"> <article class="post-content"> <header class="post-header"> <h1>Estratégias de Versionamento no Git</h1> <div class="post-meta"> <time datetime="2023-12-15">14 de dezembro de 2023</time> <div class="post-tags"> <span class="tag">Git</span><span class="tag">Versionamento</span><span class="tag">DevOps</span> </div> </div> </header> <div class="post-body">
+      <p>O controle de versão com Git é essencial para qualquer desenvolvedor moderno. As estratégias de versionamento e workflows com Git ajudam equipes a colaborarem eficientemente, manterem um histórico claro e gerenciarem releases de software de forma profissional.</p>
+
+      <h2>Conceitos Fundamentais do Git</h2>
+      
+      <p>Antes de explorar estratégias avançadas, é importante entender os conceitos básicos:</p>
+      
+      <ul>
+        <li><strong>Repositório:</strong> local onde seu código-fonte é armazenado com seu histórico</li>
+        <li><strong>Commit:</strong> captura de um estado específico do projeto</li>
+        <li><strong>Branch:</strong> ramificação que permite trabalhar em recursos isoladamente</li>
+        <li><strong>Merge:</strong> combinação de duas ramificações</li>
+        <li><strong>Remote:</strong> repositório hospedado em um servidor (ex: GitHub)</li>
+      </ul>
+
+      <h2>Workflows de Git</h2>
+      
+      <p>Existem diferentes estratégias para organizar o trabalho com Git:</p>
+      
+      <h3>Feature Branch Workflow</h3>
+      <p>Cada nova funcionalidade é desenvolvida em uma branch separada, que é mergeada à branch principal após revisão. Esta é a abordagem mais comum em equipes.</p>
+      
+      <pre><code>
+# Criar uma nova branch para uma feature
+git checkout -b feature/nova-funcionalidade
+
+# Fazer alterações e commit
+git add .
+git commit -m "Adiciona nova funcionalidade"
+
+# Enviar para o repositório remoto
+git push origin feature/nova-funcionalidade
+      </code></pre>
+      
+      <h3>Gitflow Workflow</h3>
+      <p>Um workflow mais estruturado com branches especializadas:</p>
+      <ul>
+        <li><strong>main:</strong> código de produção</li>
+        <li><strong>develop:</strong> código em desenvolvimento</li>
+        <li><strong>feature:</strong> funcionalidades em desenvolvimento</li>
+        <li><strong>release:</strong> preparação de uma nova versão</li>
+        <li><strong>hotfix:</strong> correções urgentes em produção</li>
+      </ul>
+
+      <h2>Boas Práticas de Versionamento</h2>
+      
+      <p>Adotar boas práticas melhora a legibilidade e manutenibilidade do histórico do projeto:</p>
+      
+      <h3>Mensagens de Commit Significativas</h3>
+      <p>Escreva mensagens de commit claras e descritivas. Siga convenções como:</p>
+      <ul>
+        <li>Use o imperativo: "Adiciona funcionalidade" em vez de "Adicionando funcionalidade"</li>
+        <li>Seja conciso mas descritivo</li>
+        <li>Explique o porquê da mudança se não for óbvio</li>
+      </ul>
+      
+      <h3>Tags Semânticas</h3>
+      <p>Use tags para marcar versões importantes do seu software:</p>
+      <pre><code>
+# Criar uma tag para uma versão
+git tag -a v1.2.0 -m "Lançamento da versão 1.2.0"
+
+# Enviar tags para o repositório remoto
+git push origin --tags
+      </code></pre>
+
+      <h2>Ferramentas e Integrações</h2>
+      
+      <p>Complemente seu workflow com Git usando:</p>
+      
+      <ul>
+        <li><strong>GitHub/GitLab:</strong> hospedagem de repositórios com funcionalidades adicionais</li>
+        <li><strong>Pull Requests:</strong> mecanismo para revisão de código antes do merge</li>
+        <li><strong>CI/CD:</strong> integração e entrega contínua automatizadas</li>
+        <li><strong>Git Hooks:</strong> scripts executados automaticamente em eventos do Git</li>
+      </ul>
+
+      <h2>Considerações Finais</h2>
+      
+      <p>Escolher a estratégia de versionamento certa depende do tamanho da equipe, da complexidade do projeto e dos requisitos de entrega. Comece com um workflow simples como o Feature Branch e evolua conforme sua equipe cresce e o projeto se torna mais complexo.</p>
+    </div> <footer class="post-footer"> <div class="author-info"> <h3>Levi Lucena</h3> <p>Engenheiro de Software &amp; Especialista em IA</p> </div> </footer> </article> </div> </main> <footer class="blog-footer"> <div class="container"> <div class="footer-content"> <div class="footer-about"> <h3>Levi Lucena</h3> <p>Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos.</p> <div class="social-links"> <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn"> <i class="fab fa-linkedin"></i> </a> <a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub"> <i class="fab fa-github"></i> </a> <a href="https://levilucena.github.io/portfolio/" target="_blank" aria-label="Portfolio"> <i class="fas fa-external-link-alt"></i> </a> <a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle"> <i class="fab fa-kaggle"></i> </a> <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly"> <i class="fas fa-award"></i> </a> </div> </div> </div> <div class="footer-bottom"> <p>&copy; 2025 Levi Lucena. Todos os direitos reservados.</p> </div> </div> </footer> </div>  <script type="module">document.addEventListener("DOMContentLoaded",function(){const n=document.querySelector(".theme-toggle");n&&n.addEventListener("click",function(){document.body.classList.toggle("dark-theme")});const e=document.getElementById("contactForm");e&&e.addEventListener("submit",function(m){m.preventDefault();const o=document.getElementById("name").value.trim(),t=document.getElementById("email").value.trim(),c=document.getElementById("message").value.trim();if(!o||!t||!c){alert("Por favor, preencha todos os campos.");return}if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(t)){alert("Por favor, insira um email válido.");return}const a=encodeURIComponent("Contato via Blog"),i=encodeURIComponent(`Nome: ${o}\\nEmail: ${t}\\nMensagem:\\n${c}`),s=`mailto:sr_lucen@yahoo.com.br?subject=${a}&body=${i}`;window.location.href=s,e.reset()})});</script> </body> </html>
