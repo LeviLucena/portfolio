@@ -116,3 +116,6 @@ dist/
 
 # Astro development server
 astro.config.mjs.timestamp-*
+
+# Public directory - Needed for GitHub Pages hosting
+# public/
