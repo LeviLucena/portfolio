@@ -897,6 +897,7 @@ h2, h3, h4, h5, h6 {
   object-fit: contain;
   animation: cart-bounce 3s infinite ease-in-out;
   filter: invert(0) grayscale(0) brightness(1); /* Maintain original colors */
+  margin-right: 8px; /* Add some spacing from the text */
 }
 
 @keyframes cart-bounce {
@@ -906,6 +907,14 @@ h2, h3, h4, h5, h6 {
   50% {
     transform: translateY(-5px);
   }
+}
+
+.fallback-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 8px;
+  color: white;
+  font-size: 24px;
 }
 
 .amazon-store-text {
