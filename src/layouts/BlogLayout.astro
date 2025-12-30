@@ -38,6 +38,12 @@ const { title } = Astro.props;
 <body>
   <slot />
   
+  <!-- Floating Amazon Store Button -->
+  <a class="amazon-store-button" href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" rel="noopener noreferrer">
+    <img src="/carrinho-de-compras.png" alt="Loja Amazon" class="amazon-store-icon">
+    <span class="amazon-store-text">Desbloqueie seus Insights</span>
+  </a>
+
   <script>
     // Theme toggle functionality
     document.addEventListener('DOMContentLoaded', function() {
@@ -47,30 +53,30 @@ const { title } = Astro.props;
           document.body.classList.toggle('dark-theme');
         });
       }
-      
+
       // Contact form handling
       const contactForm = document.getElementById('contactForm');
       if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          
+
           const name = document.getElementById('name').value.trim();
           const email = document.getElementById('email').value.trim();
           const message = document.getElementById('message').value.trim();
-          
+
           // Validate form
           if (!name || !email || !message) {
             alert('Por favor, preencha todos os campos.');
             return;
           }
-          
+
           // Simple email validation
           const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
           if (!emailRegex.test(email)) {
             alert('Por favor, insira um email válido.');
             return;
           }
-          
+
           // In a real application, you would send the form data to a server
           // For now, we'll open a mailto link
           const subject = encodeURIComponent('Contato via Blog');
@@ -79,9 +85,9 @@ const { title } = Astro.props;
           );
           const recipient = 'sr_lucen@yahoo.com.br';
           const mailtoLink = `mailto:${recipient}?subject=${subject}&body=${body}`;
-          
+
           window.location.href = mailtoLink;
-          
+
           // Reset form after successful submission
           contactForm.reset();
         });
