@@ -361,7 +361,7 @@ git push origin --tags
   },
   {
     slug: 'clawdbot-nova-geracao-agentes-ia',
-    title: 'ClawDBot e a Nova Geração de Agentes de IA: Quando o Deixa Responder',
+    title: 'Clawd.bot e a Nova Geração de Agentes de IA 24/7 que pode automatizar a sua vida!',
     date: '2026-01-27',
     tags: ['IA', 'Agentes', 'Automação', 'ClawDBot'],
     content: `
