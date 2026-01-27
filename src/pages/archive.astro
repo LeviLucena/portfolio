@@ -56,7 +56,12 @@ const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
   { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
   { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
-  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' }
+  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' },
+  {
+    name: 'Amazon',
+    url: 'https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1',
+    icon: 'fab fa-amazon'
+  }
 ];
 ---
 
@@ -86,7 +91,7 @@ const socialLinks = [
             <h1>Arquivo</h1>
             <p class="archive-subtitle">Todos os artigos ({posts.length} posts)</p>
           </header>
-          
+
           <div class="archive-list">
             {posts.map(post => (
               <div class="archive-item">
@@ -131,6 +136,9 @@ const socialLinks = [
               <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
                 <i class="fas fa-award"></i>
               </a>
+              <a href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" aria-label="Amazon">
+                <i class="fab fa-amazon"></i>
+              </a>
             </div>
           </div>
 
@@ -140,7 +148,7 @@ const socialLinks = [
         </div>
       </div>
     </footer>
-    
+
     <!-- Buy me a coffee floating button -->
     <a class="coffee-button" href="https://www.paypal.com/donate/?hosted_button_id=58DYCL22CTERG" target="_blank">
         <span class="coffee-text">Buy me a coffee!</span>

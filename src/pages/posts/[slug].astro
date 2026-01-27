@@ -13,7 +13,7 @@ const { post } = Astro.props;
 
 const author = {
   name: 'Levi Lucena',
-  role: 'Engenheiro de Software & Especialista em IA'
+  role: 'Engenheiro de Software & Engenheiro de Soluções de IA'
 };
 
 const socialLinks = [
@@ -21,7 +21,12 @@ const socialLinks = [
   { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
   { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
   { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
-  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' }
+  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' },
+  {
+    name: 'Amazon',
+    url: 'https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1',
+    icon: 'fab fa-amazon'
+  }
 ];
 ---
 
@@ -58,9 +63,9 @@ const socialLinks = [
               </div>
             </div>
           </header>
-          
+
           <div class="post-body" set:html={post.content}></div>
-          
+
           <footer class="post-footer">
             <div class="author-info">
               <h3>{author.name}</h3>
@@ -92,6 +97,9 @@ const socialLinks = [
               </a>
               <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
                 <i class="fas fa-award"></i>
+              </a>
+              <a href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" aria-label="Amazon">
+                <i class="fab fa-amazon"></i>
               </a>
             </div>
           </div>
