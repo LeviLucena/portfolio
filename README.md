@@ -1,143 +1,177 @@
-# Blog Pessoal de Levi Lucena
+# Portfolio Levi Lucena
 
-Bem-vindo ao meu blog pessoal profissional desenvolvido com Astro, um framework moderno para construção de websites estáticos rápidos e otimizados, inspirado no design minimalista do site errolm.dev.
+Portfolio profissional com design **Brutalist** de alto contraste, desenvolvido com Astro.
 
-## 🚀 Tecnologias Utilizadas
+**Live Demo:** [levilucena.github.io/portfolio](https://levilucena.github.io/portfolio/)
 
-- [Astro](https://astro.build/) - Framework web para conteúdo estático
-- [Martian Mono](https://github.com/evilmartians/mono) - Fonte tipográfica (adicionar arquivo woff2 na pasta public/fonts/)
-- [Font Awesome](https://fontawesome.com/) - Biblioteca de ícones
-- [Google Fonts](https://fonts.google.com/) - Fontes tipográficas de fallback
+![Astro](https://img.shields.io/badge/Astro-5.14.1-FF5D01?style=flat-square&logo=astro&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
-## ✨ Características
+## Visao Geral
 
-- Design minimalista e limpo inspirado em errolm.dev
-- Navegação completa: Home, Archive, About, Projects
-- Sistema de artigos completo com categorias e tags
-- Página dedicada de projetos com todos os projetos profissionais detalhados
-- Tecnologias organizadas por categorias com ícones representativos
-- Design responsivo e moderno
-- Tema claro/escuro alternável
-- SEO otimizado
-- Velocidade de carregamento otimizada
-- Seções completas: 
-  - Home (com artigos recentes)
-  - About (com informações detalhadas e tecnologias)
-  - Projects (com todos os projetos profissionais)
-  - Archive (com todos os artigos)
+Portfolio minimalista com estetica brutalist, focado em performance e experiencia do usuario. Features incluem seletor de temas dinamico, cursor customizado interativo e animacoes suaves.
 
-## 📦 Estrutura do Projeto
+## Tecnologias
+
+| Categoria | Tecnologias |
+|-----------|-------------|
+| **Framework** | Astro 5.14.1 |
+| **Estilizacao** | Tailwind CSS, CSS Custom Properties |
+| **Fontes** | Anton (headings), Inter (body) |
+| **Icones** | Font Awesome 6, Devicon |
+| **Deploy** | GitHub Pages + GitHub Actions |
+
+## Features
+
+### Seletor de Temas
+8 paletas de cores disponiveis com persistencia via localStorage:
+
+| Tema | Accent Color |
+|------|--------------|
+| Acid | `#ccff00` (verde acido) |
+| Cyber | `#00ffff` (ciano) |
+| Neon | `#ff00ff` (magenta) |
+| Fire | `#ff6600` (laranja) |
+| Ocean | `#00bfff` (azul) |
+| Sunset | `#ff4757` (vermelho coral) |
+| Gold | `#ffd700` (dourado) |
+| Mint | `#00ff7f` (verde menta) |
+
+### Design Brutalist
+- Alto contraste com backgrounds escuros
+- Tipografia bold em uppercase
+- Bordas retas sem border-radius
+- Sombras em bloco (box-shadow offset)
+- Efeitos hover com inversao de cores
+
+### Interatividade
+- Cursor customizado que reage a elementos hover
+- Botao magnetico no hero
+- Ticker animado com tecnologias
+- Transicoes suaves entre paginas
+
+## Estrutura do Projeto
 
 ```
-/
+portfolio/
 ├── src/
 │   ├── layouts/
-│   │   └── BlogLayout.astro
+│   │   └── BrutalistLayout.astro    # Layout principal
 │   ├── pages/
-│   │   ├── index.astro (página inicial)
-│   │   ├── about.astro (página sobre)
-│   │   ├── archive.astro (página de arquivo)
-│   │   ├── projects.astro (página de projetos)
-│   │   └── posts/[slug].astro (posts individuais)
-│   ├── styles/
-│   │   └── global.css
-│   └── lib/
-│       └── posts.js (dados dos posts)
-└── public/
-    ├── Certificados/ (subdiretórios com certificações)
-    └── fonts/ (pasta para armazenar a fonte martian-mono.woff2)
+│   │   ├── index.astro              # Home
+│   │   ├── about.astro              # Sobre + Tech Stack + Certificacoes
+│   │   ├── projects.astro           # Projetos
+│   │   ├── archive.astro            # Arquivo de posts
+│   │   └── posts/
+│   │       └── [slug].astro         # Posts dinamicos
+│   ├── lib/
+│   │   └── posts.js                 # Dados dos artigos
+│   └── styles/
+│       └── global.css               # Estilos globais
+├── public/
+│   └── fonts/                       # Fontes customizadas
+├── astro.config.mjs
+├── tailwind.config.js
+└── package.json
 ```
 
-## 🔧 Como Executar Localmente
+## Paginas
 
-1. Clone este repositório
-2. Instale as dependências: `npm install`
-3. Execute em modo de desenvolvimento: `npm run dev`
-4. Acesse `http://localhost:4321` no seu navegador
+### Home (`/`)
+- Hero com nome e role
+- Ticker animado de tecnologias
+- Posts recentes em grid
 
-## 🚀 Implantação no GitHub Pages
+### About (`/about`)
+- Informacoes profissionais
+- Formacao Academica
+- Formacao Complementar (Harvard CS50)
+- Tech Stack com icones (80+ tecnologias)
+- Certificacoes Profissionais por provedor
 
-1. Faça o build do projeto: `npm run build`
-2. O diretório `dist/` gerado contém os arquivos estáticos prontos para deploy
-3. Configure o GitHub Pages para usar a branch `gh-pages` ou a pasta `/docs` no repositório
+### Projects (`/projects`)
+- Grid de projetos destacados
+- Cards com tecnologias e links
+- CTA para GitHub
 
-### Configuração automática com GitHub Actions (recomendado)
+### Archive (`/archive`)
+- Timeline de todos os artigos
+- Filtros por categoria
+- Numeracao regressiva
 
-Crie um workflow em `.github/workflows/deploy.yml`:
+### Posts (`/posts/[slug]`)
+- Layout completo para artigos
+- Posts relacionados
+- Card do autor
 
-```yaml
-name: Deploy to GitHub Pages
+## Instalacao
 
-on:
-  push:
-    branches: [ main ]
+```bash
+# Clonar repositorio
+git clone https://github.com/LeviLucena/portfolio.git
+cd portfolio
 
-env:
-  PUBLIC_BASE_URL: '/'
+# Instalar dependencias
+npm install
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+# Executar em desenvolvimento
+npm run dev
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
+# Build para producao
+npm run build
 
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build
-        run: npm run build
-
-      - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: 'dist'
-
-  deploy:
-    needs: build
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v1
+# Preview do build
+npm run preview
 ```
 
-## 📁 Organização de Certificados
+## Deploy
 
-Os certificados estão organizados em subpastas dentro de `public/Certificados/`:
-- `Certiprof/`
-- `Cisco/`
-- `Fortinet/`
-- `IBM/`
-- `Microsoft/`
-- `Oracle/`
-- `Senai/`
+O deploy e automatico via GitHub Actions. A cada push na branch `main`, o workflow:
 
-## 🎯 Seções do Blog
+1. Faz checkout do codigo
+2. Instala dependencias
+3. Executa build do Astro
+4. Deploy para GitHub Pages
 
-1. **Home** - Página inicial com artigos recentes e introdução pessoal
-2. **Archive** - Arquivo completo com todos os artigos organizados por data
-3. **About** - Informações detalhadas sobre formação acadêmica, habilidades técnicas organizadas por categorias e tecnologias
-4. **Projects** - Página dedicada exclusivamente a todos os projetos profissionais com descrições completas, tecnologias utilizadas, áreas de atuação e status
-5. **Posts Individuais** - Páginas para cada artigo com conteúdo detalhado e formatação rica
+## Customizacao
 
-## 🌙 Tema Escuro
+### Adicionar novo tema
 
-O portfolio inclui uma opção de tema claro/escuro que pode ser alternada pelo botão no cabeçalho.
+Edite `src/layouts/BrutalistLayout.astro` e adicione:
 
-## 📞 Contato
+```css
+[data-theme="seu-tema"] {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --accent-color: #ff0000;
+  --border-color: #333333;
+}
+```
 
-- Email: sr_lucen@yahoo.com.br
-- LinkedIn: https://www.linkedin.com/in/levilucena/
-- GitHub: https://github.com/LeviLucena
+### Adicionar tecnologia ao Tech Stack
+
+Edite `src/pages/about.astro` no objeto `techStack`:
+
+```javascript
+{ name: 'NovaTech', icon: 'devicon-novatech-plain' }
+```
+
+### Adicionar certificacao
+
+Edite `src/pages/about.astro` no objeto `certifications`.
+
+## Contato
+
+- **LinkedIn:** [linkedin.com/in/levilucena](https://www.linkedin.com/in/levilucena/)
+- **GitHub:** [github.com/LeviLucena](https://github.com/LeviLucena)
+- **Kaggle:** [kaggle.com/levilucena](https://www.kaggle.com/levilucena)
+- **Amazon:** [E-books](https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena)
+
+## Licenca
+
+Este projeto esta sob a licenca MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+Desenvolvido por **Levi Lucena** | Design Brutalist
