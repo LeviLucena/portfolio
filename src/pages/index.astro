@@ -1,165 +1,242 @@
----
-import BlogLayout from '../layouts/BlogLayout.astro';
+﻿---
+import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 
 const author = {
   name: 'Levi Lucena',
   role: 'Engenheiro de Software & Engenheiro de Soluções de IA',
-  bio: 'Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos, atuando de ponta a ponta na concepção, desenvolvimento e entrega de soluções escaláveis e orientadas a dados.'
+  bio: 'Construindo soluções inteligentes que transformam ideias em realidade digital.'
 };
 
-// Mock data for blog posts
-const posts = [
+const recentPosts = [
   {
     slug: 'clawdbot-nova-geracao-agentes-ia',
-    title: 'Clawd.bot e a Nova Geração de Agentes de IA 24/7 que pode automatizar a sua vida!',
+    title: 'Clawd.bot e a Nova Geração de Agentes de IA',
     date: '2026-01-27',
-    excerpt: 'Na evolução contínua da inteligência artificial, assistimos a uma transformação significativa: o surgimento de agentes de IA verdadeiramente autônomos, como o ClawDBot, que representam uma nova geração de assistentes digitais.',
-    tags: ['IA', 'Agentes', 'Automação', 'ClawDBot']
+    tags: ['IA', 'Agentes', 'Automação']
   },
   {
     slug: 'introducao-ao-machine-learning',
     title: 'Introdução ao Machine Learning',
     date: '2024-01-15',
-    excerpt: 'Uma visão geral dos fundamentos de machine learning e suas aplicações práticas no mundo real.',
     tags: ['IA', 'Python', 'Data Science']
   },
   {
     slug: 'automacao-com-python',
     title: 'Automação de Processos com Python',
     date: '2024-01-10',
-    excerpt: 'Como usar Python para automatizar tarefas repetitivas e aumentar a produtividade.',
-    tags: ['Python', 'Automação', 'Produtividade']
-  },
-  {
-    slug: 'inteligencia-artificial-aplicada',
-    title: 'Aplicações Práticas de Inteligência Artificial',
-    date: '2024-01-05',
-    excerpt: 'Exemplos reais de como a IA está transformando diferentes setores e indústrias.',
-    tags: ['IA', 'Aplicações', 'Tecnologia']
-  },
-  {
-    slug: 'desenvolvimento-web-moderno',
-    title: 'Desenvolvimento Web Moderno com React',
-    date: '2023-12-28',
-    excerpt: 'Explorando as melhores práticas para desenvolvimento web com as tecnologias mais recentes.',
-    tags: ['React', 'JavaScript', 'Frontend']
-  }
-];
-
-const socialLinks = [
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/levilucena/', icon: 'fab fa-linkedin' },
-  { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
-  { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
-  { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
-  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' },
-  {
-    name: 'Amazon',
-    url: 'https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1',
-    icon: 'fab fa-amazon'
+    tags: ['Python', 'Automação']
   }
 ];
 ---
 
-<BlogLayout title="Levi Lucena - Blog">
-  <div class="blog-container">
-    <header class="blog-header">
-      <div class="container">
-        <nav class="blog-nav">
-          <a href="/portfolio/" class="nav-logo">LL</a>
-          <ul class="nav-menu">
-            <li><a href="/portfolio/" class="nav-link active">Home</a></li>
-            <li><a href="/portfolio/archive" class="nav-link">Archive</a></li>
-            <li><a href="/portfolio/about" class="nav-link">About</a></li>
-            <li><a href="/portfolio/projects" class="nav-link">Projects</a></li>
-          </ul>
-          <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section class="hero-section">
-        <div class="container">
-          <div class="hero-content">
-            <h1>{author.name}</h1>
-            <p class="hero-role">{author.role}</p>
-            <p class="hero-bio">{author.bio}</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="blog-posts">
-        <div class="container">
-          <h2>Artigos Recentes</h2>
-          <div class="posts-grid">
-            {posts.map(post => (
-              <article class="post-card">
-                <div class="post-content">
-                  <div class="post-meta">
-                    <time datetime={post.date}>{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                    <div class="post-tags">
-                      {post.tags.map(tag => (
-                        <span class="tag">{tag}</span>
-                      ))}
-                    </div>
-                  </div>
-                  <h3 class="post-title">
-                    <a href={`/portfolio/posts/${post.slug}`}>{post.title}</a>
-                  </h3>
-                  <p class="post-excerpt">{post.excerpt}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="blog-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <h3>Levi Lucena</h3>
-            <p>Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos.</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://levilucena.github.io/portfolio/" target="_blank" aria-label="Portfolio">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle">
-                <i class="fab fa-kaggle"></i>
-              </a>
-              <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
-                <i class="fas fa-award"></i>
-              </a>
-              <a href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" aria-label="Amazon">
-                <i class="fab fa-amazon"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
+<BrutalistLayout title="Levi Lucena - Portfolio">
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <h1>{author.name}<br /><span class="text-accent">Portfolio</span></h1>
+        <p class="hero-role">{author.role}</p>
+        <p class="hero-bio">{author.bio}</p>
+        
+        <!-- MAGNETIC CTA -->
+        <div class="cta-wrapper hover-trigger" id="magneticArea">
+          <a href="/portfolio/projects" class="magnetic-btn">
+            Ver Projetos
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
       </div>
-    </footer>
+    </div>
+  </section>
 
-    <!-- Buy me a coffee floating button -->
-    <a class="coffee-button" href="https://www.paypal.com/donate/?hosted_button_id=58DYCL22CTERG" target="_blank">
-        <span class="coffee-text">Buy me a coffee!</span>
-        <span class="coffee-icon-wrapper">
-            <i class="fas fa-coffee"></i>
-            <span class="steam steam-1"></span>
-            <span class="steam steam-2"></span>
-        </span>
-    </a>
+  <!-- TICKER SECTION -->
+  <div class="ticker-wrap">
+    <div class="ticker">
+      <div class="ticker-item">Python • React • AI • Machine Learning • Astro • Node.js • Docker • PostgreSQL • TypeScript • FastAPI • </div>
+      <div class="ticker-item">Python • React • AI • Machine Learning • Astro • Node.js • Docker • PostgreSQL • TypeScript • FastAPI • </div>
+      <div class="ticker-item">Python • React • AI • Machine Learning • Astro • Node.js • Docker • PostgreSQL • TypeScript • FastAPI • </div>
+    </div>
   </div>
-</BlogLayout>
+
+  <!-- RECENT POSTS -->
+  <section class="container">
+    <h2 class="section-title">Recent Posts</h2>
+    <div class="posts-grid">
+      {recentPosts.map(post => (
+        <article class="post-card hover-trigger">
+          <div class="post-content">
+            <div class="post-meta">
+              <time datetime={post.date}>{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+              <div class="post-tags">
+                {post.tags.map(tag => (
+                  <span class="tag">{tag}</span>
+                ))}
+              </div>
+            </div>
+            <h3 class="post-title">
+              <a href={`/portfolio/posts/${post.slug}`}>{post.title}</a>
+            </h3>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <style is:global>
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 15vw, 12rem);
+      line-height: 0.85;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: transparent;
+      -webkit-text-stroke: 3px var(--accent-color);
+    }
+
+    .hero-role {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-bio {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto;
+      opacity: 0.8;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    /* MAGNETIC CTA */
+    .cta-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-top: 3rem;
+    }
+
+    .magnetic-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      padding: 1.5rem 4rem;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      border: none;
+      transition: transform 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .magnetic-btn:hover i {
+      transform: translateX(10px);
+    }
+
+    .magnetic-btn i {
+      transition: transform 0.3s ease;
+    }
+
+    /* POSTS SECTION */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      border-bottom: 3px solid var(--accent-color);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .posts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .post-card {
+      border: 3px solid var(--text-color);
+      padding: 2rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    .post-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-10px);
+      box-shadow: 10px 10px 0px var(--accent-color);
+    }
+
+    .post-meta {
+      margin-bottom: 1rem;
+    }
+
+    .post-meta time {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .post-tags {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .post-tags .tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    .post-card:hover .post-tags .tag {
+      color: var(--bg-color);
+      border-color: var(--bg-color);
+    }
+
+    .post-title {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      line-height: 1.1;
+      margin-top: 1rem;
+      text-transform: uppercase;
+    }
+
+    .post-title a {
+      color: inherit;
+      transition: color 0.3s;
+    }
+
+    .post-card:hover .post-title a {
+      color: var(--accent-color);
+    }
+  </style>
+</BrutalistLayout>

@@ -1,5 +1,5 @@
 ---
-import BlogLayout from '../../layouts/BlogLayout.astro';
+import BrutalistLayout from '../../layouts/BrutalistLayout.astro';
 import { allPosts } from '../../lib/posts';
 
 export async function getStaticPaths() {
@@ -16,98 +16,492 @@ const author = {
   role: 'Engenheiro de Software & Engenheiro de Soluções de IA'
 };
 
-const socialLinks = [
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/levilucena/', icon: 'fab fa-linkedin' },
-  { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
-  { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
-  { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
-  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' },
-  {
-    name: 'Amazon',
-    url: 'https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1',
-    icon: 'fab fa-amazon'
-  }
-];
+// Find related posts (same tags)
+const relatedPosts = allPosts
+  .filter(p => p.slug !== post.slug && p.tags.some(tag => post.tags.includes(tag)))
+  .slice(0, 3);
 ---
 
-<BlogLayout title={`${post.title} - Levi Lucena`}>
-  <div class="blog-container">
-    <header class="blog-header">
-      <div class="container">
-        <nav class="blog-nav">
-          <a href="/portfolio/" class="nav-logo">LL</a>
-          <ul class="nav-menu">
-            <li><a href="/portfolio/" class="nav-link">Home</a></li>
-            <li><a href="/portfolio/archive" class="nav-link">Archive</a></li>
-            <li><a href="/portfolio/about" class="nav-link">About</a></li>
-            <li><a href="/portfolio/projects" class="nav-link">Projects</a></li>
-          </ul>
-          <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </nav>
+<BrutalistLayout title={`${post.title} - Levi Lucena`}>
+  <!-- POST HERO -->
+  <section class="post-hero">
+    <div class="container">
+      <a href="/portfolio/archive" class="back-link hover-trigger">
+        <i class="fas fa-arrow-left"></i> Voltar ao Archive
+      </a>
+      <div class="post-meta-top">
+        <time datetime={post.date}>
+          {new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}
+        </time>
       </div>
-    </header>
-
-    <main class="post-page">
-      <div class="container">
-        <article class="post-content">
-          <header class="post-header">
-            <h1>{post.title}</h1>
-            <div class="post-meta">
-              <time datetime={post.date}>{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-              <div class="post-tags">
-                {post.tags.map(tag => (
-                  <span class="tag">{tag}</span>
-                ))}
-              </div>
-            </div>
-          </header>
-
-          <div class="post-body" set:html={post.content}></div>
-
-          <footer class="post-footer">
-            <div class="author-info">
-              <h3>{author.name}</h3>
-              <p>{author.role}</p>
-            </div>
-          </footer>
-        </article>
+      <h1>{post.title}</h1>
+      <div class="post-tags-hero">
+        {post.tags.map(tag => (
+          <span class="tag">{tag}</span>
+        ))}
       </div>
-    </main>
+    </div>
+  </section>
 
-    <footer class="blog-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <h3>Levi Lucena</h3>
-            <p>Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos.</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://levilucena.github.io/portfolio/" target="_blank" aria-label="Portfolio">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle">
-                <i class="fab fa-kaggle"></i>
-              </a>
-              <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
-                <i class="fas fa-award"></i>
-              </a>
-              <a href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" aria-label="Amazon">
-                <i class="fab fa-amazon"></i>
-              </a>
-            </div>
+  <!-- POST CONTENT -->
+  <section class="post-content-section">
+    <div class="container">
+      <article class="post-article">
+        <div class="post-body" set:html={post.content}></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- AUTHOR SECTION -->
+  <section class="author-section">
+    <div class="container">
+      <div class="author-card hover-trigger">
+        <div class="author-info">
+          <div class="author-avatar">LL</div>
+          <div class="author-details">
+            <h3>{author.name}</h3>
+            <p>{author.role}</p>
           </div>
         </div>
-        <div class="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
+        <div class="author-links">
+          <a href="https://www.linkedin.com/in/levilucena/" target="_blank" class="hover-trigger">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/LeviLucena" target="_blank" class="hover-trigger">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://www.kaggle.com/levilucena" target="_blank" class="hover-trigger">
+            <i class="fab fa-kaggle"></i>
+          </a>
         </div>
       </div>
-    </footer>
-  </div>
-</BlogLayout>
+    </div>
+  </section>
+
+  <!-- RELATED POSTS -->
+  {relatedPosts.length > 0 && (
+    <section class="related-section">
+      <div class="container">
+        <h2>Posts <span class="text-accent">Relacionados</span></h2>
+        <div class="related-grid">
+          {relatedPosts.map((relatedPost, index) => (
+            <a href={`/portfolio/posts/${relatedPost.slug}`} class="related-card hover-trigger">
+              <span class="related-number">{(index + 1).toString().padStart(2, '0')}</span>
+              <div class="related-content">
+                <time datetime={relatedPost.date}>
+                  {new Date(relatedPost.date).toLocaleDateString('pt-BR', { month: 'short', day: 'numeric' })}
+                </time>
+                <h4>{relatedPost.title}</h4>
+                <div class="related-tags">
+                  {relatedPost.tags.slice(0, 2).map(tag => (
+                    <span class="tag-small">{tag}</span>
+                  ))}
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- NAVIGATION -->
+  <section class="post-navigation">
+    <div class="container">
+      <a href="/portfolio/archive" class="nav-btn hover-trigger">
+        <i class="fas fa-th-list"></i>
+        Ver todos os posts
+      </a>
+    </div>
+  </section>
+
+  <style is:global>
+    /* POST HERO */
+    .post-hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 120px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 2rem;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+    }
+
+    .back-link:hover {
+      opacity: 1;
+      color: var(--accent-color);
+    }
+
+    .post-meta-top {
+      margin-bottom: 1.5rem;
+    }
+
+    .post-meta-top time {
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-color);
+    }
+
+    .post-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(2.5rem, 8vw, 6rem);
+      line-height: 1;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      max-width: 1000px;
+    }
+
+    .post-tags-hero {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .post-tags-hero .tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.5rem 1.5rem;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      transition: all 0.3s ease;
+    }
+
+    .post-tags-hero .tag:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    /* POST CONTENT */
+    .post-content-section {
+      padding: 6rem 0;
+    }
+
+    .post-article {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .post-body {
+      font-size: 1.125rem;
+      line-height: 1.8;
+    }
+
+    .post-body h2 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      margin: 3rem 0 1.5rem;
+      color: var(--accent-color);
+    }
+
+    .post-body h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin: 2.5rem 0 1rem;
+    }
+
+    .post-body p {
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .post-body ul,
+    .post-body ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+
+    .post-body li {
+      margin-bottom: 0.75rem;
+      list-style: disc;
+    }
+
+    .post-body ol li {
+      list-style: decimal;
+    }
+
+    .post-body a {
+      color: var(--accent-color);
+      text-decoration: underline;
+      text-decoration-thickness: 2px;
+      transition: all 0.3s ease;
+    }
+
+    .post-body a:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    .post-body code {
+      font-family: 'Courier New', monospace;
+      background-color: rgba(204, 255, 0, 0.1);
+      padding: 0.2rem 0.5rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .post-body pre {
+      background-color: #111;
+      border: 2px solid var(--border-color);
+      padding: 1.5rem;
+      overflow-x: auto;
+      margin: 2rem 0;
+    }
+
+    .post-body pre code {
+      background: none;
+      border: none;
+      padding: 0;
+    }
+
+    .post-body blockquote {
+      border-left: 4px solid var(--accent-color);
+      padding-left: 2rem;
+      margin: 2rem 0;
+      font-style: italic;
+      opacity: 0.9;
+    }
+
+    .post-body img {
+      max-width: 100%;
+      height: auto;
+      margin: 2rem 0;
+      border: 2px solid var(--border-color);
+    }
+
+    /* AUTHOR SECTION */
+    .author-section {
+      padding: 4rem 0;
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .author-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      border: 3px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .author-card:hover {
+      border-color: var(--accent-color);
+      transform: translateX(10px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .author-avatar {
+      width: 80px;
+      height: 80px;
+      border: 3px solid var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    .author-details h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .author-details p {
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+
+    .author-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .author-links a {
+      width: 50px;
+      height: 50px;
+      border: 2px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+
+    .author-links a:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border-color: var(--accent-color);
+    }
+
+    /* RELATED POSTS */
+    .related-section {
+      padding: 6rem 0;
+    }
+
+    .related-section h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 4rem);
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1px;
+      border: 1px solid var(--border-color);
+    }
+
+    .related-card {
+      display: flex;
+      gap: 1.5rem;
+      padding: 2rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .related-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+    }
+
+    .related-number {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent-color);
+      opacity: 0.5;
+      line-height: 1;
+    }
+
+    .related-card:hover .related-number {
+      opacity: 1;
+      color: var(--bg-color);
+    }
+
+    .related-content time {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.7;
+    }
+
+    .related-content h4 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      margin: 0.5rem 0 1rem;
+      line-height: 1.2;
+    }
+
+    .related-card:hover .related-content h4 {
+      color: var(--accent-color);
+    }
+
+    .related-tags {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .tag-small {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.2rem 0.5rem;
+      border: 1px solid var(--border-color);
+    }
+
+    .related-card:hover .tag-small {
+      border-color: var(--bg-color);
+    }
+
+    /* POST NAVIGATION */
+    .post-navigation {
+      padding: 4rem 0;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .nav-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      padding: 1.5rem 3rem;
+      border: 3px solid var(--accent-color);
+      transition: all 0.3s ease;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 0 var(--border-color);
+    }
+
+    /* MOBILE RESPONSIVE */
+    @media (max-width: 768px) {
+      .post-hero {
+        min-height: 50vh;
+        padding-top: 100px;
+      }
+
+      .post-hero h1 {
+        font-size: 10vw;
+      }
+
+      .author-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .author-info {
+        flex-direction: column;
+      }
+
+      .related-card {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .related-number {
+        font-size: 2rem;
+      }
+
+      .nav-btn {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+      }
+    }
+  </style>
+</BrutalistLayout>

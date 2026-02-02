@@ -1,169 +1,328 @@
----
-import BlogLayout from '../layouts/BlogLayout.astro';
+﻿---
+import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 
 const posts = [
   {
     slug: 'clawdbot-nova-geracao-agentes-ia',
-    title: 'Clawd.bot e a Nova Geração de Agentes de IA 24/7 que pode automatizar a sua vida!',
+    title: 'Clawd.bot e a Nova Geração de Agentes de IA 24/7',
     date: '2026-01-27',
-    excerpt: 'Na evolução contínua da inteligência artificial, assistimos a uma transformação significativa: o surgimento de agentes de IA verdadeiramente autônomos, como o ClawDBot, que representam uma nova geração de assistentes digitais.',
-    tags: ['IA', 'Agentes', 'Automação', 'ClawDBot']
+    excerpt: 'Na evolução contínua da inteligência artificial, assistimos a uma transformação significativa: o surgimento de agentes de IA verdadeiramente autônomos, como o ClawDBot.',
+    tags: ['IA', 'Agentes', 'Automação', 'ClawDBot'],
+    category: 'AI'
   },
   {
     slug: 'introducao-ao-machine-learning',
     title: 'Introdução ao Machine Learning',
     date: '2024-01-15',
     excerpt: 'Uma visão geral dos fundamentos de machine learning e suas aplicações práticas no mundo real.',
-    tags: ['IA', 'Python', 'Data Science']
+    tags: ['IA', 'Python', 'Data Science'],
+    category: 'ML'
   },
   {
     slug: 'automacao-com-python',
     title: 'Automação de Processos com Python',
     date: '2024-01-10',
     excerpt: 'Como usar Python para automatizar tarefas repetitivas e aumentar a produtividade.',
-    tags: ['Python', 'Automação', 'Produtividade']
+    tags: ['Python', 'Automação', 'Produtividade'],
+    category: 'Dev'
   },
   {
     slug: 'inteligencia-artificial-aplicada',
     title: 'Aplicações Práticas de Inteligência Artificial',
     date: '2024-01-05',
     excerpt: 'Exemplos reais de como a IA está transformando diferentes setores e indústrias.',
-    tags: ['IA', 'Aplicações', 'Tecnologia']
+    tags: ['IA', 'Aplicações', 'Tecnologia'],
+    category: 'AI'
   },
   {
     slug: 'desenvolvimento-web-moderno',
     title: 'Desenvolvimento Web Moderno com React',
     date: '2023-12-28',
     excerpt: 'Explorando as melhores práticas para desenvolvimento web com as tecnologias mais recentes.',
-    tags: ['React', 'JavaScript', 'Frontend']
+    tags: ['React', 'JavaScript', 'Frontend'],
+    category: 'Dev'
   },
   {
     slug: 'como-escolher-sua-primeira-stack',
-    title: 'Como Escolher Sua Primeira Stack de Desenvolvimento',
+    title: 'Como Escolher Sua Primeira Stack',
     date: '2023-12-20',
-    excerpt: 'Guia prático para iniciantes na programação escolherem as tecnologias mais adequadas para seus projetos.',
-    tags: ['Desenvolvimento', 'Carreira', 'Iniciantes']
+    excerpt: 'Guia prático para iniciantes na programação escolherem as tecnologias mais adequadas.',
+    tags: ['Desenvolvimento', 'Carreira', 'Iniciantes'],
+    category: 'Career'
   },
   {
     slug: 'estrategias-de-versionamento-no-git',
     title: 'Estratégias de Versionamento no Git',
     date: '2023-12-15',
-    excerpt: 'Melhores práticas para gerenciamento de versões de código em projetos de desenvolvimento de software.',
-    tags: ['Git', 'Versionamento', 'DevOps']
-  }
-];
-
-const author = {
-  name: 'Levi Lucena',
-  role: 'Engenheiro de Software & Especialista em IA'
-};
-
-const socialLinks = [
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/levilucena/', icon: 'fab fa-linkedin' },
-  { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
-  { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
-  { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
-  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' },
-  {
-    name: 'Amazon',
-    url: 'https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1',
-    icon: 'fab fa-amazon'
+    excerpt: 'Melhores práticas para gerenciamento de versões de código em projetos.',
+    tags: ['Git', 'Versionamento', 'DevOps'],
+    category: 'DevOps'
   }
 ];
 ---
 
-<BlogLayout title="Arquivo - Levi Lucena">
-  <div class="blog-container">
-    <header class="blog-header">
-      <div class="container">
-        <nav class="blog-nav">
-          <a href="/portfolio/" class="nav-logo">LL</a>
-          <ul class="nav-menu">
-            <li><a href="/portfolio/" class="nav-link">Home</a></li>
-            <li><a href="/portfolio/archive" class="nav-link active">Archive</a></li>
-            <li><a href="/portfolio/about" class="nav-link">About</a></li>
-            <li><a href="/portfolio/projects" class="nav-link">Projects</a></li>
-          </ul>
-          <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
+<BrutalistLayout title="Arquivo - Levi Lucena">
+  <!-- HERO SECTION -->
+  <section class="archive-hero">
+    <div class="container">
+      <h1>Archive<br /><span class="text-accent">{posts.length} Posts</span></h1>
+      <p class="hero-subtitle">Explorando ideias, conceitos e experiências</p>
+    </div>
+  </section>
 
-    <main class="archive-page">
-      <div class="container">
-        <article class="archive-content">
-          <header class="archive-header">
-            <h1>Arquivo</h1>
-            <p class="archive-subtitle">Todos os artigos ({posts.length} posts)</p>
-          </header>
-
-          <div class="archive-list">
-            {posts.map(post => (
-              <div class="archive-item">
-                <div class="archive-meta">
-                  <time datetime={post.date}>{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })}</time>
-                  <div class="post-tags">
-                    {post.tags.map(tag => (
-                      <span class="tag">{tag}</span>
-                    ))}
-                  </div>
-                </div>
-                <h3 class="archive-title">
-                  <a href={`/portfolio/posts/${post.slug}`}>{post.title}</a>
-                </h3>
-                <p class="archive-excerpt">{post.excerpt}</p>
+  <!-- POSTS TIMELINE -->
+  <section class="container">
+    <div class="archive-timeline">
+      {posts.map((post, index) => (
+        <article class={`timeline-item hover-trigger ${index % 2 === 0 ? 'left' : 'right'}`}>
+          <div class="timeline-number">{(posts.length - index).toString().padStart(2, '0')}</div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="timeline-date">
+                <i class="far fa-calendar"></i>
+                <span>{new Date(post.date).toLocaleDateString('pt-BR', { year: 'numeric', month: 'short', day: 'numeric' })}</span>
               </div>
-            ))}
-          </div>
-        </article>
-      </div>
-    </main>
-
-    <footer class="blog-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <h3>Levi Lucena</h3>
-            <p>Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos.</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://levilucena.github.io/portfolio/" target="_blank" aria-label="Portfolio">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle">
-                <i class="fab fa-kaggle"></i>
-              </a>
-              <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
-                <i class="fas fa-award"></i>
-              </a>
-              <a href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" aria-label="Amazon">
-                <i class="fab fa-amazon"></i>
-              </a>
+              <span class="timeline-category">{post.category}</span>
+            </div>
+            <h3 class="timeline-title">
+              <a href={`/portfolio/posts/${post.slug}`}>{post.title}</a>
+            </h3>
+            <p class="timeline-excerpt">{post.excerpt}</p>
+            <div class="timeline-tags">
+              {post.tags.map(tag => (
+                <span class="tag">{tag}</span>
+              ))}
             </div>
           </div>
+        </article>
+      ))}
+    </div>
+  </section>
 
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
-        </div>
-      </div>
-    </footer>
+  <!-- FILTERS -->
+  <section class="container">
+    <div class="filter-section">
+      <button class="filter-btn hover-trigger active">All</button>
+      <button class="filter-btn hover-trigger">AI & ML</button>
+      <button class="filter-btn hover-trigger">Development</button>
+      <button class="filter-btn hover-trigger">Career</button>
+      <button class="filter-btn hover-trigger">DevOps</button>
+    </div>
+  </section>
 
-    <!-- Buy me a coffee floating button -->
-    <a class="coffee-button" href="https://www.paypal.com/donate/?hosted_button_id=58DYCL22CTERG" target="_blank">
-        <span class="coffee-text">Buy me a coffee!</span>
-        <span class="coffee-icon-wrapper">
-            <i class="fas fa-coffee"></i>
-            <span class="steam steam-1"></span>
-            <span class="steam steam-2"></span>
-        </span>
-    </a>
-  </div>
-</BlogLayout>
+  <style is:global>
+    /* ARCHIVE HERO */
+    .archive-hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .archive-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 12vw, 10rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .archive-hero h1 span {
+      color: var(--accent-color);
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      opacity: 0.7;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* TIMELINE */
+    .archive-timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .timeline-item {
+      position: relative;
+      border-bottom: 1px solid var(--border-color);
+      padding: 3rem 2rem;
+      display: flex;
+      gap: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateX(10px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .timeline-item:first-child {
+      border-top: 1px solid var(--border-color);
+    }
+
+    .timeline-number {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      line-height: 1;
+      color: var(--accent-color);
+      opacity: 0.5;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-number {
+      opacity: 1;
+      color: var(--bg-color);
+      transform: scale(1.1);
+    }
+
+    .timeline-content {
+      flex: 1;
+    }
+
+    .timeline-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-date {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .timeline-date i {
+      color: var(--accent-color);
+    }
+
+    .timeline-category {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    .timeline-item:hover .timeline-category {
+      color: var(--bg-color);
+      border-color: var(--bg-color);
+    }
+
+    .timeline-title {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .timeline-title a {
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-title a {
+      color: var(--accent-color);
+    }
+
+    .timeline-excerpt {
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .timeline-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .timeline-tags .tag {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .timeline-item:hover .timeline-tags .tag {
+      border-color: var(--bg-color);
+    }
+
+    /* FILTER SECTION */
+    .filter-section {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding: 2rem;
+      border: 3px solid var(--border-color);
+    }
+
+    .filter-btn {
+      padding: 1rem 2rem;
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      border: 2px solid var(--border-color);
+      background: transparent;
+      color: inherit;
+      transition: all 0.3s ease;
+      cursor: none;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border-color: var(--accent-color);
+      transform: translateY(-3px);
+    }
+
+    @media (max-width: 768px) {
+      .archive-hero h1 {
+        font-size: 18vw;
+      }
+
+      .timeline-item {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .timeline-number {
+        font-size: 3rem;
+      }
+
+      .timeline-title {
+        font-size: 1.5rem;
+      }
+
+      .filter-section {
+        flex-direction: column;
+      }
+
+      .filter-btn {
+        width: 100%;
+      }
+    }
+  </style>
+</BrutalistLayout>

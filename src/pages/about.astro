@@ -1,5 +1,5 @@
 ---
-import BlogLayout from '../layouts/BlogLayout.astro';
+import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 
 const author = {
   name: 'Levi Lucena',
@@ -10,493 +10,810 @@ const author = {
 };
 
 const techStack = {
-  languages: ['Python', 'R', 'TypeScript', 'JavaScript', 'PHP', 'SQL'],
-  frameworks: ['FastAPI', 'Flask', 'Django', 'Next.js', 'Dash', 'Streamlit', 'React'],
-  frontend: ['React', 'Tailwind CSS', 'shadcn/ui', 'Framer Motion', 'HTML5', 'CSS3', 'Bootstrap'],
-  ai_ml: ['OpenAI', 'Scikit-learn', 'PyTorch', 'TensorFlow', 'NumPy', 'Pandas', 'LangChain', 'Hugging Face', 'Ollama', 'Sentence Transformers', 'FAISS', 'RAG', 'MLflow', 'DVC'],
-  data_viz: ['Matplotlib', 'Plotly', 'Seaborn', 'Power BI', 'Grafana'],
-  computer_vision: ['OpenCV', 'YOLOv8', 'Tesseract', 'Pillow'],
-  cloud: ['Azure', 'AWS', 'Oracle Cloud', 'REST', 'JSON', 'WeatherAPI', 'Meteoblue', 'OpenWeatherMap', 'NASA FIRMS', 'INPE', 'Queimadas'],
-  databases: ['PostgreSQL', 'MySQL', 'SQLite', 'Supabase', 'SQLAlchemy'],
-  devops: ['Docker', 'Docker Compose', 'GitHub Actions', 'NGINX', 'Pytest', 'Dotenv', 'Postman', 'Linux'],
-  security: ['Fortinet', 'IAM', 'LGPD', 'DevSecOps']
+  languages: [
+    { name: 'Python', icon: 'devicon-python-plain' },
+    { name: 'R', icon: 'devicon-r-plain' },
+    { name: 'TypeScript', icon: 'devicon-typescript-plain' },
+    { name: 'JavaScript', icon: 'devicon-javascript-plain' },
+    { name: 'PHP', icon: 'devicon-php-plain' },
+    { name: 'SQL', icon: 'devicon-azuresqldatabase-plain' }
+  ],
+  frameworks: [
+    { name: 'FastAPI', icon: 'devicon-fastapi-plain' },
+    { name: 'Flask', icon: 'devicon-flask-original' },
+    { name: 'Django', icon: 'devicon-django-plain' },
+    { name: 'Next.js', icon: 'devicon-nextjs-plain' },
+    { name: 'Dash', icon: 'devicon-plotly-plain' },
+    { name: 'Streamlit', icon: 'devicon-streamlit-plain' },
+    { name: 'React', icon: 'devicon-react-original' }
+  ],
+  frontend: [
+    { name: 'React', icon: 'devicon-react-original' },
+    { name: 'Tailwind CSS', icon: 'devicon-tailwindcss-original' },
+    { name: 'shadcn/ui', icon: 'devicon-react-original' },
+    { name: 'Framer Motion', icon: 'devicon-framermotion-original' },
+    { name: 'HTML5', icon: 'devicon-html5-plain' },
+    { name: 'CSS3', icon: 'devicon-css3-plain' },
+    { name: 'Bootstrap', icon: 'devicon-bootstrap-plain' }
+  ],
+  ai_ml: [
+    { name: 'OpenAI', icon: 'devicon-openai-plain' },
+    { name: 'Scikit-learn', icon: 'devicon-scikitlearn-plain' },
+    { name: 'PyTorch', icon: 'devicon-pytorch-original' },
+    { name: 'TensorFlow', icon: 'devicon-tensorflow-original' },
+    { name: 'NumPy', icon: 'devicon-numpy-plain' },
+    { name: 'Pandas', icon: 'devicon-pandas-plain' },
+    { name: 'LangChain', icon: 'fas fa-link' },
+    { name: 'Hugging Face', icon: 'fas fa-robot' },
+    { name: 'Ollama', icon: 'fas fa-brain' },
+    { name: 'Sentence Transformers', icon: 'fas fa-language' },
+    { name: 'FAISS', icon: 'fas fa-search' },
+    { name: 'RAG', icon: 'fas fa-database' },
+    { name: 'MLflow', icon: 'fas fa-chart-line' },
+    { name: 'DVC', icon: 'devicon-git-plain' }
+  ],
+  data_viz: [
+    { name: 'Matplotlib', icon: 'devicon-matplotlib-plain' },
+    { name: 'Plotly', icon: 'devicon-plotly-plain' },
+    { name: 'Seaborn', icon: 'fas fa-chart-area' },
+    { name: 'Power BI', icon: 'fas fa-chart-pie' },
+    { name: 'Grafana', icon: 'devicon-grafana-plain' }
+  ],
+  computer_vision: [
+    { name: 'OpenCV', icon: 'devicon-opencv-plain' },
+    { name: 'YOLOv8', icon: 'fas fa-eye' },
+    { name: 'Tesseract', icon: 'fas fa-file-image' },
+    { name: 'Pillow', icon: 'fas fa-image' }
+  ],
+  cloud: [
+    { name: 'Azure', icon: 'devicon-azure-plain' },
+    { name: 'AWS', icon: 'devicon-amazonwebservices-plain-wordmark' },
+    { name: 'Oracle Cloud', icon: 'devicon-oracle-original' },
+    { name: 'REST', icon: 'fas fa-exchange-alt' },
+    { name: 'JSON', icon: 'devicon-json-plain' },
+    { name: 'WeatherAPI', icon: 'fas fa-cloud-sun' },
+    { name: 'Meteoblue', icon: 'fas fa-cloud' },
+    { name: 'OpenWeatherMap', icon: 'fas fa-temperature-high' },
+    { name: 'NASA FIRMS', icon: 'fas fa-fire' },
+    { name: 'INPE', icon: 'fas fa-satellite' },
+    { name: 'Queimadas', icon: 'fas fa-fire-alt' }
+  ],
+  databases: [
+    { name: 'PostgreSQL', icon: 'devicon-postgresql-plain' },
+    { name: 'MySQL', icon: 'devicon-mysql-plain' },
+    { name: 'SQLite', icon: 'devicon-sqlite-plain' },
+    { name: 'Supabase', icon: 'devicon-supabase-plain' },
+    { name: 'SQLAlchemy', icon: 'devicon-sqlalchemy-plain' }
+  ],
+  devops: [
+    { name: 'Docker', icon: 'devicon-docker-plain' },
+    { name: 'Docker Compose', icon: 'devicon-docker-plain' },
+    { name: 'GitHub Actions', icon: 'devicon-githubactions-plain' },
+    { name: 'NGINX', icon: 'devicon-nginx-original' },
+    { name: 'Pytest', icon: 'devicon-pytest-plain' },
+    { name: 'Dotenv', icon: 'fas fa-key' },
+    { name: 'Postman', icon: 'devicon-postman-plain' },
+    { name: 'Linux', icon: 'devicon-linux-plain' }
+  ],
+  security: [
+    { name: 'Fortinet', icon: 'fas fa-shield-alt' },
+    { name: 'IAM', icon: 'fas fa-user-shield' },
+    { name: 'LGPD', icon: 'fas fa-lock' },
+    { name: 'DevSecOps', icon: 'fas fa-shield-virus' }
+  ]
 };
 
-
-
-const socialLinks = [
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/levilucena/', icon: 'fab fa-linkedin' },
-  { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
-  { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
-  { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
-  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' },
+const education = [
   {
-    name: 'Amazon',
-    url: 'https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1',
-    icon: 'fab fa-amazon'
+    year: '2018',
+    title: 'Pós-Graduação em Engenharia de Software',
+    institution: 'Faculdade Impacta'
+  },
+  {
+    year: '2016',
+    title: 'Graduação em Análise e Desenvolvimento de Sistemas',
+    institution: 'Faculdade Drummond'
+  },
+  {
+    year: '2013',
+    title: 'Técnico em Administração',
+    institution: 'ETEC Centro Paula Souza'
   }
 ];
+
+const harvardCS50 = [
+  {
+    year: '2026',
+    title: 'CS50 – Introdução à Cibersegurança',
+    status: 'em andamento'
+  },
+  {
+    year: '2025',
+    title: 'CS50 – Inteligência Artificial com Python',
+    status: null
+  },
+  {
+    year: '2024',
+    title: 'CS50 – Programação com Python',
+    status: null
+  },
+  {
+    year: '2023',
+    title: 'CS50 – Ciência da Computação',
+    status: null
+  },
+  {
+    year: '2023',
+    title: 'CS50 – Ciência de Dados',
+    status: null
+  }
+];
+
+const certifications = {
+  certiprof: {
+    name: 'Certiprof',
+    icon: 'fas fa-certificate',
+    certs: [
+      'Business Intelligence Foundation Professional Certification - BIFPC™',
+      'Business Model Canvas Essentials Professional Certification - BMCEPC™',
+      'Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™',
+      'Kanban Essentials Professional Certification - KEPC',
+      'Lean Six Sigma White Belt Professional Certification - LSSWBPC',
+      'Lifelong Learning',
+      'Remote Work Professional Certification - RWPC™',
+      'Scrum Foundation Professional Certification - SFPC™'
+    ]
+  },
+  cisco: {
+    name: 'Cisco',
+    icon: 'fas fa-network-wired',
+    certs: [
+      'Introduction to IoT'
+    ]
+  },
+  fortinet: {
+    name: 'Fortinet',
+    icon: 'fas fa-shield-alt',
+    certs: [
+      'Fortinet Certified Fundamentals - Cybersecurity',
+      'Fortinet NSE 1 Associate',
+      'Fortinet NSE 2 Associate',
+      'Fortinet NSE 3 Associate',
+      'Getting Started in Cybersecurity 1.0',
+      'Introduction to the Threat Landscape 1.0'
+    ]
+  },
+  ibm: {
+    name: 'IBM',
+    icon: 'fas fa-cloud',
+    certs: [
+      'Building Cloud-Native and Multicloud Applications',
+      'Cloud Core',
+      'Cloud Native Security Conference - Application Security Foundational',
+      'Cyber Threat Intelligence',
+      'Cybersecurity Breach Case Studies',
+      'Cybersecurity Compliance Framework & System Administration',
+      'Cybersecurity Roles, Processes & Operating System Security',
+      'Data Science for Business - Level 1',
+      'IBM Cybersecurity Analyst Professional Certificate',
+      'Introduction to Cybersecurity Tools & Cyber Attacks',
+      'Network Security & Database Vulnerabilities',
+      'Penetration Testing, Incident Response and Forensics',
+      'Project Management Essentials'
+    ]
+  },
+  microsoft: {
+    name: 'Microsoft',
+    icon: 'devicon-microsoft-plain',
+    certs: [
+      'AZ-900 Microsoft Certified Azure Fundamentals',
+      'DP-900 Microsoft Certified Azure Data Fundamentals',
+      'Microsoft Advertising Certified Professional',
+      'Microsoft Advertising Native & Display Certification',
+      'Microsoft Advertising Search Certification',
+      'Microsoft Advertising Shopping Certification'
+    ]
+  },
+  oracle: {
+    name: 'Oracle',
+    icon: 'devicon-oracle-original',
+    certs: [
+      'Oracle Certified Foundations Associate Oracle Cloud Data Management 2023',
+      'Oracle Certified Foundations Associate Oracle Cloud Infrastructure 2023'
+    ]
+  },
+  senai: {
+    name: 'Senai',
+    icon: 'fas fa-graduation-cap',
+    certs: [
+      'Hackers do Bem - Formação em Cibersegurança - Básico',
+      'Hackers do Bem - Formação em Cibersegurança - Nivelamento'
+    ]
+  }
+};
 ---
 
-<BlogLayout title="Sobre - Levi Lucena">
-  <div class="blog-container">
-    <header class="blog-header">
-      <div class="container">
-        <nav class="blog-nav">
-          <a href="/portfolio/" class="nav-logo">LL</a>
-          <ul class="nav-menu">
-            <li><a href="/portfolio/" class="nav-link">Home</a></li>
-            <li><a href="/portfolio/archive" class="nav-link">Archive</a></li>
-            <li><a href="/portfolio/about" class="nav-link active">About</a></li>
-            <li><a href="/portfolio/projects" class="nav-link">Projects</a></li>
-          </ul>
-          <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </nav>
+<BrutalistLayout title="Sobre - Levi Lucena">
+  <!-- HERO SECTION -->
+  <section class="about-hero">
+    <div class="container">
+      <h1>About<br /><span class="text-accent">Me</span></h1>
+      <p class="hero-subtitle">{author.role}</p>
+      <p class="hero-bio">{author.bio}</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">{author.experience}</span>
+          <span class="stat-label">Experiência</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">São Paulo</span>
+          <span class="stat-label">Localização</span>
+        </div>
       </div>
-    </header>
+    </div>
+  </section>
 
-    <main class="about-page">
-      <div class="container">
-        <article class="about-content">
-          <header class="about-header">
-            <h1>Sobre</h1>
-            <p class="about-subtitle">Mais sobre mim e meu trabalho</p>
-          </header>
-
-          <section class="about-main">
-            <h2>{author.name}</h2>
-            <p class="about-role">{author.role}</p>
-            <p>{author.bio}</p>
-            <br>
-              <h3>Formação Acadêmica</h3>
-              <ul class="education-list">
-                <li>Pós-Graduação: Engenharia de Software – Faculdade Impacta (2018)</li>
-                <li>Graduação: Análise e Desenvolvimento de Sistemas – Faculdade Drummond (2016)</li>
-                <li>Técnico: Administração – ETEC Centro Paula Souza (2013)</li>
-              </ul>
-
-              <h3>Formação Complementar – Harvard University (CS50)</h3>
-              <ul class="education-list">
-                <li>CS50 – Introdução à Cibersegurança (2026) - em andamento</li>
-                <li>CS50 – Inteligência Artificial com Python (2025)</li>
-                <li>CS50 – Programação com Python (2024)</li>
-                <li>CS50 – Ciência da Computação (2023)</li>
-                <li>CS50 – Ciência de Dados (2023)</li>
-              </ul>
-
-            <h3>Skills & Tecnologias</h3>
-
-            <div class="tech-categories">
-              <div class="tech-category">
-                <h4><i class="fas fa-code"></i> Linguagens de Programação</h4>
-                <div class="tech-grid">
-                  {techStack.languages.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fab fa-python" style={{display: tech === 'Python' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-r-project" style={{display: tech === 'R' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-js" style={{display: tech === 'JavaScript' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-typescript" style={{display: tech === 'TypeScript' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-database" style={{display: tech === 'SQL' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-php" style={{display: tech === 'PHP' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-cube"></i> Frameworks</h4>
-                <div class="tech-grid">
-                  {techStack.frameworks.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fas fa-bolt" style={{display: tech === 'FastAPI' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-fire" style={{display: tech === 'Flask' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-cube" style={{display: tech === 'Django' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-react" style={{display: tech === 'React' || tech === 'Next.js' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-chart-line" style={{display: tech === 'Dash' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-rocket" style={{display: tech === 'Streamlit' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-desktop"></i> Frontend</h4>
-                <div class="tech-grid">
-                  {techStack.frontend.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fab fa-react" style={{display: tech === 'React' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-wind" style={{display: tech === 'Tailwind CSS' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-puzzle-piece" style={{display: tech === 'shadcn/ui' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-magic" style={{display: tech === 'Framer Motion' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-html5" style={{display: tech === 'HTML5' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-css3-alt" style={{display: tech === 'CSS3' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-bootstrap" style={{display: tech === 'Bootstrap' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-brain"></i> IA & Machine Learning</h4>
-                <div class="tech-grid">
-                  {techStack.ai_ml.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fab fa-openai" style={{display: tech === 'OpenAI' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-brain" style={{display: tech === 'Scikit-learn' || tech.includes('PyTorch') || tech.includes('TensorFlow') ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-calculator" style={{display: tech === 'NumPy' || tech === 'Pandas' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-robot" style={{display: tech === 'LangChain' || tech === 'Hugging Face' || tech === 'Ollama' || tech === 'Sentence Transformers' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-search" style={{display: tech === 'FAISS' || tech === 'RAG' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-leaf" style={{display: tech === 'MLflow' || tech === 'DVC' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-chart-bar"></i> Visualização de Dados</h4>
-                <div class="tech-grid">
-                  {techStack.data_viz.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fas fa-chart-bar" style={{display: tech === 'Matplotlib' || tech === 'Plotly' || tech === 'Seaborn' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-chart-network" style={{display: tech === 'Power BI' || tech === 'Grafana' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-eye"></i> Visão Computacional</h4>
-                <div class="tech-grid">
-                  {techStack.computer_vision.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fas fa-eye" style={{display: tech === 'OpenCV' || tech === 'YOLOv8' || tech === 'Pillow' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-text-height" style={{display: tech === 'Tesseract' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-cloud"></i> Nuvem & APIs</h4>
-                <div class="tech-grid">
-                  {techStack.cloud.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fab fa-microsoft" style={{display: tech === 'Azure' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-aws" style={{display: tech === 'AWS' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-cloud" style={{display: tech === 'Oracle Cloud' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-code" style={{display: ['REST', 'JSON'].includes(tech) ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-satellite" style={{display: ['WeatherAPI', 'Meteoblue', 'OpenWeatherMap', 'NASA FIRMS', 'INPE', 'Queimadas'].includes(tech) ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-database"></i> Bancos de Dados</h4>
-                <div class="tech-grid">
-                  {techStack.databases.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fas fa-database" style={{display: tech ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-cogs"></i> DevOps</h4>
-                <div class="tech-grid">
-                  {techStack.devops.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fab fa-docker" style={{display: tech.includes('Docker') ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-github" style={{display: tech === 'GitHub Actions' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-globe" style={{display: tech === 'NGINX' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-vial" style={{display: tech === 'Pytest' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-lock" style={{display: tech === 'Dotenv' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-envelope" style={{display: tech === 'Postman' ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fab fa-linux" style={{display: tech === 'Linux' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              <div class="tech-category">
-                <h4><i class="fas fa-shield-alt"></i> Segurança</h4>
-                <div class="tech-grid">
-                  {techStack.security.map(tech => (
-                    <div class="tech-item">
-                      <i class="tech-icon fas fa-shield-alt" style={{display: ['Fortinet', 'DevSecOps', 'LGPD'].includes(tech) ? 'inline' : 'none'}}></i>
-                      <i class="tech-icon fas fa-user-shield" style={{display: tech === 'IAM' ? 'inline' : 'none'}}></i>
-                      <span class="tech-name">{tech}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            <h3>Certificações Profissionais</h3>
-            <div class="tech-categories">
-              {/* Certiprof */}
-              <div class="tech-category">
-                <h4><i class="fas fa-award"></i> Certiprof</h4>
-                <div class="tech-grid">
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Business Intelligence Foundation Professional Certification - BIFPC™</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Business Model Canvas Essentials Professional Certification - BMCEPC™</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Fundamentos Na Lei Geral De Proteção De Dados - LGPDF™</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Kanban Essentials Professional Certification - KEPC</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Lean Six Sigma White Belt Professional Certification - LSSWBPC</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Lifelong Learning</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Remote Work Professional Certification - RWPC™</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-certificate"></i>
-                    <span class="tech-name">Scrum Foundation Professional Certification - SFPC™</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Cisco */}
-              <div class="tech-category">
-                <h4><i class="fas fa-network-wired"></i> Cisco</h4>
-                <div class="tech-grid">
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-microchip"></i>
-                    <span class="tech-name">Introduction to IoT</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Fortinet */}
-              <div class="tech-category">
-                <h4><i class="fas fa-shield-alt"></i> Fortinet</h4>
-                <div class="tech-grid">
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shield-virus"></i>
-                    <span class="tech-name">Fortinet Certified Fundamentals - Cybersecurity</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shield-virus"></i>
-                    <span class="tech-name">Fortinet NSE 1 Associate</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shield-virus"></i>
-                    <span class="tech-name">Fortinet NSE 2 Associate</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shield-virus"></i>
-                    <span class="tech-name">Fortinet NSE 3 Associate</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shield-virus"></i>
-                    <span class="tech-name">Getting Started in Cybersecurity 1.0</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shield-virus"></i>
-                    <span class="tech-name">Introduction to the Threat Landscape 1.0</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* IBM */}
-              <div class="tech-category">
-                <h4><i class="fas fa-cloud"></i> IBM</h4>
-                <div class="tech-grid">
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-cloud-upload-alt"></i>
-                    <span class="tech-name">Building Cloud-Native and Multicloud Applications</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-cloud"></i>
-                    <span class="tech-name">Cloud Core</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shield-alt"></i>
-                    <span class="tech-name">Cloud Native Security Conference - Application Security Foundational</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-brain"></i>
-                    <span class="tech-name">Cyber Threat Intelligence</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-exclamation-triangle"></i>
-                    <span class="tech-name">Cybersecurity Breach Case Studies</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-file-contract"></i>
-                    <span class="tech-name">Cybersecurity Compliance Framework & System Administration</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-cogs"></i>
-                    <span class="tech-name">Cybersecurity Roles, Processes & Operating System Security</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-chart-line"></i>
-                    <span class="tech-name">Data Science for Business - Level 1</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-user-shield"></i>
-                    <span class="tech-name">IBM Cybersecurity Analyst Professional Certificate</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-tools"></i>
-                    <span class="tech-name">Introduction to Cybersecurity Tools & Cyber Attacks</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-network-wired"></i>
-                    <span class="tech-name">Network Security & Database Vulnerabilities</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-search"></i>
-                    <span class="tech-name">Penetration Testing, Incident Response and Forensics</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-tasks"></i>
-                    <span class="tech-name">Project Management Essentials</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Microsoft */}
-              <div class="tech-category">
-                <h4><i class="fab fa-microsoft"></i> Microsoft</h4>
-                <div class="tech-grid">
-                  <div class="tech-item">
-                    <i class="tech-icon fab fa-microsoft"></i>
-                    <span class="tech-name">AZ-900 Microsoft Certified Azure Fundamentals</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fab fa-microsoft"></i>
-                    <span class="tech-name">DP-900 Microsoft Certified Azure Data Fundamentals</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-ad"></i>
-                    <span class="tech-name">Microsoft Advertising Certified Professional</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-ad"></i>
-                    <span class="tech-name">Microsoft Advertising Native & Display Certification</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-search"></i>
-                    <span class="tech-name">Microsoft Advertising Search Certification</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-shopping-cart"></i>
-                    <span class="tech-name">Microsoft Advertising Shopping Certification</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Oracle */}
-              <div class="tech-category">
-                <h4><i class="fab fa-oracle"></i> Oracle</h4>
-                <div class="tech-grid">
-                  <div class="tech-item">
-                    <i class="tech-icon fab fa-oracle"></i>
-                    <span class="tech-name">Oracle Certified Foundations Associate Oracle Cloud Data Management 2023</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fab fa-oracle"></i>
-                    <span class="tech-name">Oracle Certified Foundations Associate Oracle Cloud Infrastructure 2023</span>
-                  </div>
-                </div>
-              </div>
-
-              {/* Senai */}
-              <div class="tech-category">
-                <h4><i class="fas fa-graduation-cap"></i> Senai</h4>
-                <div class="tech-grid">
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-user-shield"></i>
-                    <span class="tech-name">Hackers do Bem - Formação em Cibersegurança - Básico</span>
-                  </div>
-                  <div class="tech-item">
-                    <i class="tech-icon fas fa-user-shield"></i>
-                    <span class="tech-name">Hackers do Bem - Formação em Cibersegurança - Nivelamento</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-          </section>
-        </article>
-      </div>
-    </main>
-
-    <footer class="blog-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <h3>Levi Lucena</h3>
-            <p>Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos.</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://levilucena.github.io/portfolio/" target="_blank" aria-label="Portfolio">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle">
-                <i class="fab fa-kaggle"></i>
-              </a>
-              <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
-                <i class="fas fa-award"></i>
-              </a>
-              <a href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" aria-label="Amazon">
-                <i class="fab fa-amazon"></i>
-              </a>
-            </div>
+  <!-- EDUCATION SECTION -->
+  <section class="container">
+    <h2 class="section-title">Formação Acadêmica</h2>
+    <div class="education-grid">
+      {education.map((edu, index) => (
+        <div class="education-card hover-trigger">
+          <div class="education-year">{edu.year}</div>
+          <div class="education-content">
+            <h3>{edu.title}</h3>
+            <p>{edu.institution}</p>
           </div>
-
         </div>
-        <div class="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
+      ))}
+    </div>
+  </section>
+
+  <!-- HARVARD CS50 SECTION -->
+  <section class="container">
+    <h2 class="section-title">Formação Complementar <span class="text-accent">– Harvard University</span></h2>
+    <div class="harvard-grid">
+      {harvardCS50.map((course, index) => (
+        <div class="harvard-card hover-trigger">
+          <div class="harvard-year">{course.year}</div>
+          <div class="harvard-content">
+            <h3>{course.title}</h3>
+            {course.status && <span class="status-badge">{course.status}</span>}
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- TECH STACK SECTION -->
+  <section class="container">
+    <h2 class="section-title">Tech Stack</h2>
+    <div class="tech-stack">
+      <!-- Languages -->
+      <div class="tech-category">
+        <h3>Languages</h3>
+        <div class="tech-tags">
+          {techStack.languages.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
         </div>
       </div>
-    </footer>
 
-    <!-- Buy me a coffee floating button -->
-    <a class="coffee-button" href="https://www.paypal.com/donate/?hosted_button_id=58DYCL22CTERG" target="_blank">
-        <span class="coffee-text">Buy me a coffee!</span>
-        <span class="coffee-icon-wrapper">
-            <i class="fas fa-coffee"></i>
-            <span class="steam steam-1"></span>
-            <span class="steam steam-2"></span>
-        </span>
-    </a>
-  </div>
-</BlogLayout>
+      <!-- Frameworks -->
+      <div class="tech-category">
+        <h3>Frameworks</h3>
+        <div class="tech-tags">
+          {techStack.frameworks.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Frontend -->
+      <div class="tech-category">
+        <h3>Frontend</h3>
+        <div class="tech-tags">
+          {techStack.frontend.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- AI/ML -->
+      <div class="tech-category">
+        <h3>AI & ML</h3>
+        <div class="tech-tags">
+          {techStack.ai_ml.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Data Viz -->
+      <div class="tech-category">
+        <h3>Data Viz</h3>
+        <div class="tech-tags">
+          {techStack.data_viz.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Computer Vision -->
+      <div class="tech-category">
+        <h3>Computer Vision</h3>
+        <div class="tech-tags">
+          {techStack.computer_vision.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Cloud -->
+      <div class="tech-category">
+        <h3>Cloud & APIs</h3>
+        <div class="tech-tags">
+          {techStack.cloud.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Databases -->
+      <div class="tech-category">
+        <h3>Databases</h3>
+        <div class="tech-tags">
+          {techStack.databases.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- DevOps -->
+      <div class="tech-category">
+        <h3>DevOps</h3>
+        <div class="tech-tags">
+          {techStack.devops.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+
+      <!-- Security -->
+      <div class="tech-category">
+        <h3>Security</h3>
+        <div class="tech-tags">
+          {techStack.security.map(tech => (
+            <span class="tech-tag"><i class={tech.icon}></i>{tech.name}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS SECTION -->
+  <section class="container">
+    <h2 class="section-title">Certificações <span class="text-accent">Profissionais</span></h2>
+    <div class="certifications-grid">
+      {Object.values(certifications).map(provider => (
+        <div class="cert-provider hover-trigger">
+          <h3 class="provider-name"><i class={provider.icon}></i>{provider.name}</h3>
+          <div class="provider-count">{provider.certs.length}</div>
+          <ul class="cert-list">
+            {provider.certs.map(cert => (
+              <li>{cert}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <style is:global>
+    /* ABOUT HERO */
+    .about-hero {
+      min-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .about-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 12vw, 10rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .about-hero h1 span {
+      color: var(--accent-color);
+    }
+
+    .hero-subtitle {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      letter-spacing: 2px;
+    }
+
+    .hero-bio {
+      font-size: 1.3rem;
+      max-width: 800px;
+      opacity: 0.9;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .stat {
+      border: 3px solid var(--accent-color);
+      padding: 1.5rem 2rem;
+      min-width: 200px;
+    }
+
+    .stat-number {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+
+    /* SECTION TITLE */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(2rem, 5vw, 4rem);
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+      border-bottom: 3px solid var(--accent-color);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+
+    /* EDUCATION */
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      border-top: 1px solid var(--border-color);
+      border-left: 1px solid var(--border-color);
+    }
+
+    .education-card {
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .education-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .education-year {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent-color);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .education-card:hover .education-year {
+      color: var(--bg-color);
+    }
+
+    .education-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .education-content p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    /* HARVARD CS50 */
+    .harvard-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      border: 1px solid var(--border-color);
+    }
+
+    .harvard-card {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .harvard-card:last-child {
+      border-bottom: none;
+    }
+
+    .harvard-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateX(10px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .harvard-year {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      line-height: 1;
+      min-width: 100px;
+    }
+
+    .harvard-card:hover .harvard-year {
+      color: var(--bg-color);
+    }
+
+    .harvard-content {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+    }
+
+    .harvard-content h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      line-height: 1.2;
+    }
+
+    .status-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+    }
+
+    .harvard-card:hover .status-badge {
+      background-color: var(--bg-color);
+      color: var(--accent-color);
+    }
+
+    /* TECH STACK */
+    .tech-stack {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .tech-category {
+      border: 3px solid var(--border-color);
+      padding: 2rem;
+      transition: all 0.3s ease;
+    }
+
+    .tech-category:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .tech-category h3 {
+      font-family: var(--font-heading);
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tech-tag {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 0.5rem 1rem;
+      border: 1px solid var(--text-color);
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tech-tag i {
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      transition: all 0.3s ease;
+    }
+
+    .tech-tag:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      border-color: var(--accent-color);
+    }
+
+    .tech-tag:hover i {
+      color: var(--bg-color);
+    }
+
+    /* CERTIFICATIONS */
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .cert-provider {
+      border: 3px solid var(--border-color);
+      padding: 2rem;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .cert-provider:hover {
+      border-color: var(--accent-color);
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .provider-name {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      color: var(--accent-color);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .provider-name i {
+      font-size: 1.8rem;
+      transition: all 0.3s ease;
+    }
+
+    .cert-provider:hover .provider-name i {
+      transform: scale(1.2);
+    }
+
+    .provider-count {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent-color);
+      opacity: 0.3;
+      line-height: 1;
+    }
+
+    .cert-provider:hover .provider-count {
+      opacity: 1;
+    }
+
+    .cert-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .cert-list li {
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border-color);
+      position: relative;
+      padding-left: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .cert-list li:last-child {
+      border-bottom: none;
+    }
+
+    .cert-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+      font-weight: bold;
+    }
+
+    .cert-provider:hover .cert-list li {
+      color: var(--text-color);
+    }
+
+    .cert-list li:hover {
+      transform: translateX(5px);
+      color: var(--accent-color);
+    }
+
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 18vw;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+      }
+
+      .hero-bio {
+        font-size: 1.1rem;
+      }
+
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .harvard-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .harvard-year {
+        font-size: 2rem;
+      }
+
+      .harvard-content {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .harvard-content h3 {
+        font-size: 1.1rem;
+      }
+
+      .tech-stack {
+        grid-template-columns: 1fr;
+      }
+
+      .certifications-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .provider-name {
+        font-size: 1.5rem;
+      }
+
+      .provider-count {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</BrutalistLayout>

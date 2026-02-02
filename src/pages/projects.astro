@@ -1,242 +1,315 @@
----
-import BlogLayout from '../layouts/BlogLayout.astro';
+﻿---
+import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 
-const projects = [
-    {
+const featuredProjects = [
+  {
     title: 'Axisus MES',
-    description: 'O AXISUS MES (Manufacturing Execution System) é um sistema abrangente de gestão da produção projetado para ambientes industriais. Ele fornece monitoramento em tempo real, métricas de OEE, rastreamento de ordens de produção e análise de desempenho de máquinas para otimizar as operações de fabricação.',
-    technologies: ['React', 'Vite', 'Tailwind CSS', 'Shadcn/ui', 'TypeScript', 'Recharts', 'Axios', 'Express.js', 'Prisma ORM', 'PostgreSQL', 'Nginx', 'Docker'],
+    description: 'Sistema abrangente de gestão da produção para ambientes industriais com monitoramento em tempo real, métricas de OEE e análise de desempenho.',
+    technologies: ['React', 'TypeScript', 'PostgreSQL', 'Docker'],
     url: 'https://github.com/LeviLucena/new-axisus',
-    status: 'Concluído',
-    areas: ['Áreas Funcionais (Domínio Industrial / Negócio)', 'Análise de Desempenho (OEE)', 'Áreas Técnicas (Arquitetura e Desenvolvimento)', 'ORM / Modelagem', 'Áreas Complementares e de Suporte']
+    category: 'Industrial',
+    number: '01'
   },
   {
     title: 'JurisGPT Advisor',
-    description: 'Plataforma jurídica inteligente que simula a atuação de um advogado virtual por meio de LLMs (GPT-4o), que conta com um classificador inteligente capaz de identificar automaticamente a área do Direito relacionada à dúvida apresentada. Funciona como um advogado virtual, oferecendo respostas rápidas, seguras e de linguagem acessível para quem busca esclarecimentos jurídicos — sejam profissionais, estudantes ou cidadãos comuns.',
-    technologies: ['React', 'TypeScript', 'Openai', 'GPT-4o', 'NLP', 'FAISS', 'Supabase'],
+    description: 'Plataforma jurídica inteligente com LLMs (GPT-4o) que simula a atuação de um advogado virtual.',
+    technologies: ['React', 'TypeScript', 'OpenAI', 'GPT-4o', 'NLP'],
     url: 'https://jurisgpt-advisor.com',
-    status: 'Concluído',
-    areas: ['Direito Digital', 'Jurídico Corporativo', 'UX design', 'IA generativa', 'Classificação Semântica']
-  },
-    {
-    title: 'Calculadora Renda Fixa',
-    description: 'É uma aplicação web desenvolvida para auxiliar investidores na simulação de rentabilidade de diferentes tipos de investimentos em renda fixa no Brasil. A ferramenta permite comparar diversos produtos financeiros como CDB, LCI, LCA, Poupança, Letras de Crédito e Tesouro Direto, levando em consideração as taxas de juros, impostos e prazos de aplicação.',
-    technologies: ['Nuxt.js', 'Vue.js', 'TypeScript', 'Vuetify', 'Pinia', 'Vite', 'Axios', 'PNPM'],
-    url: 'https://github.com/LeviLucena/rendafixa.github.io',
-    status: 'Concluído',
-    areas: ['Simulação de investimentos', 'Comparação de rentabilidade', 'Cálculo de impostos', 'Promover a literacia financeira', 'Educar investidores', 'UX design']
+    category: 'Legal AI',
+    number: '02'
   },
   {
     title: 'IntelliDoc AI',
-    description: 'Plataforma com agentes especializados para leitura, extração e análise de documentos jurídicos e administrativos combinando técnicas de OCR (Optical Character Recognition), RAG (Retrieval-Augmented Generation) e detecção visual com YOLOv8 e NLP(Natural Language Processing).',
-    technologies: ['LangChain', 'Hugging Face', 'Tesseract', 'GPT-4', 'FAISS', 'Python', 'Streamlit'],
+    description: 'Plataforma com agentes especializados para leitura e análise de documentos jurídicos com OCR, RAG e NLP.',
+    technologies: ['LangChain', 'GPT-4', 'Python', 'OCR'],
     url: 'https://github.com/LeviLucena/IntellidocAI',
-    status: 'Concluído',
-    areas: ['Jurídico', 'Governança', 'Automação de Backoffice', 'TI']
+    category: 'Document AI',
+    number: '03'
   },
   {
     title: 'Clima Blue',
-    description: 'Sistema inteligente de meteogramas focado em apoio à tomada de decisão no agronegócio, com interface web interativa, previsão climática segmentada e dados meteorológicos confiáveis para aplicações em irrigação, colheita, pulverização e manejo agrícola.',
-    technologies: ['Python', 'Flask', 'Meteoblue API', 'Jinja2', 'Docker', 'Dotenv'],
+    description: 'Sistema inteligente de meteogramas para apoio à tomada de decisão no agronegócio.',
+    technologies: ['Python', 'Flask', 'API', 'Docker'],
     url: 'https://github.com/LeviLucena/ClimaBlue_Brasil',
-    status: 'Concluído',
-    areas: ['Agronegócio', 'Meteorologia', 'Dados Ambientais', 'Automação', 'Sistemas Web']
+    category: 'AgTech',
+    number: '04'
   },
   {
     title: 'AmazonFireGuard',
-    description: 'Sistema de monitoramento inteligente para alertas ambientais, focado em incêndios florestais, com integração de dados públicos (NASA, INPE) e IA preditiva. É uma plataforma inteligente para monitoramento de queimadas na Amazônia (e globalmente), integrando dados em tempo real de satélites, fontes meteorológicas e modelos de inteligência artificial para visualização, análise e resposta rápida com pontos de calor detectados por sensores térmicos.',
-    technologies: ['APIs públicas', 'Python', 'Dash', 'Plotly', 'n8n', 'pandas', 'Mapbox'],
+    description: 'Sistema de monitoramento inteligente para alertas ambientais focado em incêndios florestais.',
+    technologies: ['Python', 'Dash', 'ML', 'NASA API'],
     url: 'https://github.com/LeviLucena/amazonfireguard',
-    status: 'Concluído',
-    areas: ['Meio Ambiente', 'Geoprocessamento', 'Dados Públicos', 'Segurança']
+    category: 'Environment',
+    number: '05'
   },
   {
-    title: 'Hemocentros',
-    description: 'Sistema web completo para gestão e monitoramento de estoques de sangue em hemocentros, com visualizações dinâmicas, autenticação de usuários e funcionalidades analíticas para apoio à tomada de decisões estratégicas de saúde pública.',
-    technologies: ['Python', 'Django', 'PostgreSQL', 'Bootstrap', 'jQuery', 'DataTables', 'Chart.js', 'Gunicorn'],
-    url: 'https://github.com/LeviLucena/hemocentro',
-    status: 'Concluído',
-    areas: ['Saúde Pública', 'Bancos de Sangue', 'Gestão Hospitalar', 'Análise de Dados']
-  },
-  {
-    title: 'HealthCare',
-    description: 'Plataforma web desenvolvida para monitoramento e gestão hospitalar, permitindo o acompanhamento em tempo real da ocupação de leitos em unidades de saúde. A solução oferece o cadastro completo de hospitais, pacientes e registros médicos, além de mapas interativos, dashboards e geração de relatórios analíticos.',
-    technologies: ['Python', 'Django', 'SQLite', 'HTML/CSS', 'Bootstrap', 'JavaScript', 'jQuery', 'DataTables', 'mapas interativos', 'dashboards analíticos', 'Faker', 'Font Awesome'],
-    url: 'https://github.com/LeviLucena/DjangoLivre',
-    status: 'Concluído',
-    areas: ['Saúde Pública', 'Gestão Hospitalar', 'Visualização de Dados', 'Análise Operacional', 'Sistemas Web']
-  },
-  {
-    title: 'MLPractical - Genetic Syndrome Classification',
-    description: 'Implementação de um projeto de classificação de síndromes genéticas usando aprendizado de máquina com embeddings de imagem. O projeto implementa KNN com métricas de distância Euclidiana e Cosseno, alcançando AUC de 0.9630 usando distância cosseno com k=15, demonstrando eficácia na classificação de 1.116 amostras de 10 diferentes síndromes genéticas.',
-    technologies: ['Python', 'scikit-learn', 'numpy', 'pandas', 'matplotlib', 'seaborn', 'KNN', 't-SNE', 'embeddings', 'classification', 'genetics'],
-    url: 'https://github.com/LeviLucena/MLPractical',
-    status: 'Concluído',
-    areas: ['Machine Learning', 'Genética', 'Classificação de Imagens', 'Análise de Dados', 'Bioinformática']
-  },
-  {
-    title: 'HeloDocs',
-    description: 'Sistema web que permite aos usuários fazer upload de documentos (PDF, DOCX, TXT), extrair informações deles e responder perguntas sobre o conteúdo. O sistema também oferece formatação de resultados e geração de certificados em formato DOCX com base nas informações extraídas, sendo especificamente projetado para análise de documentos de licitações e geração de atestados de comprovação de técnica.',
-    technologies: ['Python', 'Flask', 'Tesseract OCR', 'Ollama', 'Llama AI', 'JavaScript', 'jQuery', 'Bootstrap', 'docx.js', 'HTML5', 'CSS3'],
-    url: 'https://github.com/LeviLucena/HeloDocs',
-    status: 'Concluído',
-    areas: ['Document Processing', 'OCR', 'AI question answering', 'Document Analysis', 'Licitações']
-  },
-  {
-    title: 'API-Data-Collector',
-    description: 'API robusta baseada em FastAPI para coleta integrada de dados de três sistemas diferentes: Watio, Omie e HubSpot. O projeto oferece uma solução centralizada para integração com múltiplas APIs de negócios, com arquitetura modular, processamento assíncrono e mecanismos de retry para requisições falhas.',
-    technologies: ['Python', 'FastAPI', 'Pydantic', 'Docker', 'Docker Compose', 'JWT', 'Async/Await', 'HTTP Client', 'Uvicorn', 'API Integration'],
-    url: 'https://github.com/LeviLucena/API-Data-Collector',
-    status: 'Concluído',
-    areas: ['API Development', 'Data Collection', 'System Integration', 'Business Systems', 'Microservices']
-  },
-  {
-    title: 'NeoCore Systems',
-    description: 'Interface visual experimental que simula um painel de controle futurista para uma inteligência artificial avançada operando em tempo real. O projeto é puramente educacional, com dados fictícios gerados aleatoriamente para testes visuais, criando um showcase artístico e técnico do que é possível com tecnologias modernas de front-end, com elementos visuais inspirados em filmes de ficção científica, painéis de controle de espaçonaves e centros de comando de IA.',
-    technologies: ['React', 'Vite', 'Recharts', 'Framer Motion', 'TSParticles', 'Tailwind CSS', 'React Icons', 'JavaScript', 'ES6+', 'CSS3'],
-    url: 'https://github.com/LeviLucena/NeoCore_Systems',
-    status: 'Concluído',
-    areas: ['Front-end Development', 'Data Visualization', 'UI/UX design', 'Real-time Systems', 'Sci-fi Interfaces']
-  },
-  {
-    title: 'DeepLearning',
-    description: 'Implementação de uma rede neural de detecção de objetos em tempo real usando YOLO (Ultralytics), Collections, NumPy e OpenCV. O sistema é projetado para detecção e rastreamento de objetos com alta precisão, capturando imagens em tempo real de webcams e dispositivos de vídeo.',
-    technologies: ['Python', 'Ultralytics YOLO', 'OpenCV', 'NumPy', 'Collections', 'Computer Vision', 'Deep Learning', 'Object Detection', 'Real-time Processing'],
-    url: 'https://github.com/LeviLucena/DeepLearning',
-    status: 'Concluído',
-    areas: ['Computer Vision', 'Deep Learning', 'Object Detection', 'Real-Time Systems', 'YOLO']
-  },
-  {
-    title: 'Gestao Projetos',
-    description: 'Sistema completo de gerenciamento de projetos que permite o cadastro, consulta e edição de informações de projetos. O sistema oferece funcionalidades de gerenciamento de demandas, atividades e entregas, com painéis de controle e indicadores para tomada de decisão. Inclui cadastro de contatos e personalização por gerentes de projeto.',
-    technologies: ['PHP', 'MySQL', 'JavaScript', 'CSS', 'HTML', 'MariaDB', 'Project Management', 'Dashboards', 'Database Management'],
-    url: 'https://github.com/LeviLucena/Gestao_Projetos',
-    status: 'Concluído',
-    areas: ['Project Management', 'Web Development', 'Database Design', 'Dashboards', 'Business Intelligence']
-  }
-];
-
-const author = {
-  name: 'Levi Lucena',
-  role: 'Engenheiro de Software & Engenheiro de Soluções de IA'
-};
-
-const socialLinks = [
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/levilucena/', icon: 'fab fa-linkedin' },
-  { name: 'GitHub', url: 'https://github.com/LeviLucena', icon: 'fab fa-github' },
-  { name: 'Portfolio', url: 'https://levilucena.github.io/portfolio/', icon: 'fas fa-external-link-alt' },
-  { name: 'Kaggle', url: 'https://www.kaggle.com/levilucena', icon: 'fab fa-kaggle' },
-  { name: 'Credly', url: 'https://www.credly.com/users/levi-gustavo-oliveira-lucena', icon: 'fas fa-award' },
-  {
-    name: 'Amazon',
-    url: 'https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1',
-    icon: 'fab fa-amazon'
+    title: 'Calculadora Renda Fixa',
+    description: 'Aplicação web para simulação de rentabilidade de diferentes tipos de investimentos em renda fixa.',
+    technologies: ['Nuxt.js', 'Vue.js', 'TypeScript'],
+    url: 'https://github.com/LeviLucena/rendafixa.github.io',
+    category: 'Fintech',
+    number: '06'
   }
 ];
 ---
 
-<BlogLayout title="Projetos - Levi Lucena">
-  <div class="blog-container">
-    <header class="blog-header">
-      <div class="container">
-        <nav class="blog-nav">
-          <a href="/portfolio/" class="nav-logo">LL</a>
-          <ul class="nav-menu">
-            <li><a href="/portfolio/" class="nav-link">Home</a></li>
-            <li><a href="/portfolio/archive" class="nav-link">Archive</a></li>
-            <li><a href="/portfolio/about" class="nav-link">About</a></li>
-            <li><a href="/portfolio/projects" class="nav-link active">Projects</a></li>
-          </ul>
-          <button class="theme-toggle">
-            <i class="fas fa-moon"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
+<BrutalistLayout title="Levi Lucena - Projects">
+  <!-- HERO SECTION -->
+  <section class="projects-hero">
+    <div class="container">
+      <h1>Selected<br /><span class="text-accent">Work</span></h1>
+      <p class="hero-subtitle">Projetos que transformam ideias em soluções digitais</p>
+    </div>
+  </section>
 
-    <main class="projects-page">
-      <div class="container">
-        <article class="projects-content">
-          <header class="projects-header">
-            <h1>Projetos</h1>
-            <p class="projects-subtitle">Projetos profissionais e pessoais desenvolvidos ao longo da carreira</p>
-          </header>
-
-          <div class="projects-grid">
-            {projects.map(project => (
-              <div class="project-card">
-                <h3>{project.title}</h3>
-                <p class="project-description">{project.description}</p>
-                <div class="project-meta">
-                  <div class="project-status">Status: <span class="status-badge">{project.status}</span></div>
-                  <a href={project.url} target="_blank" rel="noopener noreferrer" class="project-link">Ver Projeto</a>
-                </div>
-                <div class="project-tech">
-                  <h4>Tecnologias:</h4>
-                  <div class="tech-tags">
-                    {project.technologies.map(tech => (
-                      <span class="tech-tag">{tech}</span>
-                    ))}
-                  </div>
-                </div>
-                <div class="project-areas">
-                  <h4>Áreas:</h4>
-                  <div class="area-tags">
-                    {project.areas.map(area => (
-                      <span class="area-tag">{area}</span>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            ))}
+  <!-- PROJECTS GRID -->
+  <section class="container">
+    <div class="projects-grid">
+      {featuredProjects.map(project => (
+        <article class="project-card hover-trigger">
+          <div class="project-number">{project.number}</div>
+          <div class="project-category">{project.category}</div>
+          <div class="project-content">
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <div class="project-tech">
+              {project.technologies.slice(0, 4).map(tech => (
+                <span>{tech}</span>
+              ))}
+            </div>
+            <a href={project.url} target="_blank" class="project-link">
+              Ver Projeto
+              <i class="fas fa-external-link-alt"></i>
+            </a>
           </div>
         </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- MORE PROJECTS CTA -->
+  <section class="more-projects">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Quer ver mais?</h2>
+        <p>Explore todos os meus projetos no GitHub</p>
+        <a href="https://github.com/LeviLucena" target="_blank" class="cta-link hover-trigger">
+          GitHub Profile
+          <i class="fab fa-github"></i>
+        </a>
       </div>
-    </main>
+    </div>
+  </section>
 
-    <footer class="blog-footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-about">
-            <h3>Levi Lucena</h3>
-            <p>Profissional multidisciplinar com sólida experiência em engenharia de software, inteligência artificial e automação de processos.</p>
-            <div class="social-links">
-              <a href="https://www.linkedin.com/in/levilucena/" target="_blank" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-              </a>
-              <a href="https://github.com/LeviLucena" target="_blank" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-              </a>
-              <a href="https://levilucena.github.io/portfolio/" target="_blank" aria-label="Portfolio">
-                <i class="fas fa-external-link-alt"></i>
-              </a>
-              <a href="https://www.kaggle.com/levilucena" target="_blank" aria-label="Kaggle">
-                <i class="fab fa-kaggle"></i>
-              </a>
-              <a href="https://www.credly.com/users/levi-gustavo-oliveira-lucena" target="_blank" aria-label="Credly">
-                <i class="fas fa-award"></i>
-              </a>
-              <a href="https://www.amazon.com.br/s?i=digital-text&rh=p_27%3ALevi%2BLucena&s=relevancerank&text=Levi+Lucena&ref=dp_byline_sr_ebooks_1" target="_blank" aria-label="Amazon">
-                <i class="fab fa-amazon"></i>
-              </a>
-            </div>
-          </div>
+  <style is:global>
+    /* PROJECTS HERO */
+    .projects-hero {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
 
-        </div>
-        <div class="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
-        </div>
-      </div>
-    </footer>
+    .projects-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 12vw, 10rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
 
-    <!-- Buy me a coffee floating button -->
-    <a class="coffee-button" href="https://www.paypal.com/donate/?hosted_button_id=58DYCL22CTERG" target="_blank">
-        <span class="coffee-text">Buy me a coffee!</span>
-        <span class="coffee-icon-wrapper">
-            <i class="fas fa-coffee"></i>
-            <span class="steam steam-1"></span>
-            <span class="steam steam-2"></span>
-        </span>
-    </a>
-  </div>
-</BlogLayout>
+    .projects-hero h1 span {
+      color: var(--accent-color);
+    }
+
+    .hero-subtitle {
+      font-size: 1.5rem;
+      opacity: 0.7;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    /* PROJECTS GRID */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2px;
+      border-top: 1px solid var(--border-color);
+      border-left: 1px solid var(--border-color);
+    }
+
+    .project-card {
+      position: relative;
+      border-right: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+      padding: 3rem 2rem;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.4s ease;
+      background: transparent;
+    }
+
+    .project-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .project-number {
+      font-family: var(--font-heading);
+      font-size: 5rem;
+      line-height: 1;
+      opacity: 0.3;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      transition: all 0.3s;
+    }
+
+    .project-card:hover .project-number {
+      opacity: 1;
+      color: var(--accent-color);
+      transform: scale(1.1);
+    }
+
+    .project-category {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+    }
+
+    .project-card:hover .project-category {
+      color: var(--bg-color);
+    }
+
+    .project-content h3 {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      line-height: 1;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+
+    .project-content p {
+      font-size: 1rem;
+      line-height: 1.6;
+      opacity: 0.8;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tech {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-tech span {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border: 1px solid var(--accent-color);
+      color: var(--accent-color);
+    }
+
+    .project-card:hover .project-tech span {
+      color: var(--bg-color);
+      border-color: var(--bg-color);
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: inherit;
+      transition: all 0.3s;
+    }
+
+    .project-link:hover {
+      color: var(--accent-color);
+    }
+
+    .project-card:hover .project-link:hover {
+      color: var(--bg-color);
+    }
+
+    /* MORE PROJECTS SECTION */
+    .more-projects {
+      padding: 4rem 2rem;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .cta-box {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border: 3px solid var(--text-color);
+    }
+
+    .cta-box:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-5px);
+      box-shadow: 10px 10px 0px var(--accent-color);
+    }
+
+    .cta-box h2 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      transition: all 0.3s;
+    }
+
+    .cta-link:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-card {
+        min-height: 300px;
+      }
+n      .projects-hero h1 {
+        font-size: 18vw;
+      }
+    }
+  </style>
+</BrutalistLayout>
