@@ -280,12 +280,25 @@ const currentPath = Astro.url.pathname;
       border: 2px solid var(--border-color);
       padding: 1rem 2rem;
       transition: 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .social-links a i {
+      font-size: 1.4rem;
+      color: var(--accent-color);
+      transition: 0.3s;
     }
 
     .social-links a:hover {
       background: var(--text-color);
       color: var(--bg-color);
       border-color: var(--accent-color);
+    }
+
+    .social-links a:hover i {
+      color: var(--bg-color);
     }
 
     /* MOBILE RESPONSIVE */
@@ -656,10 +669,11 @@ const currentPath = Astro.url.pathname;
     </div>
     
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/levilucena/" target="_blank" class="hover-trigger">LinkedIn</a>
-      <a href="https://github.com/LeviLucena" target="_blank" class="hover-trigger">GitHub</a>
-      <a href="https://levilucena.github.io/portfolio/" target="_blank" class="hover-trigger">Portfolio</a>
-      <a href="https://www.kaggle.com/levilucena" target="_blank" class="hover-trigger">Kaggle</a>
+      <a href="https://www.linkedin.com/in/levilucena/" target="_blank" class="hover-trigger"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/LeviLucena" target="_blank" class="hover-trigger"><i class="fab fa-github"></i> GitHub</a>
+      <a href="https://levilucena.github.io/portfolio/" target="_blank" class="hover-trigger"><i class="fas fa-briefcase"></i> Portfolio</a>
+      <a href="https://www.kaggle.com/levilucena" target="_blank" class="hover-trigger"><i class="fab fa-kaggle"></i> Kaggle</a>
+      <a href="https://www.hackerrank.com/profile/sr_lucen" target="_blank" class="hover-trigger"><i class="fab fa-hackerrank"></i> HackerRank</a>
     </div>
     
     <p style="margin-top: 3rem; opacity: 0.5; font-size: 0.8rem;">© {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
