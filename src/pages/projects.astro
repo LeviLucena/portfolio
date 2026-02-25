@@ -19,12 +19,36 @@ const featuredProjects = [
     number: '02'
   },
   {
+    title: 'Zellu AI',
+    description: 'Sistema de IA jurídica com agentes conversacionais para classificação de demandas e análise através de RAG com base de conhecimento jurídico.',
+    technologies: ['FastAPI', 'LangChain', 'Gemini', 'ChromaDB'],
+    url: 'https://github.com/LeviLucena/zellu-ai',
+    category: 'Legal AI',
+    number: '03'
+  },
+  {
     title: 'IntelliDoc AI',
     description: 'Plataforma com agentes especializados para leitura e análise de documentos jurídicos com OCR, RAG e NLP.',
     technologies: ['LangChain', 'GPT-4', 'Python', 'OCR'],
     url: 'https://github.com/LeviLucena/IntellidocAI',
     category: 'Document AI',
-    number: '03'
+    number: '04'
+  },
+  {
+    title: 'Sales Insights API',
+    description: 'Plataforma de análise de vendas com IA que processa consultas em linguagem natural e gera insights acionáveis sobre dados comerciais.',
+    technologies: ['FastAPI', 'LangChain', 'OpenAI', 'SQLAlchemy'],
+    url: 'https://github.com/LeviLucena/Sales-Insights-API',
+    category: 'Business Intelligence',
+    number: '05'
+  },
+  {
+    title: 'API Data Collector',
+    description: 'Solução de integração unificada que centraliza coleta de dados de sistemas empresariais (Watio IoT, Omie ERP, HubSpot CRM) com retry automático e validação robusta.',
+    technologies: ['FastAPI', 'Docker', 'Pydantic', 'Async'],
+    url: 'https://github.com/LeviLucena/API-Data-Collector',
+    category: 'Data Integration',
+    number: '06'
   },
   {
     title: 'Clima Blue',
@@ -32,7 +56,7 @@ const featuredProjects = [
     technologies: ['Python', 'Flask', 'API', 'Docker'],
     url: 'https://github.com/LeviLucena/ClimaBlue_Brasil',
     category: 'AgTech',
-    number: '04'
+    number: '07'
   },
   {
     title: 'AmazonFireGuard',
@@ -40,15 +64,111 @@ const featuredProjects = [
     technologies: ['Python', 'Dash', 'ML', 'NASA API'],
     url: 'https://github.com/LeviLucena/amazonfireguard',
     category: 'Environment',
-    number: '05'
+    number: '08'
   },
   {
     title: 'Calculadora Renda Fixa',
-    description: 'Aplicação web para simulação de rentabilidade de diferentes tipos de investimentos em renda fixa.',
+    description: 'Aplicação web para simulação de rentabilidade de diferentes tipos de investamentos em renda fixa.',
     technologies: ['Nuxt.js', 'Vue.js', 'TypeScript'],
     url: 'https://github.com/LeviLucena/rendafixa.github.io',
     category: 'Fintech',
-    number: '06'
+    number: '09'
+  },
+  {
+    title: 'MLPractical',
+    description: 'Sistema de classificação de síndromes genéticas usando embeddings 320D, KNN e t-SNE com AUC de 96.30%.',
+    technologies: ['Python', 'Scikit-learn', 't-SNE', 'KNN'],
+    url: 'https://github.com/LeviLucena/MLPractical',
+    category: 'HealthTech',
+    number: '10'
+  },
+  {
+    title: 'NeoCore Systems',
+    description: 'Interface experimental futurista estilo sci-fi com dashboard interativo, animações avançadas e visualização de dados em tempo real.',
+    technologies: ['React', 'Framer Motion', 'Recharts', 'Tailwind'],
+    url: 'https://github.com/LeviLucena/NeoCore_Systems',
+    category: 'UI/UX Showcase',
+    number: '11'
+  },
+  {
+    title: 'Gestão de Leitos Hospitalares (GGH)',
+    description: 'Sistema de gerenciamento para saúde pública com registro de hospitais, pacientes, prontuários médicos e mapas de leitos hospitalares.',
+    technologies: ['Django', 'Python', 'Bootstrap', 'jQuery'],
+    url: 'https://github.com/LeviLucena/DjangoLivre',
+    category: 'HealthTech',
+    number: '12'
+  },
+  {
+    title: 'DeepLearning YOLO',
+    description: 'Sistema de detecção de objetos em tempo real usando YOLO v8 com captura de tela e webcam, processamento com OpenCV e visualização interativa.',
+    technologies: ['Python', 'YOLO', 'OpenCV', 'NumPy'],
+    url: 'https://github.com/LeviLucena/DeepLearning',
+    category: 'Computer Vision',
+    number: '13'
+  },
+  {
+    title: 'NDA Tools',
+    description: 'Ferramenta de automação jurídica que compara contratos NDA usando OpenAI, destaca diferenças e gera documentos DOCX com modificações realçadas.',
+    technologies: ['Flask', 'OpenAI', 'Python-docx', 'Bootstrap'],
+    url: 'https://github.com/LeviLucena/NDA_Tools',
+    category: 'Legal Tech',
+    number: '14'
+  },
+  {
+    title: 'Gestão de Inventário TI',
+    description: 'Sistema web para gerenciamento de ativos de TI com controle de entrada/saída de equipamentos, CRUD completo e interface responsiva com DataTables.',
+    technologies: ['PHP', 'MySQL', 'Bootstrap', 'DataTables'],
+    url: 'https://github.com/LeviLucena/Gestao-de-Inventario-de-TI',
+    category: 'IT Management',
+    number: '15'
+  },
+  {
+    title: 'Certificados SSL Monitor',
+    description: 'Ferramenta de monitoramento de certificados SSL para múltiplos domínios com verificação automática, alertas de expiração e visualização gráfica.',
+    technologies: ['PHP', 'OpenSSL', 'HTML5', 'CSS'],
+    url: 'https://github.com/LeviLucena/Certificados-SSL-Web',
+    category: 'Security Tools',
+    number: '16'
+  },
+  {
+    title: 'Gestão de Projetos',
+    description: 'Sistema completo de gerenciamento de projetos com controle de demandas, atividades, entregas, dashboards e autenticação de usuários.',
+    technologies: ['PHP', 'MySQL', 'Apache', 'HTML'],
+    url: 'https://github.com/LeviLucena/Gestao_Projetos',
+    category: 'Project Management',
+    number: '17'
+  },
+  {
+    title: 'Painel Arboviroses',
+    description: 'Plataforma de vigilância epidemiológica para monitoramento de arboviroses (dengue, zika, chikungunya) com visualizações interativas e mapas de calor.',
+    technologies: ['Dash', 'Plotly', 'Pandas', 'Python'],
+    url: 'https://github.com/LeviLucena/Arbovirose',
+    category: 'Public Health',
+    number: '18'
+  },
+  {
+    title: 'Bolsa de Valores Analytics',
+    description: 'Aplicação interativa em R/Shiny para análise de mercado de ações com visualização de preços, volume, correlações e volatilidade histórica.',
+    technologies: ['R', 'Shiny', 'Plotly', 'dplyr'],
+    url: 'https://github.com/LeviLucena/Bolsa_de_Valores',
+    category: 'Financial Analytics',
+    number: '19'
+  },
+  {
+    title: 'ClimaTempo Dashboard',
+    description: 'Dashboard interativo em R/Shiny para análise de dados climáticos com visualizações temporais, estatísticas mensais e gráficos comparativos.',
+    technologies: ['R', 'Shiny', 'ggplot2', 'Plotly'],
+    url: 'https://github.com/LeviLucena/ClimaTempo',
+    category: 'Weather Analytics',
+    number: '20'
+  },
+  {
+    title: 'Space Invaders',
+    description: 'Implementação do clássico arcade Space Invaders em Python/Pygame com sistema de pontuação, efeitos sonoros e mecânicas shoot\'em up.',
+    technologies: ['Python', 'Pygame', 'Game Dev'],
+    url: 'https://github.com/LeviLucena/pygame',
+    category: 'Game Development',
+    number: '21'
   }
 ];
 ---
@@ -307,7 +427,8 @@ const featuredProjects = [
       .project-card {
         min-height: 300px;
       }
-n      .projects-hero h1 {
+
+n      .projects-hero h1 {
         font-size: 18vw;
       }
     }
