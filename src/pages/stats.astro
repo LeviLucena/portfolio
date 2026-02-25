@@ -1,0 +1,784 @@
+---
+import BrutalistLayout from '../layouts/BrutalistLayout.astro';
+
+const stats = {
+  totalProjects: 21,
+  categories: 19,
+  technologies: '90+',
+  growth: '+200%'
+};
+
+const categoryDistribution = [
+  { name: 'Legal AI', count: 3, percentage: 14.3, icon: 'fas fa-gavel' },
+  { name: 'HealthTech', count: 2, percentage: 9.5, icon: 'fas fa-heartbeat' },
+  { name: 'Fintech', count: 2, percentage: 9.5, icon: 'fas fa-chart-line' },
+  { name: 'Industrial', count: 1, percentage: 4.8, icon: 'fas fa-industry' },
+  { name: 'Document AI', count: 1, percentage: 4.8, icon: 'fas fa-file-alt' },
+  { name: 'Business Intelligence', count: 1, percentage: 4.8, icon: 'fas fa-chart-bar' },
+  { name: 'Data Integration', count: 1, percentage: 4.8, icon: 'fas fa-database' },
+  { name: 'AgTech', count: 1, percentage: 4.8, icon: 'fas fa-seedling' },
+  { name: 'Environment', count: 1, percentage: 4.8, icon: 'fas fa-leaf' },
+  { name: 'UI/UX Showcase', count: 1, percentage: 4.8, icon: 'fas fa-paint-brush' },
+  { name: 'Computer Vision', count: 1, percentage: 4.8, icon: 'fas fa-eye' },
+  { name: 'Legal Tech', count: 1, percentage: 4.8, icon: 'fas fa-balance-scale' },
+  { name: 'IT Management', count: 1, percentage: 4.8, icon: 'fas fa-server' },
+  { name: 'Security Tools', count: 1, percentage: 4.8, icon: 'fas fa-shield-alt' },
+  { name: 'Project Management', count: 1, percentage: 4.8, icon: 'fas fa-tasks' },
+  { name: 'Public Health', count: 1, percentage: 4.8, icon: 'fas fa-hospital' },
+  { name: 'Financial Analytics', count: 1, percentage: 4.8, icon: 'fas fa-coins' },
+  { name: 'Weather Analytics', count: 1, percentage: 4.8, icon: 'fas fa-cloud-sun' },
+  { name: 'Game Development', count: 1, percentage: 4.8, icon: 'fas fa-gamepad' }
+];
+
+const expertise = [
+  { area: 'Inteligência Artificial & Machine Learning', level: 95, projects: 9 },
+  { area: 'Desenvolvimento Web Full Stack', level: 90, projects: 12 },
+  { area: 'Processamento de Linguagem Natural (NLP)', level: 85, projects: 4 },
+  { area: 'Sistemas de Análise de Dados', level: 85, projects: 6 },
+  { area: 'Integração de APIs & Microserviços', level: 80, projects: 5 },
+  { area: 'Computer Vision & Deep Learning', level: 75, projects: 2 },
+  { area: 'DevOps & Containerização', level: 75, projects: 8 },
+  { area: 'Sistemas Empresariais (ERP/CRM/MES)', level: 70, projects: 3 },
+  { area: 'Visualização de Dados & Dashboards', level: 70, projects: 7 },
+  { area: 'Automação Jurídica & LegalTech', level: 65, projects: 4 },
+  { area: 'Saúde Digital & HealthTech', level: 60, projects: 3 },
+  { area: 'Segurança & Monitoramento', level: 60, projects: 2 },
+  { area: 'Game Development', level: 50, projects: 1 }
+];
+
+const sectors = [
+  { name: 'Legal (LegalTech/AI)', percentage: 19 },
+  { name: 'Gestão Empresarial', percentage: 14.3 },
+  { name: 'Análise de Dados', percentage: 14.3 },
+  { name: 'Saúde (HealthTech)', percentage: 14.3 },
+  { name: 'Financeiro (Fintech)', percentage: 9.5 },
+  { name: 'Industrial & IoT', percentage: 9.5 },
+  { name: 'Meio Ambiente', percentage: 9.5 },
+  { name: 'Agronegócio', percentage: 4.8 },
+  { name: 'Educação & Games', percentage: 4.8 }
+];
+
+const specialMetrics = [
+  { metric: 'Open Source', value: 100, total: 21, count: 21 },
+  { metric: 'Uso de Python', value: 57, total: 21, count: 12 },
+  { metric: 'Projetos com IA/ML', value: 43, total: 21, count: 9 },
+  { metric: 'Dockerizados', value: 38, total: 21, count: 8 },
+  { metric: 'APIs RESTful', value: 33, total: 21, count: 7 },
+  { metric: 'Impacto Social', value: 29, total: 21, count: 6 }
+];
+
+const timeline = [
+  { period: 'Fase Inicial', projects: 7, year: '2023', description: 'Primeiros projetos core' },
+  { period: 'Expansão IA', projects: 14, year: '2024', description: 'Foco em Legal AI e ML' },
+  { period: 'Portfolio Atual', projects: 21, year: '2025', description: 'Diversificação completa' }
+];
+---
+
+<BrutalistLayout title="Levi Lucena - Portfolio Analytics">
+  <!-- HERO SECTION -->
+  <section class="stats-hero">
+    <div class="container">
+      <h1>Portfolio<br /><span class="text-accent">Analytics</span></h1>
+      <div class="stats-grid-hero">
+        <div class="stat-box hover-trigger">
+          <div class="stat-number">{stats.totalProjects}</div>
+          <div class="stat-label">Projetos</div>
+        </div>
+        <div class="stat-box hover-trigger">
+          <div class="stat-number">{stats.categories}</div>
+          <div class="stat-label">Categorias</div>
+        </div>
+        <div class="stat-box hover-trigger">
+          <div class="stat-number">{stats.technologies}</div>
+          <div class="stat-label">Tecnologias</div>
+        </div>
+        <div class="stat-box hover-trigger">
+          <div class="stat-number">{stats.growth}</div>
+          <div class="stat-label">Crescimento</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW SECTION -->
+  <section class="container section-spacing">
+    <h2 class="section-title">Overview Geral</h2>
+    <div class="overview-grid">
+      <div class="overview-card hover-trigger">
+        <i class="fas fa-code-branch"></i>
+        <h3>21 Projetos</h3>
+        <p>Portfolio diversificado abrangendo múltiplas áreas da tecnologia</p>
+      </div>
+      <div class="overview-card hover-trigger">
+        <i class="fas fa-layer-group"></i>
+        <h3>19 Categorias</h3>
+        <p>Expertise demonstrada em diferentes domínios e setores</p>
+      </div>
+      <div class="overview-card hover-trigger">
+        <i class="fas fa-tools"></i>
+        <h3>90+ Tecnologias</h3>
+        <p>Stack tecnológico abrangente e moderno</p>
+      </div>
+      <div class="overview-card hover-trigger">
+        <i class="fas fa-chart-line"></i>
+        <h3>+200% Crescimento</h3>
+        <p>Expansão contínua do portfolio (7 → 21 projetos)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CATEGORY DISTRIBUTION -->
+  <section class="container section-spacing">
+    <h2 class="section-title">Distribuição por Categoria</h2>
+    <div class="category-grid">
+      {categoryDistribution.map(cat => (
+        <div class="category-card hover-trigger">
+          <div class="category-icon">
+            <i class={cat.icon}></i>
+          </div>
+          <div class="category-info">
+            <h3>{cat.name}</h3>
+            <div class="category-stats">
+              <span class="category-count">{cat.count} projeto{cat.count > 1 ? 's' : ''}</span>
+              <span class="category-percentage">{cat.percentage.toFixed(1)}%</span>
+            </div>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-fill" style={`width: ${cat.percentage}%`}></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="container section-spacing">
+    <h2 class="section-title">Expertise Demonstrada</h2>
+    <div class="expertise-grid">
+      {expertise.map((item, index) => (
+        <div class="expertise-card hover-trigger">
+          <div class="expertise-header">
+            <div class="expertise-rank">#{index + 1}</div>
+            <div class="expertise-info">
+              <h3>{item.area}</h3>
+              <span class="expertise-projects">{item.projects} projetos</span>
+            </div>
+          </div>
+          <div class="expertise-bar">
+            <div class="expertise-fill" style={`width: ${item.level}%`}>
+              <span class="expertise-level">{item.level}%</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- SECTORS -->
+  <section class="container section-spacing">
+    <h2 class="section-title">Setores de Aplicação</h2>
+    <div class="sectors-grid">
+      {sectors.map(sector => (
+        <div class="sector-card hover-trigger">
+          <h3>{sector.name}</h3>
+          <div class="sector-percentage">{sector.percentage}%</div>
+          <div class="sector-bar">
+            <div class="sector-fill" style={`width: ${sector.percentage}%`}></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- SPECIAL METRICS -->
+  <section class="container section-spacing">
+    <h2 class="section-title">Métricas Especiais</h2>
+    <div class="metrics-grid">
+      {specialMetrics.map(metric => (
+        <div class="metric-card hover-trigger">
+          <h3>{metric.metric}</h3>
+          <div class="metric-value">{metric.value}%</div>
+          <div class="metric-detail">{metric.count} de {metric.total} projetos</div>
+          <div class="metric-bar">
+            <div class="metric-fill" style={`width: ${metric.value}%`}></div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="container section-spacing">
+    <h2 class="section-title">Linha do Tempo</h2>
+    <div class="timeline-grid">
+      {timeline.map((phase, index) => (
+        <div class="timeline-card hover-trigger">
+          <div class="timeline-number">{String(index + 1).padStart(2, '0')}</div>
+          <div class="timeline-year">{phase.year}</div>
+          <h3>{phase.period}</h3>
+          <div class="timeline-projects">{phase.projects} Projetos</div>
+          <p>{phase.description}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-box hover-trigger">
+        <h2>Explore os Projetos</h2>
+        <p>Veja todos os projetos em detalhes</p>
+        <a href="/portfolio/projects" class="cta-link">
+          Ver Portfolio Completo
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <style is:global>
+    /* STATS HERO */
+    .stats-hero {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+      padding: 4rem 2rem;
+    }
+
+    .stats-hero h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(4rem, 12vw, 10rem);
+      line-height: 0.9;
+      text-transform: uppercase;
+      margin-bottom: 4rem;
+    }
+
+    .stats-grid-hero {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .stat-box {
+      border: 3px solid var(--text-color);
+      padding: 3rem 2rem;
+      transition: all 0.4s ease;
+    }
+
+    .stat-box:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-10px);
+      box-shadow: 10px 10px 0px var(--accent-color);
+    }
+
+    .stat-number {
+      font-family: var(--font-heading);
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-box:hover .stat-number {
+      color: var(--bg-color);
+    }
+
+    .stat-label {
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* SECTION SPACING */
+    .section-spacing {
+      padding: 4rem 2rem;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(3rem, 6vw, 5rem);
+      text-transform: uppercase;
+      margin-bottom: 3rem;
+      border-bottom: 5px solid var(--accent-color);
+      padding-bottom: 1rem;
+      display: inline-block;
+    }
+
+    /* OVERVIEW */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .overview-card {
+      border: 3px solid var(--text-color);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .overview-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .overview-card i {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .overview-card:hover i {
+      color: var(--bg-color);
+    }
+
+    .overview-card h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .overview-card p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    /* CATEGORY DISTRIBUTION */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .category-card {
+      border: 2px solid var(--border-color);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .category-card:hover {
+      border-color: var(--accent-color);
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateX(5px);
+      box-shadow: 5px 5px 0px var(--accent-color);
+    }
+
+    .category-icon {
+      font-size: 2rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .category-card:hover .category-icon {
+      color: var(--bg-color);
+    }
+
+    .category-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .category-stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .category-count {
+      font-size: 0.9rem;
+      font-weight: 600;
+      opacity: 0.8;
+    }
+
+    .category-percentage {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--accent-color);
+    }
+
+    .category-card:hover .category-percentage {
+      color: var(--bg-color);
+    }
+
+    .progress-bar {
+      height: 8px;
+      background-color: var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background-color: var(--accent-color);
+      transition: width 1s ease;
+    }
+
+    .category-card:hover .progress-fill {
+      background-color: var(--bg-color);
+    }
+
+    /* EXPERTISE */
+    .expertise-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .expertise-card {
+      border: 2px solid var(--border-color);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .expertise-card:hover {
+      border-color: var(--accent-color);
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateX(5px);
+      box-shadow: 5px 5px 0px var(--accent-color);
+    }
+
+    .expertise-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .expertise-rank {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent-color);
+      line-height: 1;
+    }
+
+    .expertise-card:hover .expertise-rank {
+      color: var(--bg-color);
+    }
+
+    .expertise-info h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-bottom: 0.25rem;
+    }
+
+    .expertise-projects {
+      font-size: 0.9rem;
+      opacity: 0.7;
+      font-weight: 600;
+    }
+
+    .expertise-bar {
+      height: 12px;
+      background-color: var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .expertise-fill {
+      height: 100%;
+      background-color: var(--accent-color);
+      transition: width 1s ease;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 0.5rem;
+    }
+
+    .expertise-card:hover .expertise-fill {
+      background-color: var(--bg-color);
+    }
+
+    .expertise-level {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--bg-color);
+    }
+
+    .expertise-card:hover .expertise-level {
+      color: var(--text-color);
+    }
+
+    /* SECTORS */
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .sector-card {
+      border: 3px solid var(--text-color);
+      padding: 2rem;
+      transition: all 0.4s ease;
+    }
+
+    .sector-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-5px);
+      box-shadow: 8px 8px 0px var(--accent-color);
+    }
+
+    .sector-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .sector-percentage {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .sector-card:hover .sector-percentage {
+      color: var(--bg-color);
+    }
+
+    .sector-bar {
+      height: 10px;
+      background-color: var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sector-fill {
+      height: 100%;
+      background-color: var(--accent-color);
+      transition: width 1s ease;
+    }
+
+    .sector-card:hover .sector-fill {
+      background-color: var(--bg-color);
+    }
+
+    /* METRICS */
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .metric-card {
+      border: 3px solid var(--text-color);
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .metric-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-10px);
+      box-shadow: 10px 10px 0px var(--accent-color);
+    }
+
+    .metric-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .metric-value {
+      font-family: var(--font-heading);
+      font-size: 4rem;
+      color: var(--accent-color);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .metric-card:hover .metric-value {
+      color: var(--bg-color);
+    }
+
+    .metric-detail {
+      font-size: 0.9rem;
+      opacity: 0.8;
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .metric-bar {
+      height: 8px;
+      background-color: var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .metric-fill {
+      height: 100%;
+      background-color: var(--accent-color);
+      transition: width 1s ease;
+    }
+
+    .metric-card:hover .metric-fill {
+      background-color: var(--bg-color);
+    }
+
+    /* TIMELINE */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .timeline-card {
+      border: 3px solid var(--text-color);
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: all 0.4s ease;
+    }
+
+    .timeline-card:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-10px);
+      box-shadow: 10px 10px 0px var(--accent-color);
+    }
+
+    .timeline-number {
+      font-family: var(--font-heading);
+      font-size: 6rem;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      opacity: 0.2;
+      line-height: 1;
+    }
+
+    .timeline-card:hover .timeline-number {
+      opacity: 0.5;
+      color: var(--accent-color);
+    }
+
+    .timeline-year {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      color: var(--accent-color);
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-card:hover .timeline-year {
+      color: var(--bg-color);
+    }
+
+    .timeline-card h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-projects {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+    }
+
+    .timeline-card:hover .timeline-projects {
+      color: var(--bg-color);
+    }
+
+    .timeline-card p {
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      padding: 4rem 2rem;
+    }
+
+    .cta-box {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      border: 3px solid var(--text-color);
+      transition: all 0.4s ease;
+    }
+
+    .cta-box:hover {
+      background-color: var(--text-color);
+      color: var(--bg-color);
+      transform: translateY(-5px);
+      box-shadow: 10px 10px 0px var(--accent-color);
+    }
+
+    .cta-box h2 {
+      font-family: var(--font-heading);
+      font-size: 3rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .cta-box p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 2rem;
+    }
+
+    .cta-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1.2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      transition: all 0.3s;
+      text-decoration: none;
+    }
+
+    .cta-link:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    @media (max-width: 768px) {
+      .stats-grid-hero {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .category-grid,
+      .sectors-grid,
+      .metrics-grid,
+      .timeline-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-number {
+        font-size: 3.5rem;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</BrutalistLayout>
