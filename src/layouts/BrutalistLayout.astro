@@ -11,7 +11,11 @@ const currentPath = Astro.url.pathname;
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{title}</title>
   <meta name="description" content="Portfolio de Levi Lucena - Engenheiro de Software & Engenheiro de Soluções de IA. Design brutalista com alto contraste e impacto visual." />
-  
+
+  <!-- Translation Support -->
+  <meta name="google" content="notranslate" value="false" />
+  <meta http-equiv="content-language" content="pt-BR" />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -640,6 +644,310 @@ const currentPath = Astro.url.pathname;
         right: -100%;
       }
     }
+
+    /* TRANSLATE BUTTON */
+    .translate-toggle-btn {
+      position: fixed;
+      top: 160px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border: 3px solid var(--accent-color);
+      background-color: var(--bg-color);
+      color: var(--accent-color);
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+      transition: all 0.3s ease;
+      cursor: none;
+    }
+
+    .translate-toggle-btn:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      transform: rotate(-15deg);
+    }
+
+    .translate-toggle-btn.pulse {
+      animation: pulse-translate 2s infinite;
+    }
+
+    @keyframes pulse-translate {
+      0%, 100% {
+        box-shadow: 0 0 0 0 var(--accent-color);
+      }
+      50% {
+        box-shadow: 0 0 0 10px transparent;
+      }
+    }
+
+    .translate-tooltip {
+      position: absolute;
+      right: 60px;
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+      padding: 0.5rem 1rem;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .translate-toggle-btn:hover .translate-tooltip {
+      opacity: 1;
+    }
+
+    .translate-menu {
+      position: fixed;
+      top: 160px;
+      right: 80px;
+      width: 220px;
+      max-height: 70vh;
+      overflow-y: auto;
+      background-color: var(--bg-color);
+      border: 3px solid var(--accent-color);
+      z-index: 1002;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(20px);
+      transition: all 0.3s ease;
+    }
+
+    /* Scrollbar brutalist style */
+    .translate-menu::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    .translate-menu::-webkit-scrollbar-track {
+      background: var(--bg-color);
+    }
+
+    .translate-menu::-webkit-scrollbar-thumb {
+      background: var(--accent-color);
+    }
+
+    .translate-menu.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    .translate-menu-header {
+      padding: 1rem;
+      border-bottom: 2px solid var(--border-color);
+      font-family: var(--font-heading);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      color: var(--accent-color);
+    }
+
+    .translate-options {
+      list-style: none;
+    }
+
+    .translate-option {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-color);
+      cursor: none;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .translate-option:hover {
+      background-color: var(--accent-color);
+      color: var(--bg-color);
+    }
+
+    .translate-option:last-child {
+      border-bottom: none;
+    }
+
+    @media (max-width: 768px) {
+      .translate-toggle-btn {
+        top: auto;
+        bottom: 140px;
+        right: 10px;
+        width: 45px;
+        height: 45px;
+      }
+
+      .translate-menu {
+        right: 10px;
+        top: auto;
+        bottom: 190px;
+        width: calc(100vw - 20px);
+      }
+
+      .translate-tooltip {
+        display: none;
+      }
+    }
+
+    /* GOOGLE TRANSLATE WIDGET CUSTOMIZATION */
+    /* Container do widget invisível mas funcional */
+    #google_translate_element {
+      position: fixed;
+      top: -9999px;
+      left: -9999px;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    /* REMOVE COMPLETAMENTE O BANNER DO GOOGLE TRANSLATE */
+    .goog-te-banner-frame {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    .goog-te-banner-frame.skiptranslate {
+      display: none !important;
+    }
+
+    /* Remove o iframe do banner */
+    .skiptranslate iframe {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    /* Corrige posição do body quando traduzido */
+    body {
+      top: 0 !important;
+      position: static !important;
+    }
+
+    body.translated-ltr {
+      top: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    body.translated-rtl {
+      top: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    /* Remove espaço extra que o Google adiciona */
+    html {
+      margin-top: 0 !important;
+    }
+
+    /* Esconde elementos visuais do Google mas mantém funcionalidade */
+    .goog-te-gadget {
+      color: transparent !important;
+      font-size: 0 !important;
+    }
+
+    /* Remove balões, tooltips e popups */
+    #goog-gt-tt {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    .goog-te-balloon-frame {
+      display: none !important;
+      visibility: hidden !important;
+    }
+
+    .goog-text-highlight {
+      background: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Remove menu de contexto do Google Translate */
+    .goog-te-menu-value {
+      display: none !important;
+    }
+
+    .goog-te-menu-frame {
+      display: none !important;
+    }
+
+    /* Garante que nada do Google apareça visualmente */
+    iframe.skiptranslate {
+      display: none !important;
+      visibility: hidden !important;
+      height: 0 !important;
+      width: 0 !important;
+    }
+
+    /* Remove qualquer frame do Google Translate */
+    .VIpgJd-ZVi9od-aZ2wEe-wOHMyf {
+      display: none !important;
+    }
+
+    .VIpgJd-ZVi9od-aZ2wEe-OiiCO {
+      display: none !important;
+    }
+
+    /* Reseta quaisquer margens/paddings adicionados pelo Google */
+    body > .skiptranslate {
+      display: none !important;
+    }
+
+    /* Força transparência total de elementos do Google */
+    [id^="goog-gt-"] {
+      display: none !important;
+    }
+
+    /* Translation Loading Indicator */
+    .translate-loading {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: var(--bg-color);
+      border: 3px solid var(--accent-color);
+      padding: 2rem;
+      z-index: 9999;
+      display: none;
+      text-align: center;
+    }
+
+    .translate-loading.active {
+      display: block;
+    }
+
+    .translate-loading-spinner {
+      width: 50px;
+      height: 50px;
+      border: 3px solid var(--border-color);
+      border-top: 3px solid var(--accent-color);
+      border-radius: 0;
+      animation: spin 1s linear infinite;
+      margin: 0 auto 1rem;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .translate-loading-text {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      text-transform: uppercase;
+      color: var(--accent-color);
+    }
+
+    /* Overlay escuro durante tradução */
+    .translate-overlay {
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 9998;
+      display: none;
+    }
+
+    .translate-overlay.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
@@ -676,8 +984,12 @@ const currentPath = Astro.url.pathname;
       <a href="https://www.kaggle.com/levilucena" target="_blank" class="hover-trigger"><i class="fab fa-kaggle"></i> Kaggle</a>
       <a href="https://www.hackerrank.com/profile/sr_lucen" target="_blank" class="hover-trigger"><i class="fab fa-hackerrank"></i> HackerRank</a>
     </div>
-    
-    <p style="margin-top: 3rem; opacity: 0.5; font-size: 0.8rem;">© {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
+
+    <p style="margin-top: 2rem; opacity: 0.7; font-size: 0.95rem; padding: 1rem; border-top: 1px solid var(--border-color);">
+      🌐 International visitor? Your browser can translate this page automatically.
+    </p>
+
+    <p style="margin-top: 1rem; opacity: 0.5; font-size: 0.8rem;">© {new Date().getFullYear()} Levi Lucena. Todos os direitos reservados.</p>
   </footer>
 
   <!-- Floating Amazon Store Button -->
@@ -700,6 +1012,64 @@ const currentPath = Astro.url.pathname;
   <button class="theme-toggle-btn hover-trigger" id="themeToggleBtn" aria-label="Selecionar tema">
     <i class="fas fa-palette"></i>
   </button>
+
+  <!-- Translate Button -->
+  <button class="translate-toggle-btn hover-trigger" id="translateToggleBtn" aria-label="Traduzir página">
+    <i class="fas fa-globe"></i>
+    <span class="translate-tooltip">Translate page</span>
+  </button>
+
+  <!-- Translate Menu -->
+  <div class="translate-menu" id="translateMenu">
+    <div class="translate-menu-header">
+      <i class="fas fa-globe"></i> Translate to:
+    </div>
+    <ul class="translate-options">
+      <li class="translate-option hover-trigger" data-lang="en">
+        🇬🇧 English
+      </li>
+      <li class="translate-option hover-trigger" data-lang="es">
+        🇪🇸 Español
+      </li>
+      <li class="translate-option hover-trigger" data-lang="fr">
+        🇫🇷 Français
+      </li>
+      <li class="translate-option hover-trigger" data-lang="de">
+        🇩🇪 Deutsch
+      </li>
+      <li class="translate-option hover-trigger" data-lang="zh-CN">
+        🇨🇳 中文
+      </li>
+      <li class="translate-option hover-trigger" data-lang="ja">
+        🇯🇵 日本語
+      </li>
+      <li class="translate-option hover-trigger" data-lang="ko">
+        🇰🇷 한국어
+      </li>
+      <li class="translate-option hover-trigger" data-lang="it">
+        🇮🇹 Italiano
+      </li>
+      <li class="translate-option hover-trigger" data-lang="ru">
+        🇷🇺 Русский
+      </li>
+      <li class="translate-option hover-trigger" data-lang="ar">
+        🇸🇦 العربية
+      </li>
+      <li class="translate-option hover-trigger" id="translateOriginal">
+        🇧🇷 Português (Original)
+      </li>
+    </ul>
+  </div>
+
+  <!-- Hidden Google Translate Widget Container -->
+  <div id="google_translate_element" style="display: none;"></div>
+
+  <!-- Translation Loading Indicator -->
+  <div class="translate-overlay" id="translateOverlay"></div>
+  <div class="translate-loading" id="translateLoading">
+    <div class="translate-loading-spinner"></div>
+    <div class="translate-loading-text">Translating...</div>
+  </div>
 
   <!-- Theme Panel Overlay -->
   <div class="theme-overlay" id="themeOverlay"></div>
@@ -876,6 +1246,188 @@ const currentPath = Astro.url.pathname;
         closeThemePanel();
       }
     });
+
+    // TRANSLATE FEATURE
+    const translateToggleBtn = document.getElementById("translateToggleBtn");
+    const translateMenu = document.getElementById("translateMenu");
+    const translateOptions = document.querySelectorAll(".translate-option");
+    const translateOriginalBtn = document.getElementById("translateOriginal");
+
+    // Detecta se usuário é internacional
+    const userLang = navigator.language || navigator.userLanguage;
+    const isInternational = !userLang.startsWith('pt');
+
+    // Se for internacional e primeira visita, adiciona pulse
+    if (isInternational && !localStorage.getItem('translate-seen')) {
+      translateToggleBtn.classList.add('pulse');
+      // Remove pulse após 10 segundos
+      setTimeout(() => {
+        translateToggleBtn.classList.remove('pulse');
+        localStorage.setItem('translate-seen', 'true');
+      }, 10000);
+    }
+
+    // Toggle menu
+    translateToggleBtn.addEventListener("click", () => {
+      translateMenu.classList.toggle("open");
+    });
+
+    // Fecha menu ao clicar fora
+    document.addEventListener("click", (e) => {
+      if (!translateToggleBtn.contains(e.target) && !translateMenu.contains(e.target)) {
+        translateMenu.classList.remove("open");
+      }
+    });
+
+    // Função para definir cookie do Google Translate
+    function setCookie(name, value, days) {
+      const expires = new Date();
+      expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+      document.cookie = name + '=' + value + ';expires=' + expires.toUTCString() + ';path=/';
+    }
+
+    // Função para deletar cookie
+    function deleteCookie(name) {
+      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+    }
+
+    // Função para disparar tradução via Google Translate
+    function triggerGoogleTranslate(langCode) {
+      translateMenu.classList.remove("open");
+
+      // Mostra loading indicator
+      const loadingOverlay = document.getElementById('translateOverlay');
+      const loadingIndicator = document.getElementById('translateLoading');
+
+      if (loadingOverlay && loadingIndicator) {
+        loadingOverlay.classList.add('active');
+        loadingIndicator.classList.add('active');
+      }
+
+      // Função para tentar disparar a tradução via widget
+      function attemptTranslation() {
+        const iframe = document.querySelector('.goog-te-menu-frame');
+        const selectElement = document.querySelector('.goog-te-combo');
+
+        console.log('🔍 Procurando widget do Google Translate...');
+        console.log('Select element:', selectElement);
+
+        if (selectElement) {
+          console.log('✅ Widget encontrado! Disparando tradução...');
+
+          // Widget carregado - usa o select
+          if (langCode === '' || langCode === 'pt') {
+            selectElement.value = '';
+          } else {
+            selectElement.value = langCode;
+          }
+
+          // Dispara o evento de mudança
+          selectElement.dispatchEvent(new Event('change'));
+
+          console.log('🎯 Tradução disparada via widget');
+
+          // Esconde loading após 2 segundos
+          setTimeout(() => {
+            if (loadingOverlay && loadingIndicator) {
+              loadingOverlay.classList.remove('active');
+              loadingIndicator.classList.remove('active');
+            }
+          }, 2000);
+        } else {
+          console.log('⚠️ Widget não encontrado. Usando método de cookie + reload...');
+
+          // Widget não carregou - usa método de cookie + reload
+          if (langCode === '' || langCode === 'pt') {
+            deleteCookie('googtrans');
+            deleteCookie('googtrans', '/');
+            console.log('🔄 Removendo tradução...');
+          } else {
+            const cookieValue = '/pt/' + langCode;
+            setCookie('googtrans', cookieValue, 1);
+            console.log('🍪 Cookie definido:', cookieValue);
+          }
+
+          console.log('🔄 Recarregando página em 500ms...');
+          setTimeout(() => {
+            window.location.reload();
+          }, 500);
+        }
+      }
+
+      // Tenta disparar imediatamente, se falhar aguarda 2 segundos e tenta novamente
+      setTimeout(attemptTranslation, 300);
+
+      // Fallback: se não funcionar em 3 segundos, força reload
+      setTimeout(() => {
+        if (langCode !== '' && langCode !== 'pt') {
+          const cookieValue = '/pt/' + langCode;
+          setCookie('googtrans', cookieValue, 1);
+        }
+        window.location.reload();
+      }, 3000);
+    }
+
+    // Tradução via Google Translate Widget
+    translateOptions.forEach(option => {
+      option.addEventListener("click", () => {
+        const lang = option.getAttribute("data-lang");
+
+        if (lang) {
+          console.log('🌐 Traduzindo para:', lang);
+
+          // Adiciona feedback visual
+          option.style.opacity = '0.5';
+          setTimeout(() => {
+            triggerGoogleTranslate(lang);
+          }, 200);
+        }
+      });
+    });
+
+    // Botão para voltar ao original (português)
+    if (translateOriginalBtn) {
+      translateOriginalBtn.addEventListener("click", () => {
+        translateOriginalBtn.style.opacity = '0.5';
+        setTimeout(() => {
+          triggerGoogleTranslate('pt');
+        }, 200);
+      });
+    }
+
+    // Verifica se a página já está traduzida e mostra indicador
+    function checkCurrentTranslation() {
+      const cookies = document.cookie.split(';');
+      for (let cookie of cookies) {
+        const [name, value] = cookie.trim().split('=');
+        if (name === 'googtrans') {
+          const lang = value.split('/')[2];
+          if (lang && lang !== 'pt') {
+            // Página está traduzida, adiciona indicador visual
+            translateToggleBtn.style.backgroundColor = 'var(--accent-color)';
+            translateToggleBtn.style.color = 'var(--bg-color)';
+          }
+        }
+      }
+    }
+
+    checkCurrentTranslation();
+
+    // Adiciona hover listeners para cursor customizado
+    addHoverListeners();
   </script>
+
+  <!-- Google Translate Script (carrega no final) -->
+  <script type="text/javascript">
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'pt',
+        includedLanguages: 'en,es,fr,de,zh-CN,ja,ko,it,ru,ar',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
