@@ -41,7 +41,8 @@ jobs:
       - name: Build with Astro
         run: |
           npm run build
-          
+          touch dist/.nojekyll
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
