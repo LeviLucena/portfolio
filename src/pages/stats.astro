@@ -2,32 +2,33 @@
 import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 
 const stats = {
-  totalProjects: 21,
-  categories: 19,
+  totalProjects: 22,
+  categories: 20,
   technologies: '90+',
   growth: '+200%'
 };
 
 const categoryDistribution = [
-  { name: 'Legal AI', count: 3, percentage: 14.3, icon: 'fas fa-gavel' },
-  { name: 'HealthTech', count: 2, percentage: 9.5, icon: 'fas fa-heartbeat' },
-  { name: 'Fintech', count: 2, percentage: 9.5, icon: 'fas fa-chart-line' },
-  { name: 'Industrial', count: 1, percentage: 4.8, icon: 'fas fa-industry' },
-  { name: 'Document AI', count: 1, percentage: 4.8, icon: 'fas fa-file-alt' },
-  { name: 'Business Intelligence', count: 1, percentage: 4.8, icon: 'fas fa-chart-bar' },
-  { name: 'Data Integration', count: 1, percentage: 4.8, icon: 'fas fa-database' },
-  { name: 'AgTech', count: 1, percentage: 4.8, icon: 'fas fa-seedling' },
-  { name: 'Environment', count: 1, percentage: 4.8, icon: 'fas fa-leaf' },
-  { name: 'UI/UX Showcase', count: 1, percentage: 4.8, icon: 'fas fa-paint-brush' },
-  { name: 'Computer Vision', count: 1, percentage: 4.8, icon: 'fas fa-eye' },
-  { name: 'Legal Tech', count: 1, percentage: 4.8, icon: 'fas fa-balance-scale' },
-  { name: 'IT Management', count: 1, percentage: 4.8, icon: 'fas fa-server' },
-  { name: 'Security Tools', count: 1, percentage: 4.8, icon: 'fas fa-shield-alt' },
-  { name: 'Project Management', count: 1, percentage: 4.8, icon: 'fas fa-tasks' },
-  { name: 'Public Health', count: 1, percentage: 4.8, icon: 'fas fa-hospital' },
-  { name: 'Financial Analytics', count: 1, percentage: 4.8, icon: 'fas fa-coins' },
-  { name: 'Weather Analytics', count: 1, percentage: 4.8, icon: 'fas fa-cloud-sun' },
-  { name: 'Game Development', count: 1, percentage: 4.8, icon: 'fas fa-gamepad' }
+  { name: 'Legal AI', count: 3, percentage: 13.6, icon: 'fas fa-gavel' },
+  { name: 'HealthTech', count: 2, percentage: 9.1, icon: 'fas fa-heartbeat' },
+  { name: 'Fintech', count: 2, percentage: 9.1, icon: 'fas fa-chart-line' },
+  { name: 'Industrial', count: 1, percentage: 4.5, icon: 'fas fa-industry' },
+  { name: 'Document AI', count: 1, percentage: 4.5, icon: 'fas fa-file-alt' },
+  { name: 'Business Intelligence', count: 1, percentage: 4.5, icon: 'fas fa-chart-bar' },
+  { name: 'Data Integration', count: 1, percentage: 4.5, icon: 'fas fa-database' },
+  { name: 'AgTech', count: 1, percentage: 4.5, icon: 'fas fa-seedling' },
+  { name: 'Environment', count: 1, percentage: 4.5, icon: 'fas fa-leaf' },
+  { name: 'UI/UX Showcase', count: 1, percentage: 4.5, icon: 'fas fa-paint-brush' },
+  { name: 'Computer Vision', count: 1, percentage: 4.5, icon: 'fas fa-eye' },
+  { name: 'Legal Tech', count: 1, percentage: 4.5, icon: 'fas fa-balance-scale' },
+  { name: 'IT Management', count: 1, percentage: 4.5, icon: 'fas fa-server' },
+  { name: 'Security Tools', count: 1, percentage: 4.5, icon: 'fas fa-shield-alt' },
+  { name: 'Project Management', count: 1, percentage: 4.5, icon: 'fas fa-tasks' },
+  { name: 'Public Health', count: 1, percentage: 4.5, icon: 'fas fa-hospital' },
+  { name: 'Financial Analytics', count: 1, percentage: 4.5, icon: 'fas fa-coins' },
+  { name: 'Weather Analytics', count: 1, percentage: 4.5, icon: 'fas fa-cloud-sun' },
+  { name: 'Game Development', count: 1, percentage: 4.5, icon: 'fas fa-gamepad' },
+  { name: 'Mainframe / Fintech', count: 1, percentage: 4.5, icon: 'fas fa-landmark' }
 ];
 
 const expertise = [
@@ -38,7 +39,7 @@ const expertise = [
   { area: 'Integração de APIs & Microserviços', level: 80, projects: 5 },
   { area: 'Computer Vision & Deep Learning', level: 75, projects: 2 },
   { area: 'DevOps & Containerização', level: 75, projects: 8 },
-  { area: 'Sistemas Empresariais (ERP/CRM/MES)', level: 70, projects: 3 },
+  { area: 'Sistemas Empresariais (ERP/CRM/MES)', level: 70, projects: 4 },
   { area: 'Visualização de Dados & Dashboards', level: 70, projects: 7 },
   { area: 'Automação Jurídica & LegalTech', level: 65, projects: 4 },
   { area: 'Saúde Digital & HealthTech', level: 60, projects: 3 },
@@ -47,30 +48,30 @@ const expertise = [
 ];
 
 const sectors = [
-  { name: 'Legal (LegalTech/AI)', percentage: 19 },
-  { name: 'Gestão Empresarial', percentage: 14.3 },
-  { name: 'Análise de Dados', percentage: 14.3 },
-  { name: 'Saúde (HealthTech)', percentage: 14.3 },
-  { name: 'Financeiro (Fintech)', percentage: 9.5 },
-  { name: 'Industrial & IoT', percentage: 9.5 },
-  { name: 'Meio Ambiente', percentage: 9.5 },
-  { name: 'Agronegócio', percentage: 4.8 },
-  { name: 'Educação & Games', percentage: 4.8 }
+  { name: 'Legal (LegalTech/AI)', percentage: 18.2 },
+  { name: 'Gestão Empresarial', percentage: 13.6 },
+  { name: 'Análise de Dados', percentage: 13.6 },
+  { name: 'Saúde (HealthTech)', percentage: 13.6 },
+  { name: 'Financeiro (Fintech)', percentage: 13.6 },
+  { name: 'Industrial & IoT', percentage: 9.1 },
+  { name: 'Meio Ambiente', percentage: 9.1 },
+  { name: 'Agronegócio', percentage: 4.5 },
+  { name: 'Educação & Games', percentage: 4.5 }
 ];
 
 const specialMetrics = [
-  { metric: 'Open Source', value: 100, total: 21, count: 21 },
-  { metric: 'Uso de Python', value: 57, total: 21, count: 12 },
-  { metric: 'Projetos com IA/ML', value: 43, total: 21, count: 9 },
-  { metric: 'Dockerizados', value: 38, total: 21, count: 8 },
-  { metric: 'APIs RESTful', value: 33, total: 21, count: 7 },
-  { metric: 'Impacto Social', value: 29, total: 21, count: 6 }
+  { metric: 'Open Source', value: 100, total: 22, count: 22 },
+  { metric: 'Uso de Python', value: 55, total: 22, count: 12 },
+  { metric: 'Projetos com IA/ML', value: 41, total: 22, count: 9 },
+  { metric: 'Dockerizados', value: 36, total: 22, count: 8 },
+  { metric: 'APIs RESTful', value: 32, total: 22, count: 7 },
+  { metric: 'Impacto Social', value: 27, total: 22, count: 6 }
 ];
 
 const timeline = [
   { period: 'Fase Inicial', projects: 7, year: '2023', description: 'Primeiros projetos core' },
   { period: 'Expansão IA', projects: 14, year: '2024', description: 'Foco em Legal AI e ML' },
-  { period: 'Portfolio Atual', projects: 21, year: '2025', description: 'Diversificação completa' }
+  { period: 'Portfolio Atual', projects: 22, year: '2025', description: 'Diversificação completa' }
 ];
 ---
 
@@ -106,12 +107,12 @@ const timeline = [
     <div class="overview-grid">
       <div class="overview-card hover-trigger">
         <i class="fas fa-code-branch"></i>
-        <h3>21 Projetos</h3>
+        <h3>22 Projetos</h3>
         <p>Portfolio diversificado abrangendo múltiplas áreas da tecnologia</p>
       </div>
       <div class="overview-card hover-trigger">
         <i class="fas fa-layer-group"></i>
-        <h3>19 Categorias</h3>
+        <h3>20 Categorias</h3>
         <p>Expertise demonstrada em diferentes domínios e setores</p>
       </div>
       <div class="overview-card hover-trigger">
@@ -122,7 +123,7 @@ const timeline = [
       <div class="overview-card hover-trigger">
         <i class="fas fa-chart-line"></i>
         <h3>+200% Crescimento</h3>
-        <p>Expansão contínua do portfolio (7 → 21 projetos)</p>
+        <p>Expansão contínua do portfolio (7 → 22 projetos)</p>
       </div>
     </div>
   </section>
