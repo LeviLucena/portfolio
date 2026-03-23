@@ -701,6 +701,58 @@ const currentPath = Astro.url.pathname;
       opacity: 1;
     }
 
+    /* CALENDAR BUTTON */
+    .calendar-button {
+      position: fixed;
+      top: 280px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border: 3px solid #00c65e;
+      background-color: var(--bg-color);
+      color: #00c65e;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1001;
+      transition: all 0.3s ease;
+      cursor: none;
+      text-decoration: none;
+      animation: calendar-pulse 3s infinite ease-in-out;
+    }
+
+    .calendar-button:hover {
+      background-color: #00c65e;
+      color: var(--bg-color);
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 0 20px #00c65e;
+    }
+
+    @keyframes calendar-pulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(0, 198, 94, 0.7); }
+      50% { box-shadow: 0 0 0 10px rgba(0, 198, 94, 0); }
+    }
+
+    .calendar-tooltip {
+      position: absolute;
+      right: 60px;
+      background-color: #00c65e;
+      color: var(--bg-color);
+      padding: 0.5rem 1rem;
+      font-family: var(--font-heading);
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+
+    .calendar-button:hover .calendar-tooltip {
+      opacity: 1;
+    }
+
     /* TRANSLATE BUTTON */
     .translate-toggle-btn {
       position: fixed;
@@ -1085,6 +1137,12 @@ const currentPath = Astro.url.pathname;
   <a class="gitcity-button hover-trigger" href="https://www.thegitcity.com/?ref=levilucena" target="_blank" rel="noopener noreferrer" aria-label="Explore Git City">
     <i class="fas fa-city"></i>
     <span class="gitcity-tooltip">Explore Git City</span>
+  </a>
+
+  <!-- Calendar Button -->
+  <a class="calendar-button hover-trigger" href="https://calendar.app.google/7uTNzZUqRz55w2Z1A" target="_blank" rel="noopener noreferrer" aria-label="Agendar reunião">
+    <i class="fas fa-calendar-alt"></i>
+    <span class="calendar-tooltip">Agendar Reunião</span>
   </a>
 
   <!-- Translate Button -->
