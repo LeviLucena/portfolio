@@ -3,12 +3,20 @@ import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 
 const featuredProjects = [
   {
+    title: 'LicitaAI',
+    description: 'Sistema SaaS para análise e gestão inteligente de editais de licitação no setor de saúde pública. Integra IA multi-modelo (Gemini, OpenAI, Ollama) para identificar oportunidades em portais oficiais (PNCP/Compras.gov), extrair requisitos de PDFs, detectar vícios legais e gerenciar o pipeline comercial em 5 estágios com drag-and-drop.',
+    technologies: ['React 18', 'TypeScript', 'Node.js', 'PostgreSQL', 'Docker', 'Gemini', 'OpenAI', 'Ollama'],
+    url: 'https://github.com/LeviLucena/Licita',
+    category: 'GovTech',
+    number: '01'
+  },
+  {
     title: 'MedAscend',
     description: 'Simulador de consulta clínica com avatar de paciente virtual pré-gravado (HeyGen) para treinamento de anamnese. O estudante conduz a entrevista clínica com reconhecimento de voz em português e o avatar responde com vídeos contextuais via correspondência de palavras-chave.',
     technologies: ['React 19', 'TanStack Start', 'TypeScript', 'HeyGen API', 'Cloudflare Pages', 'Tailwind CSS'],
     url: 'https://github.com/LeviLucena/saluxlab',
     category: 'MedTech',
-    number: '01'
+    number: '02'
   },
   {
     title: 'AI Render Pipeline',
@@ -16,7 +24,7 @@ const featuredProjects = [
     technologies: ['Python', 'FastAPI', 'Flux', 'Stable Diffusion', 'Replicate'],
     url: 'https://github.com/LeviLucena/ai-render-pipeline',
     category: 'Creative AI',
-    number: '02'
+    number: '03'
   },
   {
     title: 'Axisus MES',
@@ -24,7 +32,7 @@ const featuredProjects = [
     technologies: ['React', 'TypeScript', 'PostgreSQL', 'Docker'],
     url: 'https://github.com/LeviLucena/new-axisus',
     category: 'Industrial',
-    number: '03'
+    number: '04'
   },
   {
     title: 'JurisGPT Advisor',
@@ -32,7 +40,7 @@ const featuredProjects = [
     technologies: ['React', 'TypeScript', 'OpenAI', 'GPT-4o', 'NLP'],
     url: 'https://jurisgpt-advisor.com',
     category: 'Legal AI',
-    number: '04'
+    number: '05'
   },
   {
     title: 'Zellu AI',
@@ -40,7 +48,7 @@ const featuredProjects = [
     technologies: ['FastAPI', 'LangChain', 'Gemini', 'ChromaDB'],
     url: 'https://github.com/LeviLucena/zellu-ai',
     category: 'Legal AI',
-    number: '05'
+    number: '06'
   },
   {
     title: 'IntelliDoc AI',
@@ -48,7 +56,7 @@ const featuredProjects = [
     technologies: ['LangChain', 'GPT-4', 'Python', 'OCR'],
     url: 'https://github.com/LeviLucena/IntellidocAI',
     category: 'Document AI',
-    number: '06'
+    number: '07'
   },
   {
     title: 'Sales Insights API',
@@ -56,7 +64,7 @@ const featuredProjects = [
     technologies: ['FastAPI', 'LangChain', 'OpenAI', 'SQLAlchemy'],
     url: 'https://github.com/LeviLucena/Sales-Insights-API',
     category: 'Business Intelligence',
-    number: '07'
+    number: '08'
   },
   {
     title: 'API Data Collector',
@@ -64,7 +72,7 @@ const featuredProjects = [
     technologies: ['FastAPI', 'Docker', 'Pydantic', 'Async'],
     url: 'https://github.com/LeviLucena/API-Data-Collector',
     category: 'Data Integration',
-    number: '08'
+    number: '09'
   },
   {
     title: 'Clima Blue',
@@ -72,7 +80,7 @@ const featuredProjects = [
     technologies: ['Python', 'Flask', 'API', 'Docker'],
     url: 'https://github.com/LeviLucena/ClimaBlue_Brasil',
     category: 'AgTech',
-    number: '09'
+    number: '10'
   },
   {
     title: 'AmazonFireGuard',
@@ -80,7 +88,7 @@ const featuredProjects = [
     technologies: ['Python', 'Dash', 'ML', 'NASA API'],
     url: 'https://github.com/LeviLucena/amazonfireguard',
     category: 'Environment',
-    number: '10'
+    number: '11'
   },
   {
     title: 'Calculadora Renda Fixa',
@@ -88,7 +96,7 @@ const featuredProjects = [
     technologies: ['Nuxt.js', 'Vue.js', 'TypeScript'],
     url: 'https://github.com/LeviLucena/rendafixa.github.io',
     category: 'Fintech',
-    number: '11'
+    number: '12'
   },
   {
     title: 'MLPractical',
@@ -96,7 +104,7 @@ const featuredProjects = [
     technologies: ['Python', 'Scikit-learn', 't-SNE', 'KNN'],
     url: 'https://github.com/LeviLucena/MLPractical',
     category: 'HealthTech',
-    number: '12'
+    number: '13'
   },
   {
     title: 'NeoCore Systems',
@@ -104,7 +112,7 @@ const featuredProjects = [
     technologies: ['React', 'Framer Motion', 'Recharts', 'Tailwind'],
     url: 'https://github.com/LeviLucena/NeoCore_Systems',
     category: 'UI/UX Showcase',
-    number: '13'
+    number: '14'
   },
   {
     title: 'Gestão de Leitos Hospitalares (GGH)',
@@ -112,7 +120,7 @@ const featuredProjects = [
     technologies: ['Django', 'Python', 'Bootstrap', 'jQuery'],
     url: 'https://github.com/LeviLucena/DjangoLivre',
     category: 'HealthTech',
-    number: '14'
+    number: '15'
   },
   {
     title: 'DeepLearning YOLO',
@@ -120,7 +128,7 @@ const featuredProjects = [
     technologies: ['Python', 'YOLO', 'OpenCV', 'NumPy'],
     url: 'https://github.com/LeviLucena/DeepLearning',
     category: 'Computer Vision',
-    number: '15'
+    number: '16'
   },
   {
     title: 'NDA Tools',
@@ -128,7 +136,7 @@ const featuredProjects = [
     technologies: ['Flask', 'OpenAI', 'Python-docx', 'Bootstrap'],
     url: 'https://github.com/LeviLucena/NDA_Tools',
     category: 'Legal Tech',
-    number: '16'
+    number: '17'
   },
   {
     title: 'Gestão de Inventário TI',
@@ -136,7 +144,7 @@ const featuredProjects = [
     technologies: ['PHP', 'MySQL', 'Bootstrap', 'DataTables'],
     url: 'https://github.com/LeviLucena/Gestao-de-Inventario-de-TI',
     category: 'IT Management',
-    number: '17'
+    number: '18'
   },
   {
     title: 'Certificados SSL Monitor',
@@ -144,7 +152,7 @@ const featuredProjects = [
     technologies: ['PHP', 'OpenSSL', 'HTML5', 'CSS'],
     url: 'https://github.com/LeviLucena/Certificados-SSL-Web',
     category: 'Security Tools',
-    number: '18'
+    number: '19'
   },
   {
     title: 'Gestão de Projetos',
@@ -152,7 +160,7 @@ const featuredProjects = [
     technologies: ['PHP', 'MySQL', 'Apache', 'HTML'],
     url: 'https://github.com/LeviLucena/Gestao_Projetos',
     category: 'Project Management',
-    number: '19'
+    number: '20'
   },
   {
     title: 'Painel Arboviroses',
@@ -160,7 +168,7 @@ const featuredProjects = [
     technologies: ['Dash', 'Plotly', 'Pandas', 'Python'],
     url: 'https://github.com/LeviLucena/Arbovirose',
     category: 'Public Health',
-    number: '20'
+    number: '21'
   },
   {
     title: 'Bolsa de Valores Analytics',
@@ -168,7 +176,7 @@ const featuredProjects = [
     technologies: ['R', 'Shiny', 'Plotly', 'dplyr'],
     url: 'https://github.com/LeviLucena/Bolsa_de_Valores',
     category: 'Financial Analytics',
-    number: '21'
+    number: '22'
   },
   {
     title: 'ClimaTempo Dashboard',
@@ -176,7 +184,7 @@ const featuredProjects = [
     technologies: ['R', 'Shiny', 'ggplot2', 'Plotly'],
     url: 'https://github.com/LeviLucena/ClimaTempo',
     category: 'Weather Analytics',
-    number: '22'
+    number: '23'
   },
   {
     title: 'Space Invaders',
@@ -184,7 +192,7 @@ const featuredProjects = [
     technologies: ['Python', 'Pygame', 'Game Dev'],
     url: 'https://github.com/LeviLucena/pygame',
     category: 'Game Development',
-    number: '23'
+    number: '24'
   },
   {
     title: 'CobolBank',
@@ -192,7 +200,7 @@ const featuredProjects = [
     technologies: ['COBOL', 'GnuCOBOL', 'IBM z/OS', 'CICS', 'WSL 2'],
     url: 'https://github.com/LeviLucena/CobolBank',
     category: 'Mainframe / Fintech',
-    number: '24'
+    number: '25'
   }
 ];
 ---
