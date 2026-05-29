@@ -806,7 +806,8 @@ const currentPath = Astro.url.pathname;
       transition: opacity 0.3s ease;
     }
 
-    .translate-toggle-btn:hover .translate-tooltip {
+    .translate-toggle-btn:hover .translate-tooltip,
+    .translate-toggle-btn.show-hint .translate-tooltip {
       opacity: 1;
     }
 
@@ -1397,6 +1398,17 @@ const currentPath = Astro.url.pathname;
         translateToggleBtn.classList.remove('pulse');
         localStorage.setItem('translate-seen', 'true');
       }, 10000);
+    }
+
+    // Na primeira visita de qualquer usuário, mostra o tooltip por 4 segundos
+    if (!localStorage.getItem('translate-hint-seen')) {
+      setTimeout(() => {
+        translateToggleBtn.classList.add('show-hint');
+        setTimeout(() => {
+          translateToggleBtn.classList.remove('show-hint');
+          localStorage.setItem('translate-hint-seen', 'true');
+        }, 4000);
+      }, 1500);
     }
 
     // Toggle menu
