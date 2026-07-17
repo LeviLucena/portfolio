@@ -2,38 +2,38 @@
 import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 
 const stats = {
-  totalProjects: 30,
+  totalProjects: 31,
   categories: 25,
   technologies: '100+',
-  growth: '+328%'
+  growth: '+343%'
 };
 
 const categoryDistribution = [
-  { name: 'Legal AI', count: 4, percentage: 13.3, icon: 'fas fa-gavel' },
-  { name: 'MedTech', count: 2, percentage: 6.7, icon: 'fas fa-stethoscope' },
-  { name: 'HealthTech', count: 2, percentage: 6.7, icon: 'fas fa-heartbeat' },
-  { name: 'Fintech', count: 2, percentage: 6.7, icon: 'fas fa-chart-line' },
-  { name: 'GovTech', count: 1, percentage: 3.3, icon: 'fas fa-landmark' },
-  { name: 'Industrial', count: 2, percentage: 6.7, icon: 'fas fa-industry' },
-  { name: 'Document AI', count: 1, percentage: 3.3, icon: 'fas fa-file-alt' },
-  { name: 'Business Intelligence', count: 1, percentage: 3.3, icon: 'fas fa-chart-bar' },
-  { name: 'Data Integration', count: 1, percentage: 3.3, icon: 'fas fa-database' },
-  { name: 'AgTech', count: 1, percentage: 3.3, icon: 'fas fa-seedling' },
-  { name: 'Environment', count: 1, percentage: 3.3, icon: 'fas fa-leaf' },
-  { name: 'UI/UX Showcase', count: 1, percentage: 3.3, icon: 'fas fa-paint-brush' },
-  { name: 'Computer Vision', count: 1, percentage: 3.3, icon: 'fas fa-eye' },
-  { name: 'Legal Tech', count: 1, percentage: 3.3, icon: 'fas fa-balance-scale' },
-  { name: 'IT Management', count: 1, percentage: 3.3, icon: 'fas fa-server' },
-  { name: 'Security Tools', count: 1, percentage: 3.3, icon: 'fas fa-shield-alt' },
-  { name: 'Project Management', count: 1, percentage: 3.3, icon: 'fas fa-tasks' },
-  { name: 'Public Health', count: 1, percentage: 3.3, icon: 'fas fa-hospital' },
-  { name: 'Financial Analytics', count: 1, percentage: 3.3, icon: 'fas fa-coins' },
-  { name: 'Weather Analytics', count: 1, percentage: 3.3, icon: 'fas fa-cloud-sun' },
-  { name: 'Game Development', count: 1, percentage: 3.3, icon: 'fas fa-gamepad' },
-  { name: 'Mainframe / Fintech', count: 1, percentage: 3.3, icon: 'fas fa-university' },
-  { name: 'Creative AI', count: 1, percentage: 3.3, icon: 'fas fa-palette' },
-  { name: 'HRTech', count: 1, percentage: 3.3, icon: 'fas fa-users' },
-  { name: 'Biometrics', count: 1, percentage: 3.3, icon: 'fas fa-fingerprint' }
+  { name: 'Legal AI', count: 4, percentage: 12.9, icon: 'fas fa-gavel' },
+  { name: 'MedTech', count: 2, percentage: 6.5, icon: 'fas fa-stethoscope' },
+  { name: 'HealthTech', count: 2, percentage: 6.5, icon: 'fas fa-heartbeat' },
+  { name: 'Fintech', count: 2, percentage: 6.5, icon: 'fas fa-chart-line' },
+  { name: 'GovTech', count: 1, percentage: 3.2, icon: 'fas fa-landmark' },
+  { name: 'Industrial', count: 2, percentage: 6.5, icon: 'fas fa-industry' },
+  { name: 'Document AI', count: 1, percentage: 3.2, icon: 'fas fa-file-alt' },
+  { name: 'Business Intelligence', count: 1, percentage: 3.2, icon: 'fas fa-chart-bar' },
+  { name: 'Data Integration', count: 1, percentage: 3.2, icon: 'fas fa-database' },
+  { name: 'AgTech', count: 1, percentage: 3.2, icon: 'fas fa-seedling' },
+  { name: 'Environment', count: 1, percentage: 3.2, icon: 'fas fa-leaf' },
+  { name: 'UI/UX Showcase', count: 1, percentage: 3.2, icon: 'fas fa-paint-brush' },
+  { name: 'Computer Vision', count: 1, percentage: 3.2, icon: 'fas fa-eye' },
+  { name: 'Legal Tech', count: 1, percentage: 3.2, icon: 'fas fa-balance-scale' },
+  { name: 'IT Management', count: 1, percentage: 3.2, icon: 'fas fa-server' },
+  { name: 'Security Tools', count: 1, percentage: 3.2, icon: 'fas fa-shield-alt' },
+  { name: 'Project Management', count: 1, percentage: 3.2, icon: 'fas fa-tasks' },
+  { name: 'Public Health', count: 1, percentage: 3.2, icon: 'fas fa-hospital' },
+  { name: 'Financial Analytics', count: 1, percentage: 3.2, icon: 'fas fa-coins' },
+  { name: 'Weather Analytics', count: 1, percentage: 3.2, icon: 'fas fa-cloud-sun' },
+  { name: 'Game Development', count: 2, percentage: 6.5, icon: 'fas fa-gamepad' },
+  { name: 'Mainframe / Fintech', count: 1, percentage: 3.2, icon: 'fas fa-university' },
+  { name: 'Creative AI', count: 1, percentage: 3.2, icon: 'fas fa-palette' },
+  { name: 'HRTech', count: 1, percentage: 3.2, icon: 'fas fa-users' },
+  { name: 'Biometrics', count: 1, percentage: 3.2, icon: 'fas fa-fingerprint' }
 ];
 
 const expertise = [
@@ -49,36 +49,36 @@ const expertise = [
   { area: 'Automação Jurídica & LegalTech', level: 65, projects: 5 },
   { area: 'Saúde Digital & HealthTech', level: 60, projects: 3 },
   { area: 'Segurança & Monitoramento', level: 60, projects: 3 },
-  { area: 'Game Development', level: 50, projects: 1 }
+  { area: 'Game Development', level: 50, projects: 2 }
 ];
 
 const sectors = [
-  { name: 'Legal (LegalTech/AI)', percentage: 16.7 },
-  { name: 'Gestão Empresarial', percentage: 13.3 },
-  { name: 'Saúde (HealthTech / MedTech)', percentage: 13.3 },
-  { name: 'Análise de Dados', percentage: 10.0 },
-  { name: 'Financeiro (Fintech)', percentage: 10.0 },
-  { name: 'Industrial & IoT', percentage: 10.0 },
-  { name: 'Meio Ambiente', percentage: 6.7 },
-  { name: 'Segurança & Biometria', percentage: 6.7 },
-  { name: 'Agronegócio', percentage: 3.3 },
-  { name: 'Educação & Games', percentage: 3.3 },
-  { name: 'Criatividade & IA Generativa', percentage: 3.3 }
+  { name: 'Legal (LegalTech/AI)', percentage: 16.1 },
+  { name: 'Gestão Empresarial', percentage: 12.9 },
+  { name: 'Saúde (HealthTech / MedTech)', percentage: 12.9 },
+  { name: 'Análise de Dados', percentage: 9.7 },
+  { name: 'Financeiro (Fintech)', percentage: 9.7 },
+  { name: 'Industrial & IoT', percentage: 9.7 },
+  { name: 'Meio Ambiente', percentage: 6.5 },
+  { name: 'Segurança & Biometria', percentage: 6.5 },
+  { name: 'Agronegócio', percentage: 3.2 },
+  { name: 'Educação & Games', percentage: 6.5 },
+  { name: 'Criatividade & IA Generativa', percentage: 3.2 }
 ];
 
 const specialMetrics = [
-  { metric: 'Open Source', value: 100, total: 30, count: 30 },
-  { metric: 'Uso de Python', value: 50, total: 30, count: 15 },
-  { metric: 'Projetos com IA/ML', value: 53, total: 30, count: 16 },
-  { metric: 'Dockerizados', value: 33, total: 30, count: 10 },
-  { metric: 'APIs RESTful', value: 50, total: 30, count: 15 },
-  { metric: 'Impacto Social', value: 30, total: 30, count: 9 }
+  { metric: 'Open Source', value: 97, total: 31, count: 30 },
+  { metric: 'Uso de Python', value: 48, total: 31, count: 15 },
+  { metric: 'Projetos com IA/ML', value: 55, total: 31, count: 17 },
+  { metric: 'Dockerizados', value: 32, total: 31, count: 10 },
+  { metric: 'APIs RESTful', value: 48, total: 31, count: 15 },
+  { metric: 'Impacto Social', value: 29, total: 31, count: 9 }
 ];
 
 const timeline = [
   { period: 'Fase Inicial', projects: 7, year: '2023', description: 'Primeiros projetos core' },
   { period: 'Expansão IA', projects: 14, year: '2024', description: 'Foco em Legal AI e ML' },
-  { period: 'Portfolio Atual', projects: 30, year: '2025', description: 'Diversificação completa' }
+  { period: 'Portfolio Atual', projects: 31, year: '2026', description: 'Diversificação completa' }
 ];
 ---
 
@@ -114,7 +114,7 @@ const timeline = [
     <div class="overview-grid">
       <div class="overview-card hover-trigger">
         <i class="fas fa-code-branch"></i>
-        <h3>30 Projetos</h3>
+        <h3>31 Projetos</h3>
         <p>Portfolio diversificado abrangendo múltiplas áreas da tecnologia</p>
       </div>
       <div class="overview-card hover-trigger">
@@ -129,8 +129,8 @@ const timeline = [
       </div>
       <div class="overview-card hover-trigger">
         <i class="fas fa-chart-line"></i>
-        <h3>+328% Crescimento</h3>
-        <p>Expansão contínua do portfolio (7 → 30 projetos)</p>
+        <h3>+343% Crescimento</h3>
+        <p>Expansão contínua do portfolio (7 → 31 projetos)</p>
       </div>
     </div>
   </section>

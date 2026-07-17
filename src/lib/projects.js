@@ -213,6 +213,13 @@ const projects = [
     technologies: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS v4', 'shadcn/ui', 'Recharts', 'OpenAI GPT-4o-mini', 'Cloudflare Workers', 'Vite 8', 'Bun'],
     url: 'https://github.com/LeviLucena/Delphos-Insights-Hub',
     category: 'Industrial'
+  },
+  {
+    title: 'Grimhold RPG',
+    description: 'RPG de aventura em primeira pessoa criado com vibe coding no Meta Pocket. O jogador encarna um guerreiro explorando um castelo gótico, com sistema de inventário dividido em itens e relíquias, interação com objetos do cenário e combate com mecânicas de ataque e defesa. É necessário baixar o app Pocket para ter a experiência sonora completa do game.',
+    technologies: ['Meta Pocket', 'Vibe Coding', 'IA Generativa', 'RPG'],
+    url: 'https://www.madewithpocket.com/pt-BR/p/ENSV8ZMsg',
+    category: 'Game Development'
   }
 ];
 
