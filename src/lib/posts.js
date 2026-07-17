@@ -7,6 +7,8 @@ export const allPosts = [
     title: 'Introdução ao Machine Learning',
     date: '2024-01-15',
     tags: ['IA', 'Python', 'Data Science'],
+    excerpt: 'Uma visão geral dos fundamentos de machine learning e suas aplicações práticas no mundo real.',
+    category: 'ML',
     content: `
       <p>O Machine Learning (ML) é uma subárea da inteligência artificial que permite que os sistemas computacionais aprendam e façam previsões a partir de dados, sem serem explicitamente programados para isso.</p>
 
@@ -45,6 +47,8 @@ export const allPosts = [
     title: 'Automação de Processos com Python',
     date: '2024-01-10',
     tags: ['Python', 'Automação', 'Produtividade'],
+    excerpt: 'Como usar Python para automatizar tarefas repetitivas e aumentar a produtividade.',
+    category: 'Dev',
     content: `
       <p>A automação de processos com Python é uma das habilidades mais valiosas para profissionais de diversas áreas. Python oferece uma infinidade de bibliotecas que permitem automatizar tarefas repetitivas de forma eficiente e prática.</p>
 
@@ -97,6 +101,8 @@ def organizar_arquivos(pasta_origem):
     title: 'Aplicações Práticas de Inteligência Artificial',
     date: '2024-01-05',
     tags: ['IA', 'Aplicações', 'Tecnologia'],
+    excerpt: 'Exemplos reais de como a IA está transformando diferentes setores e indústrias.',
+    category: 'AI',
     content: `
       <p>A inteligência artificial (IA) deixou de ser um conceito de ficção científica para se tornar uma realidade presente em nossas vidas diárias. As aplicações práticas de IA estão transformando indústrias inteiras e revolucionando a forma como trabalhamos, vivemos e nos comunicamos.</p>
 
@@ -138,6 +144,8 @@ def organizar_arquivos(pasta_origem):
     title: 'Desenvolvimento Web Moderno com React',
     date: '2023-12-28',
     tags: ['React', 'JavaScript', 'Frontend'],
+    excerpt: 'Explorando as melhores práticas para desenvolvimento web com as tecnologias mais recentes.',
+    category: 'Dev',
     content: `
       <p>O desenvolvimento web moderno tem evoluído rapidamente nos últimos anos, com novas tecnologias e frameworks surgindo constantemente. React, uma biblioteca JavaScript desenvolvida pelo Facebook, tornou-se uma das ferramentas mais populares para criar interfaces de usuário interativas e escaláveis.</p>
 
@@ -201,6 +209,8 @@ function Contador() {
     title: 'Como Escolher Sua Primeira Stack de Desenvolvimento',
     date: '2023-12-20',
     tags: ['Desenvolvimento', 'Carreira', 'Iniciantes'],
+    excerpt: 'Guia prático para iniciantes na programação escolherem as tecnologias mais adequadas.',
+    category: 'Career',
     content: `
       <p>Escolher a primeira stack de desenvolvimento pode parecer uma tarefa assustadora para iniciantes na programação. Com tantas opções disponíveis, é normal se sentir perdido. Este guia prático ajudará você a tomar uma decisão informada com base em seus objetivos e no mercado de trabalho.</p>
 
@@ -277,6 +287,8 @@ function Contador() {
     title: 'Estratégias de Versionamento no Git',
     date: '2023-12-15',
     tags: ['Git', 'Versionamento', 'DevOps'],
+    excerpt: 'Melhores práticas para gerenciamento de versões de código em projetos.',
+    category: 'DevOps',
     content: `
       <p>O controle de versão com Git é essencial para qualquer desenvolvedor moderno. As estratégias de versionamento e workflows com Git ajudam equipes a colaborarem eficientemente, manterem um histórico claro e gerenciarem releases de software de forma profissional.</p>
 
@@ -364,6 +376,8 @@ git push origin --tags
     title: 'Clawd.bot e a Nova Geração de Agentes de IA 24/7 que pode automatizar a sua vida!',
     date: '2026-01-27',
     tags: ['IA', 'Agentes', 'Automação', 'ClawDBot'],
+    excerpt: 'Na evolução contínua da inteligência artificial, assistimos a uma transformação significativa: o surgimento de agentes de IA verdadeiramente autônomos, como o ClawDBot.',
+    category: 'AI',
     content: `
       <p>Na evolução contínua da inteligência artificial, assistimos a uma transformação significativa: o surgimento de agentes de IA verdadeiramente autônomos, como o ClawDBot, que representam uma nova geração de assistentes digitais. Esses agentes deixam de ser meros respondentes de prompts para se tornarem colaboradores digitais proativos, capazes de operar continuamente e se integrar profundamente ao ecossistema digital do usuário.</p>
 
@@ -415,4 +429,13 @@ export function getPostBySlug(slug) {
 
 export function getAllPosts() {
   return allPosts;
+}
+
+// Posts ordenados do mais recente para o mais antigo
+export function getPostsByDate() {
+  return [...allPosts].sort((a, b) => new Date(b.date) - new Date(a.date));
+}
+
+export function getRecentPosts(count = 3) {
+  return getPostsByDate().slice(0, count);
 }

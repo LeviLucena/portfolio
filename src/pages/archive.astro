@@ -1,64 +1,8 @@
 ﻿---
 import BrutalistLayout from '../layouts/BrutalistLayout.astro';
+import { getPostsByDate } from '../lib/posts.js';
 
-const posts = [
-  {
-    slug: 'clawdbot-nova-geracao-agentes-ia',
-    title: 'Clawd.bot e a Nova Geração de Agentes de IA 24/7',
-    date: '2026-01-27',
-    excerpt: 'Na evolução contínua da inteligência artificial, assistimos a uma transformação significativa: o surgimento de agentes de IA verdadeiramente autônomos, como o ClawDBot.',
-    tags: ['IA', 'Agentes', 'Automação', 'ClawDBot'],
-    category: 'AI'
-  },
-  {
-    slug: 'introducao-ao-machine-learning',
-    title: 'Introdução ao Machine Learning',
-    date: '2024-01-15',
-    excerpt: 'Uma visão geral dos fundamentos de machine learning e suas aplicações práticas no mundo real.',
-    tags: ['IA', 'Python', 'Data Science'],
-    category: 'ML'
-  },
-  {
-    slug: 'automacao-com-python',
-    title: 'Automação de Processos com Python',
-    date: '2024-01-10',
-    excerpt: 'Como usar Python para automatizar tarefas repetitivas e aumentar a produtividade.',
-    tags: ['Python', 'Automação', 'Produtividade'],
-    category: 'Dev'
-  },
-  {
-    slug: 'inteligencia-artificial-aplicada',
-    title: 'Aplicações Práticas de Inteligência Artificial',
-    date: '2024-01-05',
-    excerpt: 'Exemplos reais de como a IA está transformando diferentes setores e indústrias.',
-    tags: ['IA', 'Aplicações', 'Tecnologia'],
-    category: 'AI'
-  },
-  {
-    slug: 'desenvolvimento-web-moderno',
-    title: 'Desenvolvimento Web Moderno com React',
-    date: '2023-12-28',
-    excerpt: 'Explorando as melhores práticas para desenvolvimento web com as tecnologias mais recentes.',
-    tags: ['React', 'JavaScript', 'Frontend'],
-    category: 'Dev'
-  },
-  {
-    slug: 'como-escolher-sua-primeira-stack',
-    title: 'Como Escolher Sua Primeira Stack',
-    date: '2023-12-20',
-    excerpt: 'Guia prático para iniciantes na programação escolherem as tecnologias mais adequadas.',
-    tags: ['Desenvolvimento', 'Carreira', 'Iniciantes'],
-    category: 'Career'
-  },
-  {
-    slug: 'estrategias-de-versionamento-no-git',
-    title: 'Estratégias de Versionamento no Git',
-    date: '2023-12-15',
-    excerpt: 'Melhores práticas para gerenciamento de versões de código em projetos.',
-    tags: ['Git', 'Versionamento', 'DevOps'],
-    category: 'DevOps'
-  }
-];
+const posts = getPostsByDate();
 ---
 
 <BrutalistLayout title="Arquivo - Levi Lucena">

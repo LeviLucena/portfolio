@@ -1,5 +1,6 @@
 ﻿---
 import BrutalistLayout from '../layouts/BrutalistLayout.astro';
+import { getRecentPosts } from '../lib/posts.js';
 
 const author = {
   name: 'Levi Lucena',
@@ -7,26 +8,7 @@ const author = {
   bio: 'Construindo soluções inteligentes que transformam ideias em realidade digital.'
 };
 
-const recentPosts = [
-  {
-    slug: 'clawdbot-nova-geracao-agentes-ia',
-    title: 'Clawd.bot e a Nova Geração de Agentes de IA',
-    date: '2026-01-27',
-    tags: ['IA', 'Agentes', 'Automação']
-  },
-  {
-    slug: 'introducao-ao-machine-learning',
-    title: 'Introdução ao Machine Learning',
-    date: '2024-01-15',
-    tags: ['IA', 'Python', 'Data Science']
-  },
-  {
-    slug: 'automacao-com-python',
-    title: 'Automação de Processos com Python',
-    date: '2024-01-10',
-    tags: ['Python', 'Automação']
-  }
-];
+const recentPosts = getRecentPosts(3);
 ---
 
 <BrutalistLayout title="Levi Lucena - Portfolio">
