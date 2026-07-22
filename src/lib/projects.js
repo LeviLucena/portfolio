@@ -22,7 +22,7 @@ const projects = [
     title: 'MedAscend',
     description: 'Simulador de consulta clínica com avatar de paciente virtual pré-gravado (HeyGen) para treinamento de anamnese. O estudante conduz a entrevista clínica com reconhecimento de voz em português e o avatar responde com vídeos contextuais via correspondência de palavras-chave.',
     technologies: ['React 19', 'TanStack Start', 'TypeScript', 'HeyGen API', 'Cloudflare Pages', 'Tailwind CSS'],
-    url: 'https://github.com/LeviLucena/medascend',
+    url: 'https://medascend.the-joker-lucena.workers.dev/',
     category: 'MedTech'
   },
   {
