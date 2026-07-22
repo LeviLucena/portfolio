@@ -211,7 +211,7 @@ const projects = [
     title: 'Delphos Insights Hub',
     description: 'Plataforma de inteligência operacional para gestão de frotas de energia renovável. Monitoramento SCADA em tempo real, alertas, ordens de serviço e assistente de IA (GPT-4o-mini) para suporte à decisão com dashboard interativo e cena isométrica de turbina eólica.',
     technologies: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS v4', 'shadcn/ui', 'Recharts', 'OpenAI GPT-4o-mini', 'Cloudflare Workers', 'Vite 8', 'Bun'],
-    url: 'https://github.com/LeviLucena/Delphos-Insights-Hub',
+    url: 'https://delphos-insights-hub.the-joker-lucena.workers.dev/',
     category: 'Industrial'
   },
   {
