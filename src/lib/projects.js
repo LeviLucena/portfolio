@@ -208,6 +208,13 @@ const projects = [
     category: 'Legal AI'
   },
   {
+    title: 'Freight Recovery Console',
+    description: 'Console de auditoria de invoices e recuperação de claims logísticos com agentes de IA. Audita faturas de transportadoras via Claude (structured tool-use, com fallback heurístico), abre e conduz claims como uma state machine durável com retries, human-in-the-loop e reconciliação, com timeline de execução completa e e-mail de disputa gerado automaticamente. Multi-idioma (PT/ES/EN) persistido por claim.',
+    technologies: ['React 19', 'TanStack Start', 'TypeScript', 'Anthropic Claude API', 'Drizzle ORM', 'Cloudflare Workers', 'D1', 'Tailwind CSS v4'],
+    url: 'https://freight-recovery-console.the-joker-lucena.workers.dev/',
+    category: 'InvoiceTech'
+  },
+  {
     title: 'Delphos Insights Hub',
     description: 'Plataforma de inteligência operacional para gestão de frotas de energia renovável. Monitoramento SCADA em tempo real, alertas, ordens de serviço e assistente de IA (GPT-4o-mini) para suporte à decisão com dashboard interativo e cena isométrica de turbina eólica.',
     technologies: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS v4', 'shadcn/ui', 'Recharts', 'OpenAI GPT-4o-mini', 'Cloudflare Workers', 'Vite 8', 'Bun'],
