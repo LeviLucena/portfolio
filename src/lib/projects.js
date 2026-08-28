@@ -227,6 +227,13 @@ const projects = [
     technologies: ['Meta Pocket', 'Vibe Coding', 'IA Generativa', 'RPG'],
     url: 'https://www.madewithpocket.com/pt-BR/p/ENSV8ZMsg',
     category: 'Game Development'
+  },
+  {
+    title: 'Empório da Música — Agente de Atendimento',
+    description: 'Agente de atendimento conversacional para loja de instrumentos musicais, com function calling sobre dados da operação (SQLite) e RAG (BM25) sobre o manual de políticas da loja. Interface de chat web em React consumindo API própria em FastAPI.',
+    technologies: ['React 19', 'TanStack Start', 'TypeScript', 'Vite', 'Tailwind CSS', 'Python', 'Google Gemini', 'FastAPI', 'SQLite', 'Bun'],
+    url: 'https://github.com/LeviLucena/emporio-da-musica-agent',
+    category: 'Retail AI'
   }
 ];
 
