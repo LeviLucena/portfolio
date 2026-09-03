@@ -7,7 +7,7 @@ const projects = [
   {
     title: 'Agente Comercial Autônomo — CRM Vendas',
     description: 'CRM de vendas com um agente comercial autônomo embutido: qualifica leads, responde dúvidas, agenda reuniões, liga por telefone e envia e-mails e WhatsApp — com base numa persona, objetivo e regras configuráveis, sem precisar de vendedor humano no primeiro contato. Só escala para um humano quando faz sentido (desconto fora da tabela, contrato, cliente insatisfeito ou pedido explícito).',
-    technologies: ['Pipecat', 'Deepgram', 'OpenAI (gpt-4o-mini)', 'ElevenLabs', 'Twilio', 'FastAPI', 'Uvicorn'],
+    technologies: ['Pipecat', 'Deepgram', 'Ollama', 'ElevenLabs', 'Twilio', 'FastAPI', 'Uvicorn'],
     url: 'https://github.com/LeviLucena/agent-CRM-Sales',
     category: 'Sales AI'
   },
