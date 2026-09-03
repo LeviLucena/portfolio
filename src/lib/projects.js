@@ -5,6 +5,13 @@
 
 const projects = [
   {
+    title: 'Agente Comercial Autônomo — CRM Vendas',
+    description: 'CRM de vendas com um agente comercial autônomo embutido: qualifica leads, responde dúvidas, agenda reuniões, liga por telefone e envia e-mails e WhatsApp — com base numa persona, objetivo e regras configuráveis, sem precisar de vendedor humano no primeiro contato. Só escala para um humano quando faz sentido (desconto fora da tabela, contrato, cliente insatisfeito ou pedido explícito).',
+    technologies: ['Pipecat', 'Deepgram', 'OpenAI (gpt-4o-mini)', 'ElevenLabs', 'Twilio', 'FastAPI', 'Uvicorn'],
+    url: 'https://github.com/LeviLucena/agent-CRM-Sales',
+    category: 'Sales AI'
+  },
+  {
     title: 'Copiloto Clínico por Voz',
     description: 'Assistente conversacional para gestão hospitalar com avatar interativo (Simli) e reconhecimento de voz em português. Detecta automaticamente a intenção do usuário e roteia para workflows n8n — dashboards executivos, documentação clínica e copiloto regulatório TISS/ANS. Interface PWA instalável com orbe de estado e painel destacável.',
     technologies: ['React 19', 'TanStack Start', 'TypeScript', 'n8n', 'OpenAI', 'Simli API', 'Cloudflare Pages'],
