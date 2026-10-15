@@ -2,6 +2,9 @@
 import BrutalistLayout from '../layouts/BrutalistLayout.astro';
 import { featuredProjects } from '../lib/projects.js';
 
+// Máximo de tecnologias visíveis por card; as demais viram uma tag "+N".
+const MAX_TECH = 8;
+
 ---
 
 <BrutalistLayout title="Levi Lucena - Projects">
@@ -24,9 +27,14 @@ import { featuredProjects } from '../lib/projects.js';
             <h3>{project.title}</h3>
             <p>{project.description}</p>
             <div class="project-tech">
-              {project.technologies.slice(0, 4).map(tech => (
+              {project.technologies.slice(0, MAX_TECH).map(tech => (
                 <span>{tech}</span>
               ))}
+              {project.technologies.length > MAX_TECH && (
+                <span class="tech-more" title={project.technologies.slice(MAX_TECH).join(', ')}>
+                  +{project.technologies.length - MAX_TECH}
+                </span>
+              )}
             </div>
             <a href={project.url} target="_blank" class="project-link">
               Ver Projeto
@@ -172,6 +180,11 @@ import { featuredProjects } from '../lib/projects.js';
       padding: 0.25rem 0.75rem;
       border: 1px solid var(--accent-color);
       color: var(--accent-color);
+    }
+
+    .project-tech span.tech-more {
+      border-style: dashed;
+      cursor: help;
     }
 
     .project-card:hover .project-tech span {
